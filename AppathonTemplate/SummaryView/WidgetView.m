@@ -30,7 +30,7 @@
 
 - (void)createViews
 {
-    self.titleLabel = [[UILabel alloc] initWithText:@"Test" textAlignment:NSTextAlignmentCenter textColor:[UIColor whiteColor] font:[UIFont fontWithName:@COMMONGFONT size:18]];
+    self.titleLabel = [[UILabel alloc] initWithText:@"Test" textAlignment:NSTextAlignmentCenter textColor:UIColorFromRGB(0x343331) font:[UIFont fontWithName:@COMMONGFONT size:18]];
     [self addSubview:self.titleLabel];
     
     self.bodyLabel = [[UILabel alloc] initWithText:@"Test" textAlignment:NSTextAlignmentCenter textColor:[UIColor whiteColor] font:[UIFont fontWithName:@COMMONBOLDFONT size:21]];
