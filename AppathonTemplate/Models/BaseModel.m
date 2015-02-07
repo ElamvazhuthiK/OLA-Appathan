@@ -28,33 +28,36 @@
 
     [therequest setHTTPBody:[[((ModelBase *)request) decoratedJSONRequest] dataUsingEncoding:NSUTF8StringEncoding]];
     
-//    NSLog(@"request is %@",therequest);
+    NSLog(@"\n\n request is %@",therequest);
     
     NSOperationQueue *queue = [NSOperationQueue mainQueue];
     
     [NSURLConnection sendAsynchronousRequest:therequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
     {
-//        NSLog(@"Response through json = %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        NSLog(@"\n\n Response through json = %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         
-        if (error)
-        {
-            NSLog(@"Some error occured, Reason : %@",[error localizedDescription]);
-            Error *errorObj = [[Error alloc] init];
-            errorObj.message = [NSString stringWithFormat:@"%@",[error localizedDescription]];
-            errorObj.errorType = kErrorTypeNetworkError;
-            [self handleError:errorObj];
-        }
-        else
-        {
-            NSError *jsonError = nil;
-            NSDictionary *json = [NSJSONSerialization
-                                  JSONObjectWithData:data
-                                  options:kNilOptions
-                                  error:&jsonError];
+        
+        [self handleResponse:nil];
+        
+//        if (error)
+//        {
+//            NSLog(@"Some error occured, Reason : %@",[error localizedDescription]);
+//            Error *errorObj = [[Error alloc] init];
+//            errorObj.message = [NSString stringWithFormat:@"%@",[error localizedDescription]];
+//            errorObj.errorType = kErrorTypeNetworkError;
+//            [self handleError:errorObj];
+//        }
+//        else
+//        {
+//            NSError *jsonError = nil;
+//            NSDictionary *json = [NSJSONSerialization
+//                                  JSONObjectWithData:data
+//                                  options:kNilOptions
+//                                  error:&jsonError];
 //            NSLog(@"Json Values %@",json);
-            
-            [self responseReceived:json];
-        }
+//            
+//            [self responseReceived:json];
+//        }
     }];
 }
 
@@ -83,7 +86,7 @@
             Error *errorObj = [Validator getError:response];
             if (errorObj.actionType == kErrorActionTypeSessionTimeOut)
             {
-                [self.baseModelDelegate logoutForInvalidSession];
+//                [self.baseModelDelegate logoutForInvalidSession];
             }
             else
             {

@@ -12,20 +12,14 @@
 @class BaseViewController;
 #import "JSONModelBaseProtocol.h"
 
-@protocol BaseModelDeleGate <NSObject>
-
-- (void)logoutForInvalidSession;
+@protocol BaseModelDelegate <NSObject>
 - (void)noResponse:(Error*)error;
-
 @end
 
 @interface BaseModel : NSObject
 
 @property (nonatomic, strong) NSString *svcName;
-@property (nonatomic, weak) id <BaseModelDeleGate> baseModelDelegate;
-
-//@property (nonatomic) BOOL showInvalidSession;
-
+@property (nonatomic, weak) id <BaseModelDelegate> baseModelDelegate;
 - (void)sendRequest:(id<JSONModelBaseProtocol>)request;
 - (void)handleResponse:(NSDictionary*)response;
 - (void)handleError:(Error *)errorObj;

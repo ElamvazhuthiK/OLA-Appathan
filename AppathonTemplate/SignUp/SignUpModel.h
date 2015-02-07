@@ -8,6 +8,7 @@
 
 #import "BaseModel.h"
 #import "ModelBase.h"
+
 @interface SignUpRequest:ModelBase
 @property(nonatomic, strong) NSString *email;
 @property(nonatomic, strong) NSString *password;
@@ -17,38 +18,12 @@
 @property(nonatomic, strong) NSString *device_id;
 @end
 
-@implementation SignUpRequest
-+ (NSString*)getName
-{
-    return @"signup";
-}
-+ (NSString*)getGroup
-{
-    return @"user";
-}
-+ (NSString*)getVersion
-{
-    return @"v1";
-}
-@end
-
 @interface SignUpResponse:ModelBase
 @property(nonatomic, strong) NSString *status;
 @end
-@implementation SignUpResponse
-+ (NSString*)getName
-{
-    return @"signup";
-}
-+ (NSString*)getGroup
-{
-    return @"user";
-}
-+ (NSString*)getVersion
-{
-    return @"v1";
-}
+@protocol SignUpModelDelegate <BaseModelDelegate>
+- (void)signUpSuccess;
 @end
 @interface SignUpModel : BaseModel
-
+@property(nonatomic, weak)id<SignUpModelDelegate>delegate;
 @end

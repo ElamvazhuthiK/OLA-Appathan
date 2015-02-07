@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginView.h"
 #import "LoginModel.h"
-
+#import "Encryptor.h"
 #import "SignUpViewController.h"
 
 @interface LoginViewController ()
@@ -33,15 +33,22 @@
 {
     self.loginView = [[LoginView alloc] init];
     self.view = self.loginView;
-    
-    [self.loginView.submitButton addTarget:self action:@selector(submitUserCredientilasToLogin:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.loginView.signUpButton addTarget:self action:@selector(signUpNewUser:) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.loginView.submitButton addTarget:self action:@selector(submitUserCredientilasToLogin:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.loginView.signUpButton addTarget:self action:@selector(signUpNewUser:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([[AppData getObject] username] != nil) {
+        self.loginView.userEmailTextField.text = [[AppData getObject] username];
+    }
+    if ([[AppData getObject] password] != nil) {
+        self.loginView.passwordTextField.text = [[Encryptor encryptor] decryptData:[[[AppData getObject] password] dataUsingEncoding:NSUTF8StringEncoding] withKey:ENCRYPTION_KEY];
+    }
 }
 
 #pragma mark - Action methods

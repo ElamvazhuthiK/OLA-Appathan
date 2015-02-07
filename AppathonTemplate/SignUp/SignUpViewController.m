@@ -9,8 +9,9 @@
 #import "SignUpViewController.h"
 #import "SignView.h"
 #import "SignUpModel.h"
+#import "Encryptor.h"
 
-@interface SignUpViewController ()
+@interface SignUpViewController ()<SignUpModelDelegate>
 
 @property (nonatomic, strong) SignView *signUpView;
 @property (nonatomic, strong) SignUpModel *signUpModel;
@@ -31,9 +32,19 @@
 - (void)loadView
 {
     self.signUpView = [[SignView alloc] init];
+    self.signUpModel = [[SignUpModel alloc] init];
+    self.signUpModel.delegate = self;
     self.view = self.signUpView;
     
     [self.signUpView.signUpButton addTarget:self action:@selector(signUpNewUser:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([[AppData getObject] username] != nil) {
+        self.signUpView.userNameTextField.text = [[AppData getObject] username];
+    }
+    
+    if ([[AppData getObject] password] != nil) {
+        self.signUpView.userNameTextField.text = [[Encryptor encryptor] decryptData:[[[AppData getObject] password] dataUsingEncoding:NSUTF8StringEncoding] withKey:ENCRYPTION_KEY];
+    }
 }
 - (void)viewDidLoad
 {
@@ -45,7 +56,7 @@
 
 - (void)signUpNewUser:(UIButton *)sender
 {
-    if (self.signUpView.userEmailTextField.text.length > 0 && self.signUpView.passwordTextField.text.length > 0 && self.signUpView.mobileNumberOfUserTextField.text.length > 0 && self.signUpView.userNameTextField.text.length > 0)
+//    if (self.signUpView.userEmailTextField.text.length > 0 && self.signUpView.passwordTextField.text.length > 0 && self.signUpView.mobileNumberOfUserTextField.text.length > 0 && self.signUpView.userNameTextField.text.length > 0)
     {
 //        @property(nonatomic, strong) NSString *email;
 //        @property(nonatomic, strong) NSString *password;
@@ -53,20 +64,33 @@
 //        @property(nonatomic, strong) NSString *mobile;
 //        @property(nonatomic, strong) NSString *source;
 //        @property(nonatomic, strong) NSString *device_id;
-//        loginRequest.email = self.signUpView.userEmailTextField.text;
-//        loginRequest.password = self.signUpView.passwordTextField.text;
-//        loginRequest.email = self.signUpView.mobileNumberOfUserTextField.text;
-//        loginRequest.email = self.signUpView.userEmailTextField.text;
-
+        SignUpRequest *signUpRequest = [[SignUpRequest alloc] init];
+        signUpRequest.email = self.signUpView.userEmailTextField.text;
+        signUpRequest.password =  [[NSString alloc] initWithData:[[Encryptor encryptor] encryptString:self.signUpView.passwordTextField.text withKey:ENCRYPTION_KEY] encoding:NSUTF8StringEncoding];
+        signUpRequest.name = self.signUpView.userNameTextField.text;
+        signUpRequest.mobile = self.signUpView.mobileNumberOfUserTextField.text;
         
-//        [self.signUpModel sendRequest:]
-    }
-    else
-    {
-        UIAlertView *missedRequieredFields = [[UIAlertView alloc] initWithTitle:@"Missing required fields" message:@"Please make sure all requiered fields are given" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        signUpRequest.email = @"vazhuthik@gmail.com";
         
-        [missedRequieredFields show];
+        Encryptor *enc = [Encryptor encryptor];
+        NSData *data = [enc encryptString:@"kvazhuthi" withKey:ENCRYPTION_KEY];
+        NSLog(@"Check enc %@", [enc decryptData:data withKey:ENCRYPTION_KEY]);
+        
+        signUpRequest.password =  [[NSString alloc] initWithData:[[Encryptor encryptor] encryptString:@"kvazhuthi" withKey:ENCRYPTION_KEY] encoding:NSUTF16StringEncoding];
+        NSLog(@"password %@", signUpRequest.password);
+        
+        signUpRequest.name = @"Elamvazhuthi";
+        signUpRequest.mobile = @"8754469970";
+        
+        
+        [self.signUpModel sendRequest:signUpRequest];
     }
+//    else
+//    {
+//        UIAlertView *missedRequieredFields = [[UIAlertView alloc] initWithTitle:@"Missing required fields" message:@"Please make sure all requiered fields are given" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+//        
+//        [missedRequieredFields show];
+//    }
 }
 /*
  #pragma mark - Navigation
@@ -77,5 +101,11 @@
  // Pass the selected object to the new view controller.
  }
  */
-
+#pragma mark SignUpModel delegate
+- (void)signUpSuccess
+{
+    NSLog(@"signUpSuccess");
+    [[AppData getObject] setUsername:self.signUpView.userNameTextField.text];
+    [[AppData getObject] setUsername:[[NSString alloc] initWithData:[[Encryptor encryptor] encryptString:@"kvazhuthi" withKey:ENCRYPTION_KEY] encoding:NSUTF16StringEncoding]];
+}
 @end

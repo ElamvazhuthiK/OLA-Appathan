@@ -12,6 +12,6 @@
 @implementation AppConfig
 + (NSString*)getURL
 {
-    return @"http://mobile-dev-service.optionsxpress.com";
+    return @"http://mobile.api.foo.com";
 }
 @end

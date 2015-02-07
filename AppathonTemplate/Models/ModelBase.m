@@ -126,20 +126,22 @@
 
 - (NSMutableDictionary*)actualRequestToBeSent
 {
-    NSMutableDictionary *wrapper = [NSMutableDictionary dictionary];
-    [wrapper setObject:[self decoratedRequestPart] forKey:@"request"];
-    return wrapper;
+//    NSMutableDictionary *wrapper = [NSMutableDictionary dictionary];
+//    [wrapper setObject:[self decoratedRequestPart] forKey:@"request"];
+//    return wrapper;
+    return [self decoratedRequestPart];
 }
 
 - (NSMutableDictionary*)decoratedRequestPart
 {
-    NSDictionary *dataPart = [self toDict];
+    NSMutableDictionary *dataPart = [self toDict];
     
-    NSMutableDictionary *request = [NSMutableDictionary dictionary];
-    [request setObject:dataPart forKey:@"data"];
+//    NSMutableDictionary *request = [NSMutableDictionary dictionary];
+//    [request setObject:dataPart forKey:@"data"];
 //    [request setObject:@"json" forKey:@"response_format"];
 //    [request setObject:@"s" forKey:@"formFactor"];
-    return request;
+//    return request;
+    return dataPart;
 }
 
 - (NSString*)decoratedJSONRequest
@@ -151,7 +153,7 @@
                                                  encoding:NSUTF8StringEncoding];
     jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\\" withString:@""];
     
-    //    NSLog(@"request is %@",jsonString);
+    NSLog(@"request is %@",jsonString);
     
     
     return jsonString;

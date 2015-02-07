@@ -45,6 +45,7 @@
 		7D52CACA1A861E6000CD56AE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CAC91A861E6000CD56AE /* libc++.dylib */; };
 		7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACB1A861E6F00CD56AE /* libicucore.dylib */; };
 		7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACD1A861E7800CD56AE /* libz.dylib */; };
+		7D90EF201A865DFB00AF79F9 /* Encryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */; };
 		CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B521A8649DC0032DA11 /* SocialShare.m */; };
 		CB665B561A8649DC0032DA11 /* SocialSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B541A8649DC0032DA11 /* SocialSharingViewController.m */; };
 		CB665B5F1A864A500032DA11 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B591A864A500032DA11 /* HomeView.m */; };
@@ -140,6 +141,8 @@
 		7D52CAC91A861E6000CD56AE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7D52CACB1A861E6F00CD56AE /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		7D52CACD1A861E7800CD56AE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7D90EF1E1A865DFB00AF79F9 /* Encryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryptor.h; sourceTree = "<group>"; };
+		7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryptor.m; sourceTree = "<group>"; };
 		CB665B511A8649DC0032DA11 /* SocialShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShare.h; sourceTree = "<group>"; };
 		CB665B521A8649DC0032DA11 /* SocialShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialShare.m; sourceTree = "<group>"; };
 		CB665B531A8649DC0032DA11 /* SocialSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialSharingViewController.h; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 		7D52CA7A1A8618DC00CD56AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7D90EF1E1A865DFB00AF79F9 /* Encryptor.h */,
+				7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */,
 				7D3295341A8634CB00114B7D /* Error.h */,
 				7D3295351A8634CB00114B7D /* Error.m */,
 				7D3295371A86351500114B7D /* Validator.h */,
@@ -578,6 +583,7 @@
 				CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
 				7D32953F1A8638D900114B7D /* UITextField+TextField.m in Sources */,
+				7D90EF201A865DFB00AF79F9 /* Encryptor.m in Sources */,
 				7D3295271A8631D200114B7D /* ModelBase.m in Sources */,
 				7D3295461A863B1600114B7D /* SignView.m in Sources */,
 				CB665B561A8649DC0032DA11 /* SocialSharingViewController.m in Sources */,
