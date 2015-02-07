@@ -15,6 +15,10 @@
 		34C6DFAF1A868D2500C193F6 /* UILabel+AppathonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DFAE1A868D2500C193F6 /* UILabel+AppathonLabel.m */; };
 		34C6DFBA1A86A65C00C193F6 /* LoginAndSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DFB91A86A65C00C193F6 /* LoginAndSignUpViewController.m */; };
 		34C6DFBE1A86B65F00C193F6 /* UIColor+BasicColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DFBD1A86B65F00C193F6 /* UIColor+BasicColors.m */; };
+		34C6DFD11A86CF0100C193F6 /* csmera.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFD01A86CF0100C193F6 /* csmera.png */; };
+		34C6DFD31A86CF8400C193F6 /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFD21A86CF8400C193F6 /* gallery.png */; };
+		34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFDA1A86D63400C193F6 /* cab1.png */; };
+		34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFDC1A86D8A600C193F6 /* rupee.png */; };
 		7D3295271A8631D200114B7D /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295261A8631D200114B7D /* ModelBase.m */; };
 		7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295291A8632AE00114B7D /* LoginModel.m */; };
 		7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32952C1A8632FF00114B7D /* BaseModel.m */; };
@@ -112,6 +116,10 @@
 		34C6DFB91A86A65C00C193F6 /* LoginAndSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAndSignUpViewController.m; sourceTree = "<group>"; };
 		34C6DFBC1A86B65F00C193F6 /* UIColor+BasicColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BasicColors.h"; sourceTree = "<group>"; };
 		34C6DFBD1A86B65F00C193F6 /* UIColor+BasicColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BasicColors.m"; sourceTree = "<group>"; };
+		34C6DFD01A86CF0100C193F6 /* csmera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = csmera.png; sourceTree = "<group>"; };
+		34C6DFD21A86CF8400C193F6 /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
+		34C6DFDA1A86D63400C193F6 /* cab1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cab1.png; sourceTree = "<group>"; };
+		34C6DFDC1A86D8A600C193F6 /* rupee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rupee.png; sourceTree = "<group>"; };
 		7D3295241A8631D200114B7D /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
 		7D3295251A8631D200114B7D /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
 		7D3295261A8631D200114B7D /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
@@ -556,6 +564,10 @@
 			children = (
 				34C6DF931A866D7E00C193F6 /* libsqlite3.dylib */,
 				34C6DFA41A8673CC00C193F6 /* Google.png */,
+				34C6DFD01A86CF0100C193F6 /* csmera.png */,
+				34C6DFD21A86CF8400C193F6 /* gallery.png */,
+				34C6DFDA1A86D63400C193F6 /* cab1.png */,
+				34C6DFDC1A86D8A600C193F6 /* rupee.png */,
 				FC3AEB201A837C6300EA6B03 /* AppathonTemplate */,
 				FC3AEB3A1A837C6600EA6B03 /* AppathonTemplateTests */,
 				FC3AEB1F1A837C6300EA6B03 /* Products */,
@@ -709,11 +721,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C6DFD11A86CF0100C193F6 /* csmera.png in Resources */,
 				CB38BD561A86B3C4001AB6F5 /* splash-01-01@2x.png in Resources */,
 				CB38BD521A86B3C4001AB6F5 /* menu@2x.png in Resources */,
 				FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */,
 				CB38BD541A86B3C4001AB6F5 /* pick my friend pic@2x.png in Resources */,
 				CB38BD4E1A86B3C4001AB6F5 /* close@2x.png in Resources */,
+				34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */,
 				FC3AEB321A837C6400EA6B03 /* LaunchScreen.xib in Resources */,
 				CB38BD571A86B3C4001AB6F5 /* splash-01@2x.png in Resources */,
 				CB38BD4D1A86B3C4001AB6F5 /* call@2x.png in Resources */,
@@ -722,8 +736,10 @@
 				CB38BD511A86B3C4001AB6F5 /* login@2x.png in Resources */,
 				CB38BD581A86B3C4001AB6F5 /* transpernt list@2x.png in Resources */,
 				CB38BD4F1A86B3C4001AB6F5 /* csmera@2x.png in Resources */,
+				34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */,
 				CB38BD551A86B3C4001AB6F5 /* signup@2x.png in Resources */,
 				FC3AEB2F1A837C6400EA6B03 /* Images.xcassets in Resources */,
+				34C6DFD31A86CF8400C193F6 /* gallery.png in Resources */,
 				7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */,
 				CB38BD531A86B3C4001AB6F5 /* noyification side box@2x.png in Resources */,
 			);
@@ -787,7 +803,6 @@
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
 				CB38BDF91A86BCB4001AB6F5 /* BaseHeaderView.m in Sources */,
-				CB665B681A865B300032DA11 /* InitialViewController.m in Sources */,
 				7D3295391A86351500114B7D /* Validator.m in Sources */,
 				7D3295331A86340200114B7D /* AppData.m in Sources */,
 			);
