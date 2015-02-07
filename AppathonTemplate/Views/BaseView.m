@@ -30,6 +30,7 @@
 
 - (void)createViews
 {
+    self.frame = [[UIScreen mainScreen] bounds];
     self.locationManager = [[CLLocationManager alloc] init];
     
     self.locationManager.delegate = self;
@@ -96,10 +97,5 @@
 - (void)hideLoadingMessageForView:(UIView *)view
 {
     [MBProgressHUD hideHUDForView:view animated:YES];
-}
-
-- (void)layoutSubviews
-{
-    self.frame = [[UIScreen mainScreen] bounds];
 }
 @end

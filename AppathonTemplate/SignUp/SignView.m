@@ -17,7 +17,7 @@
     self = [super init];
     if (self)
     {
-        self.backgroundColor = [UIColor greenColor];
+        self.backgroundColor = [UIColor yellowColor];
         [self createViews];
     }
     return self;
@@ -52,12 +52,13 @@
 
 - (void)layoutSubviews
 {
-    [self.userEmailTextField setFrame:CGRectMake(60, 74, 200, 30)];
-    [self.passwordTextField setFrame:CGRectMake(60, 114, 200, 30)];
-    [self.mobileNumberOfUserTextField setFrame:CGRectMake(60, 154, 200, 30)];
-    [self.userNameTextField setFrame:CGRectMake(60, 194, 200, 30)];
+    [super layoutSubviews];
+    [self.userEmailTextField setFrame:CGRectMake(60, 314, 200, 30)];
+    [self.passwordTextField setFrame:CGRectMake(60, 364, 200, 30)];
+    [self.mobileNumberOfUserTextField setFrame:CGRectMake(60, 414, 200, 30)];
+    [self.userNameTextField setFrame:CGRectMake(60, 464, 200, 30)];
     
-    [self.signUpButton setFrame:CGRectMake(60, 234, 200, 30)];
+    [self.signUpButton setFrame:CGRectMake(60, 514, 200, 30)];
 }
 /*
  // Only override drawRect: if you perform custom drawing.
@@ -66,6 +67,15 @@
  // Drawing code
  }
  */
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSUInteger touchCount = [touches count];
+    if (touchCount == 1) {
+        if ([self.delegate respondsToSelector:@selector(removeView)]) {
+            [self.delegate removeView];
+        }
+    }
+}
 - (void)dealloc
 {
 }

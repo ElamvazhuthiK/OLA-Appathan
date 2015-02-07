@@ -1,5 +1,5 @@
 //
-//  SocialShare.h
+//  InitialView.h
 //  AppathonTemplate
 //
 //  Created by Raghunathan on 2/7/15.
@@ -7,8 +7,9 @@
 //
 
 #import "BaseView.h"
-#import <Social/Social.h>
 
-@interface SocialShare : BaseView
+@interface InitialView : BaseView
+
+@property (nonatomic,strong) UIButton *loginBtn,*signUpBtn;
 
 @end

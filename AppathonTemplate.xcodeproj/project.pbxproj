@@ -18,7 +18,6 @@
 		7D32953F1A8638D900114B7D /* UITextField+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32953D1A8638D900114B7D /* UITextField+TextField.m */; };
 		7D3295431A863AF000114B7D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295421A863AF000114B7D /* SignUpViewController.m */; };
 		7D3295461A863B1600114B7D /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295451A863B1600114B7D /* SignView.m */; };
-		7D3295491A86418A00114B7D /* SignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295481A86418A00114B7D /* SignUpModel.m */; };
 		7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */; };
 		7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA7D1A8618DC00CD56AE /* DataParser.m */; };
 		7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA801A8618DC00CD56AE /* ImageCache.m */; };
@@ -45,12 +44,19 @@
 		7D52CACA1A861E6000CD56AE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CAC91A861E6000CD56AE /* libc++.dylib */; };
 		7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACB1A861E6F00CD56AE /* libicucore.dylib */; };
 		7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACD1A861E7800CD56AE /* libz.dylib */; };
+		7D59FDBD1A86A239007C921D /* PickMyFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D59FDBC1A86A239007C921D /* PickMyFriendViewController.m */; };
+		7D59FDC01A86A253007C921D /* PickMyFriendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D59FDBF1A86A253007C921D /* PickMyFriendView.m */; };
 		7D90EF201A865DFB00AF79F9 /* Encryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */; };
+		7D90EF231A86816C00AF79F9 /* SignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D90EF221A86816C00AF79F9 /* SignUpModel.m */; };
 		CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B521A8649DC0032DA11 /* SocialShare.m */; };
 		CB665B561A8649DC0032DA11 /* SocialSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B541A8649DC0032DA11 /* SocialSharingViewController.m */; };
 		CB665B5F1A864A500032DA11 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B591A864A500032DA11 /* HomeView.m */; };
 		CB665B601A864A500032DA11 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B5B1A864A500032DA11 /* HomeViewController.m */; };
 		CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B5E1A864A500032DA11 /* GoogleMapView.m */; };
+		CB665B641A864FC00032DA11 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB665B621A864F840032DA11 /* Social.framework */; };
+		CB665B681A865B300032DA11 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B671A865B300032DA11 /* InitialViewController.m */; };
+		CB665B6B1A865BCF0032DA11 /* InitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B6A1A865BCF0032DA11 /* InitialView.m */; };
+		CB665B711A865F5A0032DA11 /* UIImageView+ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */; };
 		FC3AEB241A837C6400EA6B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB231A837C6400EA6B03 /* main.m */; };
 		FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB261A837C6400EA6B03 /* AppDelegate.m */; };
 		FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */; };
@@ -94,8 +100,6 @@
 		7D3295421A863AF000114B7D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		7D3295441A863B1600114B7D /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		7D3295451A863B1600114B7D /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
-		7D3295471A86418A00114B7D /* SignUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpModel.h; sourceTree = "<group>"; };
-		7D3295481A86418A00114B7D /* SignUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpModel.m; sourceTree = "<group>"; };
 		7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		7D52CA791A8618DC00CD56AE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		7D52CA7C1A8618DC00CD56AE /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
@@ -141,8 +145,15 @@
 		7D52CAC91A861E6000CD56AE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7D52CACB1A861E6F00CD56AE /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		7D52CACD1A861E7800CD56AE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7D59FDBB1A86A239007C921D /* PickMyFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickMyFriendViewController.h; sourceTree = "<group>"; };
+		7D59FDBC1A86A239007C921D /* PickMyFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickMyFriendViewController.m; sourceTree = "<group>"; };
+		7D59FDBE1A86A253007C921D /* PickMyFriendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickMyFriendView.h; sourceTree = "<group>"; };
+		7D59FDBF1A86A253007C921D /* PickMyFriendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickMyFriendView.m; sourceTree = "<group>"; };
+		7D59FDC11A86B0F2007C921D /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		7D90EF1E1A865DFB00AF79F9 /* Encryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryptor.h; sourceTree = "<group>"; };
 		7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryptor.m; sourceTree = "<group>"; };
+		7D90EF211A86816C00AF79F9 /* SignUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpModel.h; sourceTree = "<group>"; };
+		7D90EF221A86816C00AF79F9 /* SignUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpModel.m; sourceTree = "<group>"; };
 		CB665B511A8649DC0032DA11 /* SocialShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShare.h; sourceTree = "<group>"; };
 		CB665B521A8649DC0032DA11 /* SocialShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialShare.m; sourceTree = "<group>"; };
 		CB665B531A8649DC0032DA11 /* SocialSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialSharingViewController.h; sourceTree = "<group>"; };
@@ -153,6 +164,13 @@
 		CB665B5B1A864A500032DA11 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CB665B5D1A864A500032DA11 /* GoogleMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleMapView.h; sourceTree = "<group>"; };
 		CB665B5E1A864A500032DA11 /* GoogleMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleMapView.m; sourceTree = "<group>"; };
+		CB665B621A864F840032DA11 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CB665B661A865B300032DA11 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = InitialView/InitialViewController.h; sourceTree = "<group>"; };
+		CB665B671A865B300032DA11 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = InitialView/InitialViewController.m; sourceTree = "<group>"; };
+		CB665B691A865BCF0032DA11 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialView.h; path = InitialView/InitialView.h; sourceTree = "<group>"; };
+		CB665B6A1A865BCF0032DA11 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = InitialView/InitialView.m; sourceTree = "<group>"; };
+		CB665B6F1A865F5A0032DA11 /* UIImageView+ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageView.h"; sourceTree = "<group>"; };
+		CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ImageView.m"; sourceTree = "<group>"; };
 		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB665B641A864FC00032DA11 /* Social.framework in Frameworks */,
 				7D52CAC81A861E4F00CD56AE /* CoreLocation.framework in Frameworks */,
 				7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */,
 				7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */,
@@ -203,6 +222,8 @@
 				7D32953B1A8638D900114B7D /* UIButton+Button.m */,
 				7D32953C1A8638D900114B7D /* UITextField+TextField.h */,
 				7D32953D1A8638D900114B7D /* UITextField+TextField.m */,
+				CB665B6F1A865F5A0032DA11 /* UIImageView+ImageView.h */,
+				CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -210,6 +231,7 @@
 		7D52CA771A8618DC00CD56AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB665B621A864F840032DA11 /* Social.framework */,
 				7D52CACD1A861E7800CD56AE /* libz.dylib */,
 				7D52CACB1A861E6F00CD56AE /* libicucore.dylib */,
 				7D52CAC91A861E6000CD56AE /* libc++.dylib */,
@@ -230,6 +252,7 @@
 		7D52CA7A1A8618DC00CD56AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7D59FDC11A86B0F2007C921D /* Macros.h */,
 				7D90EF1E1A865DFB00AF79F9 /* Encryptor.h */,
 				7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */,
 				7D3295341A8634CB00114B7D /* Error.h */,
@@ -365,15 +388,27 @@
 		7D52CAB11A8619F600CD56AE /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				7D90EF211A86816C00AF79F9 /* SignUpModel.h */,
+				7D90EF221A86816C00AF79F9 /* SignUpModel.m */,
 				7D3295411A863AF000114B7D /* SignUpViewController.h */,
 				7D3295421A863AF000114B7D /* SignUpViewController.m */,
 				7D3295441A863B1600114B7D /* SignView.h */,
 				7D3295451A863B1600114B7D /* SignView.m */,
-				7D3295471A86418A00114B7D /* SignUpModel.h */,
-				7D3295481A86418A00114B7D /* SignUpModel.m */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
+		};
+		7D59FDBA1A86A204007C921D /* PickMyFriend */ = {
+			isa = PBXGroup;
+			children = (
+				7D59FDBB1A86A239007C921D /* PickMyFriendViewController.h */,
+				7D59FDBC1A86A239007C921D /* PickMyFriendViewController.m */,
+				7D59FDBE1A86A253007C921D /* PickMyFriendView.h */,
+				7D59FDBF1A86A253007C921D /* PickMyFriendView.m */,
+			);
+			name = PickMyFriend;
+			path = AppathonTemplate/PickMyFriend;
+			sourceTree = SOURCE_ROOT;
 		};
 		CB665B501A8649DC0032DA11 /* SocialShare */ = {
 			isa = PBXGroup;
@@ -406,6 +441,17 @@
 			path = MapView;
 			sourceTree = "<group>";
 		};
+		CB665B651A865AEF0032DA11 /* InitialView */ = {
+			isa = PBXGroup;
+			children = (
+				CB665B661A865B300032DA11 /* InitialViewController.h */,
+				CB665B671A865B300032DA11 /* InitialViewController.m */,
+				CB665B691A865BCF0032DA11 /* InitialView.h */,
+				CB665B6A1A865BCF0032DA11 /* InitialView.m */,
+			);
+			name = InitialView;
+			sourceTree = "<group>";
+		};
 		FC3AEB151A837C6100EA6B03 = {
 			isa = PBXGroup;
 			children = (
@@ -427,10 +473,12 @@
 		FC3AEB201A837C6300EA6B03 /* AppathonTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CB665B651A865AEF0032DA11 /* InitialView */,
 				CB665B571A864A500032DA11 /* HomeView */,
 				CB665B5C1A864A500032DA11 /* MapView */,
 				CB665B501A8649DC0032DA11 /* SocialShare */,
 				347E45671A862A20004A9006 /* Categories */,
+				7D59FDBA1A86A204007C921D /* PickMyFriend */,
 				7D52CAB01A8619F600CD56AE /* Login */,
 				7D52CAB11A8619F600CD56AE /* SignUp */,
 				7D52CA8F1A8618DC00CD56AE /* BaseModels */,
@@ -595,18 +643,23 @@
 				7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */,
 				CB665B5F1A864A500032DA11 /* HomeView.m in Sources */,
 				7D52CAB41A861A4A00CD56AE /* LoginViewController.m in Sources */,
+				7D90EF231A86816C00AF79F9 /* SignUpModel.m in Sources */,
 				7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */,
+				7D59FDC01A86A253007C921D /* PickMyFriendView.m in Sources */,
 				7D52CAAE1A8618DC00CD56AE /* LinkedInLoginView.m in Sources */,
 				7D52CAAC1A8618DC00CD56AE /* BaseView.m in Sources */,
 				CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */,
+				7D59FDBD1A86A239007C921D /* PickMyFriendViewController.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
-				7D3295491A86418A00114B7D /* SignUpModel.m in Sources */,
+				CB665B711A865F5A0032DA11 /* UIImageView+ImageView.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
+				CB665B6B1A865BCF0032DA11 /* InitialView.m in Sources */,
 				CB665B601A864A500032DA11 /* HomeViewController.m in Sources */,
 				FC3AEB241A837C6400EA6B03 /* main.m in Sources */,
 				7D52CAA61A8618DC00CD56AE /* LocationSorter.m in Sources */,
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
+				CB665B681A865B300032DA11 /* InitialViewController.m in Sources */,
 				7D3295391A86351500114B7D /* Validator.m in Sources */,
 				7D3295331A86340200114B7D /* AppData.m in Sources */,
 			);
