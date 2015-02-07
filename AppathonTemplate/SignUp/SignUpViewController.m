@@ -33,10 +33,18 @@
 - (void)loadView
 {
     self.signUpView = [[SignView alloc] init];
-    self.view = self.signUpView;
+    [self.view addSubview:self.signUpView];
+    //[self.view   addSubView :self.signUpView];
     
     [self.signUpView.signUpButton addTarget:self action:@selector(signUpNewUser:) forControlEvents:UIControlEventTouchUpInside];
 }
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -73,14 +81,4 @@
 //        [missedRequieredFields show];
 //    }
 }
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
 @end

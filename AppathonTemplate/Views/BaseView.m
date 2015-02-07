@@ -12,6 +12,7 @@
 @interface BaseView()
 
 @property (nonatomic,strong) MBProgressHUD *loadingView;
+@property (nonatomic,strong) UIImageView *imageView;
 
 @end
 
@@ -29,6 +30,17 @@
 }
 
 - (void)createViews
+{
+    self.frame = [[UIScreen mainScreen] bounds];
+    
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-01-01.png"] bgColor:[UIColor clearColor]];
+    [self addSubview:self.imageView];
+    
+    self.fullContentView = [[UIView alloc] initWithFrame:self.bounds];
+    [self addSubview:self.fullContentView];
+}
+
+- (void)createLocationManger
 {
     self.locationManager = [[CLLocationManager alloc] init];
     
@@ -100,6 +112,10 @@
 
 - (void)layoutSubviews
 {
-    self.frame = [[UIScreen mainScreen] bounds];
+    [super layoutSubviews];
+    
+    self.imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    self.fullContentView.frame = CGRectMake(0,0, self.frame.size.width, self.frame.size.height );
+    
 }
 @end

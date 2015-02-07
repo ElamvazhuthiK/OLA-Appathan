@@ -12,19 +12,21 @@
 
 @end
 @implementation SignView
+
 - (instancetype)init
 {
     self = [super init];
     if (self)
     {
         self.backgroundColor = [UIColor greenColor];
-        [self createViews];
     }
     return self;
 }
 
 - (void)createViews
 {
+    [super createViews];
+    
     self.userEmailTextField = [[UITextField alloc] initWithPlaceholder:@"email" andBackgroundColor:[UIColor clearColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentCenter andBorderStyle:UITextBorderStyleLine];
     [self addSubview:self.userEmailTextField];
     
@@ -59,17 +61,9 @@
     
     [self.signUpButton setFrame:CGRectMake(60, 234, 200, 30)];
 }
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+
 - (void)dealloc
 {
 }
 
-//@implementation SignView
-//
 @end

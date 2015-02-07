@@ -27,7 +27,7 @@
     InitialViewController *viewController = [[InitialViewController alloc] init];
 
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-//    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    self.navigationController.navigationBarHidden = YES;
     self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

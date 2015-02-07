@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Market Simplified. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseHeaderViewController.h"
 
-@interface SummaryViewController : BaseViewController
+@interface SummaryViewController : BaseHeaderViewController
 
 @end

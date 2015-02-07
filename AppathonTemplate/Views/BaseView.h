@@ -19,6 +19,9 @@
 @property(nonatomic,weak) id<BaseViewDelegate>delegate;
 @property (nonatomic,strong) CLLocationManager *locationManager;
 
+
+@property (nonatomic,strong) UIView *fullContentView;
+
 - (void)createViews;
 
 - (void)showLoadingMessage:(NSString *)message addedToView:(UIView *)view;

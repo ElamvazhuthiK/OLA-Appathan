@@ -10,6 +10,7 @@
 #import "InitialView.h"
 #import "SignUpViewController.h"
 #import "LoginViewController.h"
+#import "SummaryViewController.h"
 
 @interface InitialViewController ()
 
@@ -18,11 +19,18 @@
 @end
 
 @implementation InitialViewController
-
 - (void)loadView
 {
+    [super loadView];
     self.iniView = [[InitialView alloc] init];
-    self.view = self.iniView;
+    [self.view addSubview:self.iniView];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.iniView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 - (void)viewDidLoad
@@ -37,31 +45,25 @@
 
 - (void)btnClicked:(UIButton *)sender
 {
-    if (sender == self.iniView.loginBtn)
-    {
-        LoginViewController *loginVC = [[LoginViewController alloc] init];
-        [self navigateToViewController:loginVC];
-    }
-    else
-    {
-        SignUpViewController *signupVc = [[SignUpViewController alloc] init];
-        [self navigateToViewController:signupVc];
-    }
+    SummaryViewController *vc = [[SummaryViewController alloc] init];
+    [self navigateToViewController:vc];
+    
+//    if (sender == self.iniView.loginBtn)
+//    {
+//        LoginViewController *loginVC = [[LoginViewController alloc] init];
+//        [self navigateToViewController:loginVC];
+//    }
+//    else
+//    {
+//        SignUpViewController *signupVc = [[SignUpViewController alloc] init];
+//        [self navigateToViewController:signupVc];
+//    }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
