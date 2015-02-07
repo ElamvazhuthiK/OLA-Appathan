@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		347E456A1A862A9E004A9006 /* UITextField+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 347E45691A862A9E004A9006 /* UITextField+TextField.m */; };
+		347E45711A86303A004A9006 /* UIButton+Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 347E45701A86303A004A9006 /* UIButton+Button.m */; };
 		7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */; };
 		7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA7D1A8618DC00CD56AE /* DataParser.m */; };
 		7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA801A8618DC00CD56AE /* ImageCache.m */; };
@@ -52,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		347E45681A862A9E004A9006 /* UITextField+TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+TextField.h"; sourceTree = "<group>"; };
+		347E45691A862A9E004A9006 /* UITextField+TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TextField.m"; sourceTree = "<group>"; };
+		347E456B1A862BE4004A9006 /* AppathonTemplate-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppathonTemplate-PrefixHeader.pch"; sourceTree = "<group>"; };
+		347E456F1A86303A004A9006 /* UIButton+Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Button.h"; sourceTree = "<group>"; };
+		347E45701A86303A004A9006 /* UIButton+Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Button.m"; sourceTree = "<group>"; };
 		7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		7D52CA791A8618DC00CD56AE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		7D52CA7C1A8618DC00CD56AE /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
@@ -140,6 +147,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		347E45671A862A20004A9006 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				347E45681A862A9E004A9006 /* UITextField+TextField.h */,
+				347E45691A862A9E004A9006 /* UITextField+TextField.m */,
+				347E456F1A86303A004A9006 /* UIButton+Button.h */,
+				347E45701A86303A004A9006 /* UIButton+Button.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		7D52CA771A8618DC00CD56AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +324,7 @@
 		FC3AEB201A837C6300EA6B03 /* AppathonTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				347E45671A862A20004A9006 /* Categories */,
 				7D52CAB01A8619F600CD56AE /* Login */,
 				7D52CAB11A8619F600CD56AE /* SignUp */,
 				7D52CA8F1A8618DC00CD56AE /* BaseModels */,
@@ -327,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3AEB221A837C6400EA6B03 /* Info.plist */,
+				347E456B1A862BE4004A9006 /* AppathonTemplate-PrefixHeader.pch */,
 				FC3AEB231A837C6400EA6B03 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -457,12 +477,14 @@
 				7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */,
 				7D52CAB41A861A4A00CD56AE /* LoginViewController.m in Sources */,
 				7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */,
+				347E45711A86303A004A9006 /* UIButton+Button.m in Sources */,
 				7D52CAAE1A8618DC00CD56AE /* LinkedInLoginView.m in Sources */,
 				7D52CAAC1A8618DC00CD56AE /* BaseView.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
 				FC3AEB241A837C6400EA6B03 /* main.m in Sources */,
 				7D52CAA61A8618DC00CD56AE /* LocationSorter.m in Sources */,
+				347E456A1A862A9E004A9006 /* UITextField+TextField.m in Sources */,
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
 			);
@@ -596,6 +618,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppathonTemplate/Frameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppathonTemplate/AppathonTemplate-PrefixHeader.pch";
 				INFOPLIST_FILE = AppathonTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -614,6 +638,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppathonTemplate/Frameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppathonTemplate/AppathonTemplate-PrefixHeader.pch";
 				INFOPLIST_FILE = AppathonTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
