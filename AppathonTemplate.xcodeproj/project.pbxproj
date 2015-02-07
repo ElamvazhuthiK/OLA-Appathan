@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34C6DF941A866D7E00C193F6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C6DF931A866D7E00C193F6 /* libsqlite3.dylib */; };
+		34C6DF981A866DA700C193F6 /* SQLiteClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DF971A866DA700C193F6 /* SQLiteClass.m */; };
+		34C6DFA51A8673CC00C193F6 /* Google.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFA41A8673CC00C193F6 /* Google.png */; };
 		7D3295271A8631D200114B7D /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295261A8631D200114B7D /* ModelBase.m */; };
 		7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295291A8632AE00114B7D /* LoginModel.m */; };
 		7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32952C1A8632FF00114B7D /* BaseModel.m */; };
@@ -77,6 +80,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34C6DF931A866D7E00C193F6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		34C6DF961A866DA700C193F6 /* SQLiteClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteClass.h; sourceTree = "<group>"; };
+		34C6DF971A866DA700C193F6 /* SQLiteClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteClass.m; sourceTree = "<group>"; };
+		34C6DFA41A8673CC00C193F6 /* Google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Google.png; sourceTree = "<group>"; };
 		7D3295241A8631D200114B7D /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
 		7D3295251A8631D200114B7D /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
 		7D3295261A8631D200114B7D /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
@@ -192,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C6DF941A866D7E00C193F6 /* libsqlite3.dylib in Frameworks */,
 				CB665B641A864FC00032DA11 /* Social.framework in Frameworks */,
 				7D52CAC81A861E4F00CD56AE /* CoreLocation.framework in Frameworks */,
 				7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */,
@@ -231,6 +239,15 @@
 				CB665B7D1A867C9B0032DA11 /* UILabel+Label.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		34C6DF951A866DA700C193F6 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				34C6DF961A866DA700C193F6 /* SQLiteClass.h */,
+				34C6DF971A866DA700C193F6 /* SQLiteClass.m */,
+			);
+			path = SQLite;
 			sourceTree = "<group>";
 		};
 		7D52CA771A8618DC00CD56AE /* Frameworks */ = {
@@ -458,6 +475,8 @@
 		FC3AEB151A837C6100EA6B03 = {
 			isa = PBXGroup;
 			children = (
+				34C6DF931A866D7E00C193F6 /* libsqlite3.dylib */,
+				34C6DFA41A8673CC00C193F6 /* Google.png */,
 				FC3AEB201A837C6300EA6B03 /* AppathonTemplate */,
 				FC3AEB3A1A837C6600EA6B03 /* AppathonTemplateTests */,
 				FC3AEB1F1A837C6300EA6B03 /* Products */,
@@ -477,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				CB665B721A86790C0032DA11 /* SummaryView */,
+				34C6DF951A866DA700C193F6 /* SQLite */,
 				CB665B651A865AEF0032DA11 /* InitialView */,
 				CB665B571A864A500032DA11 /* HomeView */,
 				CB665B5C1A864A500032DA11 /* MapView */,
@@ -609,6 +629,7 @@
 			files = (
 				FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */,
 				FC3AEB321A837C6400EA6B03 /* LaunchScreen.xib in Resources */,
+				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
 				FC3AEB2F1A837C6400EA6B03 /* Images.xcassets in Resources */,
 				7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */,
 			);
@@ -630,6 +651,7 @@
 			files = (
 				7D32953E1A8638D900114B7D /* UIButton+Button.m in Sources */,
 				7D3295361A8634CB00114B7D /* Error.m in Sources */,
+				34C6DF981A866DA700C193F6 /* SQLiteClass.m in Sources */,
 				7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
 				CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */,
