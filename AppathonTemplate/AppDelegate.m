@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RestaurentDetailsViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,7 @@
     
     [GMSServices provideAPIKey:@"AIzaSyAeoOD842NbdMbPjHcNxNFHlOXnx-7PBCU"];
     
-    RestaurentDetailsViewController *viewController = [[RestaurentDetailsViewController alloc] init];
+    LoginViewController *viewController = [[LoginViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
     self.window.rootViewController = self.navigationController;

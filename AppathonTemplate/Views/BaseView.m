@@ -59,16 +59,16 @@
 }
 
 
-- (instancetype)initWithViewController:(BaseViewController *)viewController
-{
-    self = [super init];
-    
-    if (self)
-    {
-        self.viewController = viewController;
-    }
-    
-    return self;
-}
+//- (instancetype)initWithViewController:(BaseViewController *)viewController
+//{
+//    self = [super init];
+//    
+//    if (self)
+//    {
+//        self.viewController = viewController;
+//    }
+//    
+//    return self;
+//}
 
 @end

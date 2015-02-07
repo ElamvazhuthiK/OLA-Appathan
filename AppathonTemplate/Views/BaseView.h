@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-
+@protocol BaseViewDelegate<NSObject>
+@end
 @interface BaseView : UIView
+@property(nonatomic,weak) id<BaseViewDelegate>delegate;
+//@property (nonatomic,weak) BaseViewController *viewController;
 
-@property (nonatomic,weak) BaseViewController *viewController;
-
-- (instancetype)initWithViewController:(BaseViewController *)viewController;
+//- (instancetype)initWithViewController:(BaseViewController *)viewController;
 - (void)createViews;
 
 - (void)showLoadingMessage:(NSString *)message addedToView:(UIView *)view;

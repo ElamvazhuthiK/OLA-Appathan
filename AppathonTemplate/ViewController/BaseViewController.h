@@ -11,7 +11,7 @@
 
 @interface BaseViewController : UIViewController
 
-@property (nonatomic,strong) GMSMapView *googleMapView;
+//@property (nonatomic,strong) GMSMapView *googleMapView;
 
 - (void)navigateToViewController:(UIViewController *)viewController;
 - (void)createViews;
