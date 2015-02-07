@@ -10,4 +10,11 @@
 
 @interface SignView : BaseView
 
+@property(nonatomic, strong)UITextField *userEmailTextField;
+@property(nonatomic, strong)UITextField *passwordTextField;
+@property(nonatomic, strong)UITextField *mobileNumberOfUserTextField;
+@property(nonatomic, strong)UITextField *userNameTextField;
+
+@property(nonatomic, strong)UIButton *signUpButton;
+
 @end
