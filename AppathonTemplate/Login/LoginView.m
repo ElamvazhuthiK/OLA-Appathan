@@ -36,7 +36,6 @@
     self.passwordTextField.secureTextEntry = YES;
     [self addSubview:self.passwordTextField];
     
-    
     self.submitButton = [[UIButton alloc] initWithTitle:@"Submit" andBackgroundImage:@"" andTextColor:[UIColor blueColor]];
     [self addSubview:self.submitButton];
     
