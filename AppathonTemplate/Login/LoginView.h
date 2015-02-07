@@ -10,8 +10,9 @@
 @protocol LoginViewDelegate <BaseViewDelegate>
 @end
 @interface LoginView : BaseView
-@property(nonatomic, strong)UITextField *txtFieldUsername;
-@property(nonatomic, strong)UITextField *txtFieldPassword;
-@property(nonatomic, strong)UIButton *btnSignUp;
-@property(nonatomic, strong)UIButton *btnSubmit;
+@property(nonatomic, strong)UITextField *userEmailTextField;
+@property(nonatomic, strong)UITextField *passwordTextField;
+@property(nonatomic, strong)UIButton *signUpButton;
+@property(nonatomic, strong)UIButton *submitButton;
+
 @end
