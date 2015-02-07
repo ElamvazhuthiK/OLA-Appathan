@@ -31,7 +31,7 @@
 
 - (void)createViews
 {
-    self.headerLabel = [UILabel alloc]initWithText:@"Test" textAlignment:NSTextAlignmentLeft textColor:[UIColor blackColor] font:[UIFont fontWithName:COMMONBOLDFONT size:18.0];
+    //self.headerLabel = [UILabel alloc]initWithText:@"Test" textAlignment:NSTextAlignmentLeft textColor:[UIColor blackColor] font:[UIFont fontWithName:COMMONBOLDFONT size:18.0];
     
 }
 

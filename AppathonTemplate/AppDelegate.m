@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "InitialViewController.h"
+#import "LoginAndSignUpViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,10 +24,11 @@
     
 //    [GMSServices provideAPIKey:@"AIzaSyAeoOD842NbdMbPjHcNxNFHlOXnx-7PBCU"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    InitialViewController *viewController = [[InitialViewController alloc] init];
+    LoginAndSignUpViewController *viewController = [[LoginAndSignUpViewController alloc] init];
 
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 //    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    
     self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
