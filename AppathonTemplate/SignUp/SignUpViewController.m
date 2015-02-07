@@ -8,7 +8,7 @@
 
 #import "SignUpViewController.h"
 #import "SocialSharingViewController.h"
-
+#import "SelectedTripDetailsViewController.h"
 #import "SignView.h"
 #import "SignUpModel.h"
 
@@ -55,8 +55,8 @@
 
 - (void)signUpNewUser:(UIButton *)sender
 {
-    SocialSharingViewController *socialSharevc = [[SocialSharingViewController alloc] init];
-    [self.navigationController pushViewController:socialSharevc animated:YES];
+    SelectedTripDetailsViewController *selTripvc = [[SelectedTripDetailsViewController alloc] init];
+    [self.navigationController pushViewController:selTripvc animated:YES];
     
 //    if (self.signUpView.userEmailTextField.text.length > 0 && self.signUpView.passwordTextField.text.length > 0 && self.signUpView.mobileNumberOfUserTextField.text.length > 0 && self.signUpView.userNameTextField.text.length > 0)
 //    {

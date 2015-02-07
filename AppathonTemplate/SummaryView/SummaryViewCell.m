@@ -66,7 +66,6 @@
     self.carTypelabel.frame = CGRectMake(startXPos, singleLabelHeight*3, fullWidth, singleLabelHeight);
     
     self.imageView.frame = CGRectMake(fullWidth, startYPos + 5, self.contentView.frame.size.width - (fullWidth + 10), fullHeight - 10);
-    
-}
+ }
 
 @end

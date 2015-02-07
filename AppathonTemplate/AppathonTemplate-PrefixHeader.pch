@@ -26,8 +26,10 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "UITextField+TextField.h"
+#import "UIColor+BasicColors.h"
 #import "UIButton+Button.h"
 #import "UIImageView+ImageView.h"
 #import "UILabel+Label.h"
+#import "UILabel+AppathonLabel.h"
 #import "Header.h"
 #endif
