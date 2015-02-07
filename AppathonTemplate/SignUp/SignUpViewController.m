@@ -53,13 +53,13 @@
 //        @property(nonatomic, strong) NSString *mobile;
 //        @property(nonatomic, strong) NSString *source;
 //        @property(nonatomic, strong) NSString *device_id;
-        loginRequest.email = self.signUpView.userEmailTextField.text;
-        loginRequest.password = self.signUpView.passwordTextField.text;
-        loginRequest.email = self.signUpView.mobileNumberOfUserTextField.text;
-        loginRequest.email = self.signUpView.userEmailTextField.text;
+//        loginRequest.email = self.signUpView.userEmailTextField.text;
+//        loginRequest.password = self.signUpView.passwordTextField.text;
+//        loginRequest.email = self.signUpView.mobileNumberOfUserTextField.text;
+//        loginRequest.email = self.signUpView.userEmailTextField.text;
 
         
-        [self.signUpModel sendRequest:]
+//        [self.signUpModel sendRequest:]
     }
     else
     {
