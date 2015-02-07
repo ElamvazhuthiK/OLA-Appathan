@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginViewController.h"
+#import "InitialViewController.h"
 
 @interface AppDelegate ()
 
-//@property (nonatomic,strong)UINavigationController *navigationController;
+@property (nonatomic,strong)UINavigationController *navigationController;
 
 @end
 
@@ -24,11 +24,11 @@
     
 //    [GMSServices provideAPIKey:@"AIzaSyAeoOD842NbdMbPjHcNxNFHlOXnx-7PBCU"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    LoginViewController *viewController = [[LoginViewController alloc] init];
-//    NSLog(@"viewController %@", viewController.view);
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    InitialViewController *viewController = [[InitialViewController alloc] init];
+
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 //    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

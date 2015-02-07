@@ -7,16 +7,46 @@
 //
 
 #import "InitialViewController.h"
+#import "InitialView.h"
+#import "SignUpViewController.h"
+#import "LoginViewController.h"
 
 @interface InitialViewController ()
+
+@property (nonatomic,strong) InitialView *iniView;
 
 @end
 
 @implementation InitialViewController
 
-- (void)viewDidLoad {
+- (void)loadView
+{
+    self.iniView = [[InitialView alloc] init];
+    self.view = self.iniView;
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.iniView.loginBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.iniView.signUpBtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)btnClicked:(UIButton *)sender
+{
+    if (sender == self.iniView.loginBtn)
+    {
+        LoginViewController *loginVC = [[LoginViewController alloc] init];
+        [self navigateToViewController:loginVC];
+    }
+    else
+    {
+        SignUpViewController *signupVc = [[SignUpViewController alloc] init];
+        [self navigateToViewController:signupVc];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

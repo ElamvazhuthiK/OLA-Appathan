@@ -18,7 +18,6 @@
 		7D32953F1A8638D900114B7D /* UITextField+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32953D1A8638D900114B7D /* UITextField+TextField.m */; };
 		7D3295431A863AF000114B7D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295421A863AF000114B7D /* SignUpViewController.m */; };
 		7D3295461A863B1600114B7D /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295451A863B1600114B7D /* SignView.m */; };
-		7D3295491A86418A00114B7D /* SignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295481A86418A00114B7D /* SignUpModel.m */; };
 		7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */; };
 		7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA7D1A8618DC00CD56AE /* DataParser.m */; };
 		7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA801A8618DC00CD56AE /* ImageCache.m */; };
@@ -53,6 +52,7 @@
 		CB665B641A864FC00032DA11 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB665B621A864F840032DA11 /* Social.framework */; };
 		CB665B681A865B300032DA11 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B671A865B300032DA11 /* InitialViewController.m */; };
 		CB665B6B1A865BCF0032DA11 /* InitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B6A1A865BCF0032DA11 /* InitialView.m */; };
+		CB665B711A865F5A0032DA11 /* UIImageView+ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */; };
 		FC3AEB241A837C6400EA6B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB231A837C6400EA6B03 /* main.m */; };
 		FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB261A837C6400EA6B03 /* AppDelegate.m */; };
 		FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */; };
@@ -96,8 +96,6 @@
 		7D3295421A863AF000114B7D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		7D3295441A863B1600114B7D /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		7D3295451A863B1600114B7D /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
-		7D3295471A86418A00114B7D /* SignUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpModel.h; sourceTree = "<group>"; };
-		7D3295481A86418A00114B7D /* SignUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpModel.m; sourceTree = "<group>"; };
 		7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		7D52CA791A8618DC00CD56AE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		7D52CA7C1A8618DC00CD56AE /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
@@ -158,6 +156,8 @@
 		CB665B671A865B300032DA11 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = InitialView/InitialViewController.m; sourceTree = "<group>"; };
 		CB665B691A865BCF0032DA11 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialView.h; path = InitialView/InitialView.h; sourceTree = "<group>"; };
 		CB665B6A1A865BCF0032DA11 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = InitialView/InitialView.m; sourceTree = "<group>"; };
+		CB665B6F1A865F5A0032DA11 /* UIImageView+ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageView.h"; sourceTree = "<group>"; };
+		CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ImageView.m"; sourceTree = "<group>"; };
 		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -209,6 +209,8 @@
 				7D32953B1A8638D900114B7D /* UIButton+Button.m */,
 				7D32953C1A8638D900114B7D /* UITextField+TextField.h */,
 				7D32953D1A8638D900114B7D /* UITextField+TextField.m */,
+				CB665B6F1A865F5A0032DA11 /* UIImageView+ImageView.h */,
+				CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -374,8 +376,6 @@
 				7D3295421A863AF000114B7D /* SignUpViewController.m */,
 				7D3295441A863B1600114B7D /* SignView.h */,
 				7D3295451A863B1600114B7D /* SignView.m */,
-				7D3295471A86418A00114B7D /* SignUpModel.h */,
-				7D3295481A86418A00114B7D /* SignUpModel.m */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -616,7 +616,7 @@
 				7D52CAAC1A8618DC00CD56AE /* BaseView.m in Sources */,
 				CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
-				7D3295491A86418A00114B7D /* SignUpModel.m in Sources */,
+				CB665B711A865F5A0032DA11 /* UIImageView+ImageView.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
 				CB665B6B1A865BCF0032DA11 /* InitialView.m in Sources */,
 				CB665B601A864A500032DA11 /* HomeViewController.m in Sources */,

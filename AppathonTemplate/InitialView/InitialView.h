@@ -10,4 +10,6 @@
 
 @interface InitialView : BaseView
 
+@property (nonatomic,strong) UIButton *loginBtn,*signUpBtn;
+
 @end

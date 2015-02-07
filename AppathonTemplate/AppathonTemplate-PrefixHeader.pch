@@ -27,4 +27,5 @@
 #import <Foundation/Foundation.h>
 #import "UITextField+TextField.h"
 #import "UIButton+Button.h"
+#import "UIImageView+ImageView.h"
 #endif
