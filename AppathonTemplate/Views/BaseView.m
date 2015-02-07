@@ -70,5 +70,8 @@
 //    
 //    return self;
 //}
-
+- (void)layoutSubviews
+{
+    self.frame = [[UIScreen mainScreen] bounds];
+}
 @end

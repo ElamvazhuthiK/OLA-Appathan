@@ -13,7 +13,7 @@
 
 //@property (nonatomic,strong) GMSMapView *googleMapView;
 
-- (void)navigateToViewController:(UIViewController *)viewController;
-- (void)createViews;
+//- (void)navigateToViewController:(UIViewController *)viewController;
+//- (void)createViews;
 
 @end

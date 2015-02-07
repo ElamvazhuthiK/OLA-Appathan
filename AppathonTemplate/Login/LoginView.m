@@ -7,15 +7,26 @@
 //
 
 #import "LoginView.h"
+@interface LoginView()
 
+@end
 @implementation LoginView
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor greenColor];
+        [self createViews];
     }
     return self;
+}
+- (void)createViews
+{
+    
+}
+- (void)layoutSubviews
+{
+    
 }
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -24,5 +35,7 @@
     // Drawing code
 }
 */
-
+- (void)dealloc
+{
+}
 @end

@@ -11,7 +11,7 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic,strong)UINavigationController *navigationController;
+//@property (nonatomic,strong)UINavigationController *navigationController;
 
 @end
 
@@ -22,12 +22,13 @@
 {
     // Override point for customization after application launch.
     
-    [GMSServices provideAPIKey:@"AIzaSyAeoOD842NbdMbPjHcNxNFHlOXnx-7PBCU"];
-    
+//    [GMSServices provideAPIKey:@"AIzaSyAeoOD842NbdMbPjHcNxNFHlOXnx-7PBCU"];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     LoginViewController *viewController = [[LoginViewController alloc] init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-    self.window.rootViewController = self.navigationController;
+//    NSLog(@"viewController %@", viewController.view);
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

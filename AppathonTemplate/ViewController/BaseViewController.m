@@ -13,29 +13,10 @@
 @end
 
 @implementation BaseViewController
-
-- (instancetype)init
-{
-    self = [super init];
-    
-    if (self)
-    {
-        [self createViews];
-    }
-    
-    return self;
-}
-
-- (void)createViews
-{
-    
-}
-
-- (void)navigateToViewController:(UIViewController *)viewController
-{
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
+//- (void)navigateToViewController:(UIViewController *)viewController
+//{
+//    [self.navigationController pushViewController:viewController animated:YES];
+//}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
