@@ -20,8 +20,8 @@
 - (void)sendRequest:(id<JSONModelBaseProtocol>)request
 {
     id classRequest = [request class];
-    NSString *urlToConnect = [NSString stringWithFormat:@"%@", [AppConfig getURL]];
-
+    NSString *urlToConnect = [NSString stringWithFormat:@"%@/%@/%@/%@", [AppConfig getURL], [classRequest getVersion],[classRequest getGroup], [classRequest getName]];
+    
     NSMutableURLRequest *therequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlToConnect]];
     [therequest setHTTPMethod:@"POST"];
     [therequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

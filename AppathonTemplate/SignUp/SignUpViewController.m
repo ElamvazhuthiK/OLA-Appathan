@@ -7,7 +7,6 @@
 //
 
 #import "SignUpViewController.h"
-
 @implementation SignUpViewController
 
 @end

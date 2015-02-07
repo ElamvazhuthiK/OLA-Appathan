@@ -4,6 +4,9 @@
 @protocol JSONModelBaseProtocol <NSObject>
 
 @required
++ (NSString*)getName;
++ (NSString*)getGroup;
++ (NSString*)getVersion;
 - (NSDictionary*)toDict;
 - (id)initWithDict:(NSDictionary*)dict;
 - (NSString*)toJSONString;
