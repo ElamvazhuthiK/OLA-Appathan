@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "LoginView.h"
 
+#import "SignUpViewController.h"
+
 @interface LoginViewController ()
 @property (nonatomic, retain)LoginView *loginView;
 @end
@@ -58,7 +60,8 @@
 
 - (void)signUpNewUser:(UIButton *)sender
 {
-    
+    SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
+    [self.navigationController pushViewController:signUpViewController animated:YES];
 }
 /*
 #pragma mark - Navigation
