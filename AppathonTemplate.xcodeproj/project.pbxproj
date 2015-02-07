@@ -14,6 +14,8 @@
 		7D3295331A86340200114B7D /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295321A86340200114B7D /* AppData.m */; };
 		7D3295361A8634CB00114B7D /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295351A8634CB00114B7D /* Error.m */; };
 		7D3295391A86351500114B7D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295381A86351500114B7D /* Validator.m */; };
+		7D32953E1A8638D900114B7D /* UIButton+Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32953B1A8638D900114B7D /* UIButton+Button.m */; };
+		7D32953F1A8638D900114B7D /* UITextField+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32953D1A8638D900114B7D /* UITextField+TextField.m */; };
 		7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */; };
 		7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA7D1A8618DC00CD56AE /* DataParser.m */; };
 		7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA801A8618DC00CD56AE /* ImageCache.m */; };
@@ -74,7 +76,11 @@
 		7D3295351A8634CB00114B7D /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		7D3295371A86351500114B7D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		7D3295381A86351500114B7D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
-
+		7D32953A1A8638D900114B7D /* UIButton+Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Button.h"; sourceTree = "<group>"; };
+		7D32953B1A8638D900114B7D /* UIButton+Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Button.m"; sourceTree = "<group>"; };
+		7D32953C1A8638D900114B7D /* UITextField+TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+TextField.h"; sourceTree = "<group>"; };
+		7D32953D1A8638D900114B7D /* UITextField+TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TextField.m"; sourceTree = "<group>"; };
+		7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppathonTemplate-PrefixHeader.pch"; sourceTree = "<group>"; };
 		7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		7D52CA791A8618DC00CD56AE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		7D52CA7C1A8618DC00CD56AE /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
@@ -166,10 +172,10 @@
 		347E45671A862A20004A9006 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				347E45681A862A9E004A9006 /* UITextField+TextField.h */,
-				347E45691A862A9E004A9006 /* UITextField+TextField.m */,
-				347E456F1A86303A004A9006 /* UIButton+Button.h */,
-				347E45701A86303A004A9006 /* UIButton+Button.m */,
+				7D32953A1A8638D900114B7D /* UIButton+Button.h */,
+				7D32953B1A8638D900114B7D /* UIButton+Button.m */,
+				7D32953C1A8638D900114B7D /* UITextField+TextField.h */,
+				7D32953D1A8638D900114B7D /* UITextField+TextField.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -376,8 +382,8 @@
 		FC3AEB211A837C6300EA6B03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */,
 				FC3AEB221A837C6400EA6B03 /* Info.plist */,
-				347E456B1A862BE4004A9006 /* AppathonTemplate-PrefixHeader.pch */,
 				FC3AEB231A837C6400EA6B03 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -501,10 +507,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D32953E1A8638D900114B7D /* UIButton+Button.m in Sources */,
 				7D3295361A8634CB00114B7D /* Error.m in Sources */,
 				7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
+				7D32953F1A8638D900114B7D /* UITextField+TextField.m in Sources */,
 				7D3295271A8631D200114B7D /* ModelBase.m in Sources */,
 				FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */,
 				7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */,
@@ -513,14 +521,12 @@
 				7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */,
 				7D52CAB41A861A4A00CD56AE /* LoginViewController.m in Sources */,
 				7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */,
-				347E45711A86303A004A9006 /* UIButton+Button.m in Sources */,
 				7D52CAAE1A8618DC00CD56AE /* LinkedInLoginView.m in Sources */,
 				7D52CAAC1A8618DC00CD56AE /* BaseView.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
 				FC3AEB241A837C6400EA6B03 /* main.m in Sources */,
 				7D52CAA61A8618DC00CD56AE /* LocationSorter.m in Sources */,
-				347E456A1A862A9E004A9006 /* UITextField+TextField.m in Sources */,
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
 				7D3295391A86351500114B7D /* Validator.m in Sources */,
