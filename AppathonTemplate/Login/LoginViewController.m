@@ -8,11 +8,13 @@
 
 #import "LoginViewController.h"
 #import "LoginView.h"
+#import "LoginModel.h"
 
 #import "SignUpViewController.h"
 
 @interface LoginViewController ()
-@property (nonatomic, retain)LoginView *loginView;
+@property (nonatomic, strong)LoginModel *loginModel;
+@property (nonatomic, strong)LoginView *loginView;
 @end
 
 @implementation LoginViewController
@@ -48,6 +50,18 @@
 {
     if (self.loginView.userEmailTextField.text.length > 0 && self.loginView.passwordTextField.text.length > 0)
     {
+//        LoginRequest *loginRequest = [[LoginRequest alloc] init];
+        
+//        @property(nonatomic, strong) NSString *email;
+//        @property(nonatomic, strong) NSString *password;
+//        @property(nonatomic, strong) NSString *name;
+//        @property(nonatomic, strong) NSString *mobile;
+//        @property(nonatomic, strong) NSString *source;
+//        @property(nonatomic, strong) NSString *device_id;
+//        loginRequest.email = self.loginView.userEmailTextField.text;
+//        loginRequest.password = self.loginView.passwordTextField.text;
+//        loginRequest.email = self.loginView.userEmailTextField.text;
+//        loginRequest.email = self.loginView.userEmailTextField.text;
         
     }
     else

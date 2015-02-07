@@ -9,5 +9,12 @@
 #import "LoginModel.h"
 
 @implementation LoginModel
-
+- (void)sendRequest:(id<JSONModelBaseProtocol>)request
+{
+    [super sendRequest:request];
+}
+- (void)handleResponse:(NSDictionary*)response
+{
+    NSLog(@"handleResponse %@", [response description]);
+}
 @end

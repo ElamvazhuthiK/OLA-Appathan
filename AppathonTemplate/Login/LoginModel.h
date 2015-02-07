@@ -7,16 +7,8 @@
 //
 
 #import "BaseModel.h"
+#import "ModelBase.h"
 
-//public class RootObject
-//{
-//    public string email { get; set; }
-//    public string password { get; set; }
-//    public string name { get; set; }
-//    public string mobile { get; set; }
-//    public string source { get; set; }
-//    public string device_id { get; set; }
-//}
 
 @interface LoginModel : BaseModel
 

@@ -156,4 +156,17 @@
     
     return jsonString;
 }
+
++ (NSString*)getName
+{
+    return @"name";
+}
++ (NSString*)getGroup
+{
+    return @"group";
+}
++ (NSString*)getVersion
+{
+    return @"version";
+}
 @end

@@ -9,10 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface AppConfig : NSObject
-
-
 + (NSString*)getURL;
-+ (NSString*)getStreamerURL;
-+ (NSString*)getDisclaimerURL;
-
 @end
