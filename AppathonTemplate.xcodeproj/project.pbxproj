@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3295271A8631D200114B7D /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295261A8631D200114B7D /* ModelBase.m */; };
+		7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295291A8632AE00114B7D /* LoginModel.m */; };
+		7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32952C1A8632FF00114B7D /* BaseModel.m */; };
+		7D3295301A86335900114B7D /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32952F1A86335900114B7D /* AppConfig.m */; };
+		7D3295331A86340200114B7D /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295321A86340200114B7D /* AppData.m */; };
+		7D3295361A8634CB00114B7D /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295351A8634CB00114B7D /* Error.m */; };
+		7D3295391A86351500114B7D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295381A86351500114B7D /* Validator.m */; };
 		7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */; };
 		7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA7D1A8618DC00CD56AE /* DataParser.m */; };
 		7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D52CA801A8618DC00CD56AE /* ImageCache.m */; };
@@ -52,6 +59,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D3295241A8631D200114B7D /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
+		7D3295251A8631D200114B7D /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
+		7D3295261A8631D200114B7D /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
+		7D3295281A8632AE00114B7D /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		7D3295291A8632AE00114B7D /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		7D32952B1A8632FF00114B7D /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		7D32952C1A8632FF00114B7D /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		7D32952E1A86335900114B7D /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		7D32952F1A86335900114B7D /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		7D3295311A86340200114B7D /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
+		7D3295321A86340200114B7D /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		7D3295341A8634CB00114B7D /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
+		7D3295351A8634CB00114B7D /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
+		7D3295371A86351500114B7D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		7D3295381A86351500114B7D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
 		7D52CA781A8618DC00CD56AE /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		7D52CA791A8618DC00CD56AE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		7D52CA7C1A8618DC00CD56AE /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
@@ -163,6 +185,14 @@
 		7D52CA7A1A8618DC00CD56AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7D3295341A8634CB00114B7D /* Error.h */,
+				7D3295351A8634CB00114B7D /* Error.m */,
+				7D3295371A86351500114B7D /* Validator.h */,
+				7D3295381A86351500114B7D /* Validator.m */,
+				7D3295311A86340200114B7D /* AppData.h */,
+				7D3295321A86340200114B7D /* AppData.m */,
+				7D32952E1A86335900114B7D /* AppConfig.h */,
+				7D32952F1A86335900114B7D /* AppConfig.m */,
 				7D52CA7B1A8618DC00CD56AE /* DataParser */,
 				7D52CA7E1A8618DC00CD56AE /* ImageCache */,
 				7D52CA811A8618DC00CD56AE /* ImageDownloader */,
@@ -232,6 +262,11 @@
 		7D52CA8F1A8618DC00CD56AE /* BaseModels */ = {
 			isa = PBXGroup;
 			children = (
+				7D3295241A8631D200114B7D /* JSONModelBaseProtocol.h */,
+				7D32952B1A8632FF00114B7D /* BaseModel.h */,
+				7D32952C1A8632FF00114B7D /* BaseModel.m */,
+				7D3295251A8631D200114B7D /* ModelBase.h */,
+				7D3295261A8631D200114B7D /* ModelBase.m */,
 			);
 			name = BaseModels;
 			path = Models;
@@ -274,6 +309,8 @@
 				7D52CAB31A861A4A00CD56AE /* LoginViewController.m */,
 				7D52CAB51A861A6200CD56AE /* LoginView.h */,
 				7D52CAB61A861A6200CD56AE /* LoginView.m */,
+				7D3295281A8632AE00114B7D /* LoginModel.h */,
+				7D3295291A8632AE00114B7D /* LoginModel.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -450,9 +487,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3295361A8634CB00114B7D /* Error.m in Sources */,
+				7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
+				7D3295271A8631D200114B7D /* ModelBase.m in Sources */,
 				FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */,
+				7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */,
+				7D3295301A86335900114B7D /* AppConfig.m in Sources */,
 				7D52CAA41A8618DC00CD56AE /* AsynchronousImageDownloader.m in Sources */,
 				7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */,
 				7D52CAB41A861A4A00CD56AE /* LoginViewController.m in Sources */,
@@ -465,6 +507,8 @@
 				7D52CAA61A8618DC00CD56AE /* LocationSorter.m in Sources */,
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
+				7D3295391A86351500114B7D /* Validator.m in Sources */,
+				7D3295331A86340200114B7D /* AppData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
