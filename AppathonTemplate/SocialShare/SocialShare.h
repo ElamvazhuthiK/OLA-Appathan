@@ -7,6 +7,7 @@
 //
 
 #import "BaseView.h"
+#import <Social/Social.h>
 
 @interface SocialShare : BaseView
 

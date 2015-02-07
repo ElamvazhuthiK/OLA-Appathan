@@ -49,6 +49,7 @@
 		CB665B5F1A864A500032DA11 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B591A864A500032DA11 /* HomeView.m */; };
 		CB665B601A864A500032DA11 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B5B1A864A500032DA11 /* HomeViewController.m */; };
 		CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B5E1A864A500032DA11 /* GoogleMapView.m */; };
+		CB665B641A864FC00032DA11 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB665B621A864F840032DA11 /* Social.framework */; };
 		FC3AEB241A837C6400EA6B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB231A837C6400EA6B03 /* main.m */; };
 		FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB261A837C6400EA6B03 /* AppDelegate.m */; };
 		FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */; };
@@ -147,6 +148,7 @@
 		CB665B5B1A864A500032DA11 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CB665B5D1A864A500032DA11 /* GoogleMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleMapView.h; sourceTree = "<group>"; };
 		CB665B5E1A864A500032DA11 /* GoogleMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleMapView.m; sourceTree = "<group>"; };
+		CB665B621A864F840032DA11 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB665B641A864FC00032DA11 /* Social.framework in Frameworks */,
 				7D52CAC81A861E4F00CD56AE /* CoreLocation.framework in Frameworks */,
 				7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */,
 				7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */,
@@ -204,6 +207,7 @@
 		7D52CA771A8618DC00CD56AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB665B621A864F840032DA11 /* Social.framework */,
 				7D52CACD1A861E7800CD56AE /* libz.dylib */,
 				7D52CACB1A861E6F00CD56AE /* libicucore.dylib */,
 				7D52CAC91A861E6000CD56AE /* libc++.dylib */,
