@@ -40,15 +40,15 @@
     [self.mainContentView addSubview:self.bgImage];
     
     self.widget1 = [[WidgetView alloc] init];
-    self.widget1.backgroundColor = [UIColor greenColor];
+    self.widget1.backgroundColor = UIColorFromRGB(0x3D3936);
     [self.mainContentView addSubview:self.widget1];
     
     self.widget2 = [[WidgetView alloc] init];
-    self.widget2.backgroundColor = [UIColor redColor];
+    self.widget2.backgroundColor = UIColorFromRGB(0x3D3936);
     [self.mainContentView addSubview:self.widget2];
     
     self.widget3 = [[WidgetView alloc] init];
-    self.widget3.backgroundColor = [UIColor purpleColor];
+    self.widget3.backgroundColor = UIColorFromRGB(0x3D3936);
     [self.mainContentView addSubview:self.widget3];
     
     self.tableView = [[UITableView alloc] init];
@@ -88,7 +88,8 @@
     if (!cell)
     {
         cell = [[SummaryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidentifier];
-        cell.backgroundColor = [UIColor clearColor];
+        cell.backgroundColor = UIColorFromRGB(0xC7C2BF);
+        cell.alpha = 0.8;
     }
     
     return cell;

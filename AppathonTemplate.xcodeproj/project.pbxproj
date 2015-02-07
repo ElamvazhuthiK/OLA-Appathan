@@ -787,7 +787,6 @@
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
 				CB38BDF91A86BCB4001AB6F5 /* BaseHeaderView.m in Sources */,
-				CB665B681A865B300032DA11 /* InitialViewController.m in Sources */,
 				7D3295391A86351500114B7D /* Validator.m in Sources */,
 				7D3295331A86340200114B7D /* AppData.m in Sources */,
 			);
