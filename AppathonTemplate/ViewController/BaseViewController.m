@@ -13,10 +13,12 @@
 @end
 
 @implementation BaseViewController
-//- (void)navigateToViewController:(UIViewController *)viewController
-//{
-//    [self.navigationController pushViewController:viewController animated:YES];
-//}
+
+- (void)navigateToViewController:(UIViewController *)viewController
+{
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

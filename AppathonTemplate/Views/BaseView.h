@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-@protocol BaseViewDelegate<NSObject>
-@end
-@interface BaseView : UIView
-@property(nonatomic,weak) id<BaseViewDelegate>delegate;
-//@property (nonatomic,weak) BaseViewController *viewController;
+#import <CoreLocation/CoreLocation.h>
 
-//- (instancetype)initWithViewController:(BaseViewController *)viewController;
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+@protocol BaseViewDelegate<NSObject>
+
+@end
+
+@interface BaseView : UIView<CLLocationManagerDelegate>
+
+@property(nonatomic,weak) id<BaseViewDelegate>delegate;
+@property (nonatomic,strong) CLLocationManager *locationManager;
+
 - (void)createViews;
 
 - (void)showLoadingMessage:(NSString *)message addedToView:(UIView *)view;

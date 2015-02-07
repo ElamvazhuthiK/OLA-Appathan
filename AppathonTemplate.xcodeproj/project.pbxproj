@@ -33,6 +33,11 @@
 		7D52CACA1A861E6000CD56AE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CAC91A861E6000CD56AE /* libc++.dylib */; };
 		7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACB1A861E6F00CD56AE /* libicucore.dylib */; };
 		7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACD1A861E7800CD56AE /* libz.dylib */; };
+		CB665B411A862B7C0032DA11 /* GoogleMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B401A862B7C0032DA11 /* GoogleMapView.m */; };
+		CB665B451A862CDA0032DA11 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B441A862CDA0032DA11 /* HomeView.m */; };
+		CB665B481A862CFC0032DA11 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B471A862CFC0032DA11 /* HomeViewController.m */; };
+		CB665B4C1A8634970032DA11 /* SocialSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B4B1A8634970032DA11 /* SocialSharingViewController.m */; };
+		CB665B4F1A8634CF0032DA11 /* SocialShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B4E1A8634CF0032DA11 /* SocialShare.m */; };
 		FC3AEB241A837C6400EA6B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB231A837C6400EA6B03 /* main.m */; };
 		FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB261A837C6400EA6B03 /* AppDelegate.m */; };
 		FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */; };
@@ -97,6 +102,16 @@
 		7D52CAC91A861E6000CD56AE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7D52CACB1A861E6F00CD56AE /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		7D52CACD1A861E7800CD56AE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CB665B3F1A862B7C0032DA11 /* GoogleMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleMapView.h; path = MapView/GoogleMapView.h; sourceTree = "<group>"; };
+		CB665B401A862B7C0032DA11 /* GoogleMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleMapView.m; path = MapView/GoogleMapView.m; sourceTree = "<group>"; };
+		CB665B431A862CDA0032DA11 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeView.h; path = HomeView/HomeView.h; sourceTree = "<group>"; };
+		CB665B441A862CDA0032DA11 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeView.m; path = HomeView/HomeView.m; sourceTree = "<group>"; };
+		CB665B461A862CFC0032DA11 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = HomeView/HomeViewController.h; sourceTree = "<group>"; };
+		CB665B471A862CFC0032DA11 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = HomeView/HomeViewController.m; sourceTree = "<group>"; };
+		CB665B4A1A8634970032DA11 /* SocialSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialSharingViewController.h; path = SocialShare/SocialSharingViewController.h; sourceTree = "<group>"; };
+		CB665B4B1A8634970032DA11 /* SocialSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialSharingViewController.m; path = SocialShare/SocialSharingViewController.m; sourceTree = "<group>"; };
+		CB665B4D1A8634CF0032DA11 /* SocialShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialShare.h; path = SocialShare/SocialShare.h; sourceTree = "<group>"; };
+		CB665B4E1A8634CF0032DA11 /* SocialShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialShare.m; path = SocialShare/SocialShare.m; sourceTree = "<group>"; };
 		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,10 +130,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D52CAC81A861E4F00CD56AE /* CoreLocation.framework in Frameworks */,
 				7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */,
 				7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */,
 				7D52CACA1A861E6000CD56AE /* libc++.dylib in Frameworks */,
-				7D52CAC81A861E4F00CD56AE /* CoreLocation.framework in Frameworks */,
 				7D52CAC61A861E4900CD56AE /* AVFoundation.framework in Frameworks */,
 				7D52CAC41A861E4400CD56AE /* ImageIO.framework in Frameworks */,
 				7D52CAC21A861E3D00CD56AE /* QuartzCore.framework in Frameworks */,
@@ -285,6 +300,37 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		CB665B3E1A862B0D0032DA11 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				CB665B3F1A862B7C0032DA11 /* GoogleMapView.h */,
+				CB665B401A862B7C0032DA11 /* GoogleMapView.m */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
+		CB665B421A862CAE0032DA11 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				CB665B431A862CDA0032DA11 /* HomeView.h */,
+				CB665B441A862CDA0032DA11 /* HomeView.m */,
+				CB665B461A862CFC0032DA11 /* HomeViewController.h */,
+				CB665B471A862CFC0032DA11 /* HomeViewController.m */,
+			);
+			name = HomeView;
+			sourceTree = "<group>";
+		};
+		CB665B491A8634650032DA11 /* SocialShare */ = {
+			isa = PBXGroup;
+			children = (
+				CB665B4A1A8634970032DA11 /* SocialSharingViewController.h */,
+				CB665B4B1A8634970032DA11 /* SocialSharingViewController.m */,
+				CB665B4D1A8634CF0032DA11 /* SocialShare.h */,
+				CB665B4E1A8634CF0032DA11 /* SocialShare.m */,
+			);
+			name = SocialShare;
+			sourceTree = "<group>";
+		};
 		FC3AEB151A837C6100EA6B03 = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +352,9 @@
 		FC3AEB201A837C6300EA6B03 /* AppathonTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CB665B491A8634650032DA11 /* SocialShare */,
+				CB665B421A862CAE0032DA11 /* HomeView */,
+				CB665B3E1A862B0D0032DA11 /* MapView */,
 				7D52CAB01A8619F600CD56AE /* Login */,
 				7D52CAB11A8619F600CD56AE /* SignUp */,
 				7D52CA8F1A8618DC00CD56AE /* BaseModels */,
@@ -450,20 +499,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB665B411A862B7C0032DA11 /* GoogleMapView.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
 				FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */,
 				7D52CAA41A8618DC00CD56AE /* AsynchronousImageDownloader.m in Sources */,
+				CB665B481A862CFC0032DA11 /* HomeViewController.m in Sources */,
 				7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */,
 				7D52CAB41A861A4A00CD56AE /* LoginViewController.m in Sources */,
 				7D52CAA31A8618DC00CD56AE /* ImageCache.m in Sources */,
 				7D52CAAE1A8618DC00CD56AE /* LinkedInLoginView.m in Sources */,
 				7D52CAAC1A8618DC00CD56AE /* BaseView.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
+				CB665B4C1A8634970032DA11 /* SocialSharingViewController.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
 				FC3AEB241A837C6400EA6B03 /* main.m in Sources */,
 				7D52CAA61A8618DC00CD56AE /* LocationSorter.m in Sources */,
 				7D52CAA71A8618DC00CD56AE /* MBProgressHUD.m in Sources */,
+				CB665B451A862CDA0032DA11 /* HomeView.m in Sources */,
+				CB665B4F1A8634CF0032DA11 /* SocialShare.m in Sources */,
 				7D52CAAA1A8618DC00CD56AE /* LinkedInLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
