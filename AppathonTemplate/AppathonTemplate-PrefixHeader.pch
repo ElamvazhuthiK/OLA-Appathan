@@ -28,4 +28,6 @@
 #import "UITextField+TextField.h"
 #import "UIButton+Button.h"
 #import "UIImageView+ImageView.h"
+#import "UILabel+Label.h"
+#import "Header.h"
 #endif

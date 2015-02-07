@@ -53,6 +53,11 @@
 		CB665B681A865B300032DA11 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B671A865B300032DA11 /* InitialViewController.m */; };
 		CB665B6B1A865BCF0032DA11 /* InitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B6A1A865BCF0032DA11 /* InitialView.m */; };
 		CB665B711A865F5A0032DA11 /* UIImageView+ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */; };
+		CB665B751A8679940032DA11 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B741A8679940032DA11 /* SummaryViewController.m */; };
+		CB665B781A8679D30032DA11 /* SummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B771A8679D30032DA11 /* SummaryView.m */; };
+		CB665B7B1A867BE30032DA11 /* WidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B7A1A867BE30032DA11 /* WidgetView.m */; };
+		CB665B7E1A867C9B0032DA11 /* UILabel+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B7D1A867C9B0032DA11 /* UILabel+Label.m */; };
+		CB665B811A867F310032DA11 /* SummaryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B801A867F310032DA11 /* SummaryViewCell.m */; };
 		FC3AEB241A837C6400EA6B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB231A837C6400EA6B03 /* main.m */; };
 		FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB261A837C6400EA6B03 /* AppDelegate.m */; };
 		FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */; };
@@ -158,6 +163,17 @@
 		CB665B6A1A865BCF0032DA11 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = InitialView/InitialView.m; sourceTree = "<group>"; };
 		CB665B6F1A865F5A0032DA11 /* UIImageView+ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageView.h"; sourceTree = "<group>"; };
 		CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ImageView.m"; sourceTree = "<group>"; };
+		CB665B731A8679940032DA11 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryViewController.h; path = SummaryView/SummaryViewController.h; sourceTree = "<group>"; };
+		CB665B741A8679940032DA11 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryViewController.m; path = SummaryView/SummaryViewController.m; sourceTree = "<group>"; };
+		CB665B761A8679D30032DA11 /* SummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryView.h; path = SummaryView/SummaryView.h; sourceTree = "<group>"; };
+		CB665B771A8679D30032DA11 /* SummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryView.m; path = SummaryView/SummaryView.m; sourceTree = "<group>"; };
+		CB665B791A867BE30032DA11 /* WidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WidgetView.h; path = SummaryView/WidgetView.h; sourceTree = "<group>"; };
+		CB665B7A1A867BE30032DA11 /* WidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WidgetView.m; path = SummaryView/WidgetView.m; sourceTree = "<group>"; };
+		CB665B7C1A867C9B0032DA11 /* UILabel+Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Label.h"; sourceTree = "<group>"; };
+		CB665B7D1A867C9B0032DA11 /* UILabel+Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Label.m"; sourceTree = "<group>"; };
+		CB665B7F1A867F310032DA11 /* SummaryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryViewCell.h; path = SummaryView/SummaryViewCell.h; sourceTree = "<group>"; };
+		CB665B801A867F310032DA11 /* SummaryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryViewCell.m; path = SummaryView/SummaryViewCell.m; sourceTree = "<group>"; };
+		CB665B821A8686490032DA11 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +227,8 @@
 				7D32953D1A8638D900114B7D /* UITextField+TextField.m */,
 				CB665B6F1A865F5A0032DA11 /* UIImageView+ImageView.h */,
 				CB665B701A865F5A0032DA11 /* UIImageView+ImageView.m */,
+				CB665B7C1A867C9B0032DA11 /* UILabel+Label.h */,
+				CB665B7D1A867C9B0032DA11 /* UILabel+Label.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -422,6 +440,21 @@
 			name = InitialView;
 			sourceTree = "<group>";
 		};
+		CB665B721A86790C0032DA11 /* SummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				CB665B731A8679940032DA11 /* SummaryViewController.h */,
+				CB665B741A8679940032DA11 /* SummaryViewController.m */,
+				CB665B761A8679D30032DA11 /* SummaryView.h */,
+				CB665B771A8679D30032DA11 /* SummaryView.m */,
+				CB665B791A867BE30032DA11 /* WidgetView.h */,
+				CB665B7A1A867BE30032DA11 /* WidgetView.m */,
+				CB665B7F1A867F310032DA11 /* SummaryViewCell.h */,
+				CB665B801A867F310032DA11 /* SummaryViewCell.m */,
+			);
+			name = SummaryView;
+			sourceTree = "<group>";
+		};
 		FC3AEB151A837C6100EA6B03 = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +476,7 @@
 		FC3AEB201A837C6300EA6B03 /* AppathonTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CB665B721A86790C0032DA11 /* SummaryView */,
 				CB665B651A865AEF0032DA11 /* InitialView */,
 				CB665B571A864A500032DA11 /* HomeView */,
 				CB665B5C1A864A500032DA11 /* MapView */,
@@ -471,6 +505,7 @@
 				7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */,
 				FC3AEB221A837C6400EA6B03 /* Info.plist */,
 				FC3AEB231A837C6400EA6B03 /* main.m */,
+				CB665B821A8686490032DA11 /* Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -598,6 +633,7 @@
 				7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
 				CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */,
+				CB665B7B1A867BE30032DA11 /* WidgetView.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
 				7D32953F1A8638D900114B7D /* UITextField+TextField.m in Sources */,
 				7D3295271A8631D200114B7D /* ModelBase.m in Sources */,
@@ -606,6 +642,8 @@
 				FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */,
 				7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */,
 				7D3295301A86335900114B7D /* AppConfig.m in Sources */,
+				CB665B811A867F310032DA11 /* SummaryViewCell.m in Sources */,
+				CB665B751A8679940032DA11 /* SummaryViewController.m in Sources */,
 				7D52CAA41A8618DC00CD56AE /* AsynchronousImageDownloader.m in Sources */,
 				7D3295431A863AF000114B7D /* SignUpViewController.m in Sources */,
 				7D52CAA21A8618DC00CD56AE /* DataParser.m in Sources */,
@@ -617,6 +655,8 @@
 				CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
 				CB665B711A865F5A0032DA11 /* UIImageView+ImageView.m in Sources */,
+				CB665B781A8679D30032DA11 /* SummaryView.m in Sources */,
+				CB665B7E1A867C9B0032DA11 /* UILabel+Label.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
 				CB665B6B1A865BCF0032DA11 /* InitialView.m in Sources */,
 				CB665B601A864A500032DA11 /* HomeViewController.m in Sources */,
