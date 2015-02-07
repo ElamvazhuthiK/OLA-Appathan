@@ -7,6 +7,8 @@
 //
 
 #import "SignUpViewController.h"
+#import "SocialSharingViewController.h"
+
 #import "SignView.h"
 #import "SignUpModel.h"
 
@@ -45,28 +47,31 @@
 
 - (void)signUpNewUser:(UIButton *)sender
 {
-    if (self.signUpView.userEmailTextField.text.length > 0 && self.signUpView.passwordTextField.text.length > 0 && self.signUpView.mobileNumberOfUserTextField.text.length > 0 && self.signUpView.userNameTextField.text.length > 0)
-    {
-//        @property(nonatomic, strong) NSString *email;
-//        @property(nonatomic, strong) NSString *password;
-//        @property(nonatomic, strong) NSString *name;
-//        @property(nonatomic, strong) NSString *mobile;
-//        @property(nonatomic, strong) NSString *source;
-//        @property(nonatomic, strong) NSString *device_id;
-//        loginRequest.email = self.signUpView.userEmailTextField.text;
-//        loginRequest.password = self.signUpView.passwordTextField.text;
-//        loginRequest.email = self.signUpView.mobileNumberOfUserTextField.text;
-//        loginRequest.email = self.signUpView.userEmailTextField.text;
-
-        
-//        [self.signUpModel sendRequest:]
-    }
-    else
-    {
-        UIAlertView *missedRequieredFields = [[UIAlertView alloc] initWithTitle:@"Missing required fields" message:@"Please make sure all requiered fields are given" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        
-        [missedRequieredFields show];
-    }
+    SocialSharingViewController *socialSharevc = [[SocialSharingViewController alloc] init];
+    [self.navigationController pushViewController:socialSharevc animated:YES];
+    
+//    if (self.signUpView.userEmailTextField.text.length > 0 && self.signUpView.passwordTextField.text.length > 0 && self.signUpView.mobileNumberOfUserTextField.text.length > 0 && self.signUpView.userNameTextField.text.length > 0)
+//    {
+////        @property(nonatomic, strong) NSString *email;
+////        @property(nonatomic, strong) NSString *password;
+////        @property(nonatomic, strong) NSString *name;
+////        @property(nonatomic, strong) NSString *mobile;
+////        @property(nonatomic, strong) NSString *source;
+////        @property(nonatomic, strong) NSString *device_id;
+////        loginRequest.email = self.signUpView.userEmailTextField.text;
+////        loginRequest.password = self.signUpView.passwordTextField.text;
+////        loginRequest.email = self.signUpView.mobileNumberOfUserTextField.text;
+////        loginRequest.email = self.signUpView.userEmailTextField.text;
+//
+//        
+////        [self.signUpModel sendRequest:]
+//    }
+//    else
+//    {
+//        UIAlertView *missedRequieredFields = [[UIAlertView alloc] initWithTitle:@"Missing required fields" message:@"Please make sure all requiered fields are given" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+//        
+//        [missedRequieredFields show];
+//    }
 }
 /*
  #pragma mark - Navigation
