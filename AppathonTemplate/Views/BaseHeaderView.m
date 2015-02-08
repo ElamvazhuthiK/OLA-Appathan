@@ -10,7 +10,7 @@
 
 @interface BaseHeaderView ()
 
-@property (nonatomic,strong) UILabel *titleLabel;
+
 
 @end
 

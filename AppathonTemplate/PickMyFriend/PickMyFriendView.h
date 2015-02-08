@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Market Simplified. All rights reserved.
 //
 
-#import "BaseView.h"
+#import "BaseHeaderView.h"
 
-@interface PickMyFriendView : BaseView
+@interface PickMyFriendView : BaseHeaderView
 @property(nonatomic, strong)UIImageView *imgViewFriend;
 @property(nonatomic, strong)UITextField *txtFieldName;
 @property(nonatomic, strong)UITextField *txtFieldNumber;

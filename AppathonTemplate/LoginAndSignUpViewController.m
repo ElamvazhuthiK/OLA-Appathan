@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Market Simplified. All rights reserved.
 //
 
+#import "PickMyFriendViewController.h"
+
 #import "LoginAndSignUpViewController.h"
 #import "SummaryViewController.h"
 #import "SelectedTripDetailsViewController.h"
@@ -175,9 +177,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)loginDoneAction
 {
-    SummaryViewController *vc = [[SummaryViewController alloc] init];
+//    SummaryViewController *vc = [[SummaryViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
+
+    PickMyFriendViewController *vc = [[PickMyFriendViewController alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
+
+    
 }
 
 - (IBAction)signupNextAction
