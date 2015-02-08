@@ -25,19 +25,25 @@
 {
     [super createViews];
     
+//    CGRect frame = self.frame;
+//    frame.origin.y = 20;
+//    self.frame = frame;
+    
     self.titleLabel.text = @"Pick My Friend";
     self.bgView = [[UIView alloc] init];
     self.bgView.userInteractionEnabled = YES;
-    self.bgView.backgroundColor = [UIColor whiteColor];
-    self.bgView.opaque = 0.1;
+    self.bgView.backgroundColor = UIColorFromRGB(0xcccccc);
+    self.bgView.opaque = 0.9;
+    self.bgView.alpha = 0.9;
     
-    [self.mainContentView addSubview:self.bgView];
+    [self addSubview:self.bgView];
     
-    self.imgViewFriend = [[UIImageView alloc] init];
+    self.imgViewFriend = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nophoto.png"]];
     self.imgViewFriend.backgroundColor = [UIColor grayColor];
     [self.bgView addSubview:self.imgViewFriend];
     
     self.txtFieldName = [[UITextField alloc] initWithPlaceholder:@"Name" andBackgroundColor:[UIColor clearColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentCenter andBorderStyle:UITextBorderStyleLine];
+    self.txtFieldName.autocorrectionType = UITextAutocorrectionTypeNo;
     [self.bgView addSubview:self.txtFieldName];
     
     
@@ -93,8 +99,14 @@
     [super layoutSubviews];
     float y = 10;
     float height = 40;
-    self.bgView.frame = self.mainContentView.bounds;
-    CGRect frame = self.bgView.frame;
+    CGRect frame;// = self.frame;
+//    frame.origin.y = 40;
+//    self.frame = frame;
+    self.bgView.frame = CGRectInset(self.bounds, 10, 60);
+    frame = self.bgView.frame;
+    frame.size.height -= 10;
+    self.bgView.frame = frame;
+    
     self.imgViewFriend.frame = CGRectMake((frame.size.width - 100)/2, y, 100, 100);
     y+=110;
     self.txtFieldName.frame = CGRectMake(10, y, (frame.size.width - 20), height);
@@ -111,9 +123,9 @@
     self.btnTime.frame = CGRectMake(10+(frame.size.width - 60), y, 40, height);
     y+=(height+5);
     
-    self.locationPicker.frame = CGRectMake(0, frame.size.height - 140, frame.size.width, 140);
-    self.datePicker.frame = CGRectMake(0, frame.size.height - 140, frame.size.width, 140);
-    self.timePicker.frame = CGRectMake(0, frame.size.height - 140, frame.size.width, 140);
+    self.locationPicker.frame = CGRectMake(0, frame.size.height - 120, frame.size.width, 120);
+    self.datePicker.frame = CGRectMake(0, frame.size.height - 120, frame.size.width, 120);
+    self.timePicker.frame = CGRectMake(0, frame.size.height - 120, frame.size.width, 120);
     
     self.btnDone.frame = CGRectMake((self.frame.size.width - 100)/2, frame.origin.y + frame.size.height + 5, 100, 30);
 }
@@ -128,10 +140,17 @@
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSUInteger touchCount = [touches count];
-    if (touchCount == 1) {
-        [self.txtFieldName resignFirstResponder];
-        [self.txtFieldNumber resignFirstResponder];
+    CGPoint point = [[touches anyObject] locationInView:self.imgViewFriend];
+    if (CGRectContainsPoint(self.imgViewFriend.bounds, point)) {
+        if ([self.pickDelegate respondsToSelector:@selector(pickMyFriendSelectPhoto)]) {
+            [self.pickDelegate pickMyFriendSelectPhoto];
+        }
+    }else {
+        NSUInteger touchCount = [touches count];
+        if (touchCount == 1) {
+            [self.txtFieldName resignFirstResponder];
+            [self.txtFieldNumber resignFirstResponder];
+        }
     }
 }
 @end

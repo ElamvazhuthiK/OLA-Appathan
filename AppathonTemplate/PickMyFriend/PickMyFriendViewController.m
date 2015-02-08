@@ -11,7 +11,7 @@
 #import "SummaryViewController.h"
 #import "AppDelegate.h"
 
-@interface PickMyFriendViewController ()<BaseViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface PickMyFriendViewController ()<BaseViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate,UITableViewDataSource,UITableViewDelegate, PickMyFriendViewDelegate, UIImagePickerControllerDelegate>
 @property(nonatomic, strong)PickMyFriendView *pickMyFriendView;
 @property(nonatomic, strong)NSArray *aryLocations;
 @property(nonatomic, strong)NSDateFormatter *dateFormatter;
@@ -22,7 +22,7 @@
 - (void)loadView
 {
     self.pickMyFriendView = [[PickMyFriendView alloc] init];
-    self.pickMyFriendView.delegate = self;
+    self.pickMyFriendView.pickDelegate = self;
     self.view = self.pickMyFriendView;
     
     [self.pickMyFriendView.menuBtn addTarget:self action:@selector(menuList:) forControlEvents:UIControlEventTouchUpInside];
@@ -39,7 +39,8 @@
     // Do any additional setup after loading the view.
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateFormat:@"dd/MM/yyyy"];
-    self.aryLocations = [NSArray arrayWithObjects:@"one", @"Bangalore", @"three", nil];
+    
+    self.aryLocations = [NSArray arrayWithObjects:@"Yeswanthpur",@"Malleswara",@"Ejipura",@"Bellandur",@"Kotur",@"Bargur",@"WhitField",@"Jayanagar",@"Begur",@"Kumbalgodu",@"Bangalore", nil];
     self.pickMyFriendView.locationPicker.delegate = self;
     self.pickMyFriendView.locationPicker.dataSource = self;
     [self.pickMyFriendView.locationPicker reloadAllComponents];
@@ -50,102 +51,6 @@
     [self.pickMyFriendView.btnDate addTarget:self action:@selector(btnDatePressed) forControlEvents:UIControlEventTouchUpInside];
     
     [self.pickMyFriendView.btnTime addTarget:self action:@selector(btnTimePressed) forControlEvents:UIControlEventTouchUpInside];
-}
-
-#define kOFFSET_FOR_KEYBOARD 40.0
-
--(void)keyboardWillShow {
-    // Animate the current view out of the way
-    if (self.view.frame.origin.y >= 0)
-    {
-        [self setViewMovedUp:YES];
-    }
-    else if (self.view.frame.origin.y < 0)
-    {
-        [self setViewMovedUp:NO];
-    }
-}
-
--(void)keyboardWillHide {
-    if (self.view.frame.origin.y >= 0)
-    {
-        [self setViewMovedUp:YES];
-    }
-    else if (self.view.frame.origin.y < 0)
-    {
-        [self setViewMovedUp:NO];
-    }
-}
-
--(void)textFieldDidBeginEditing:(UITextField *)sender
-{
-    [self setViewMovedUp:YES];
-    //    if ([sender isEqual:mailTf])
-    //    {
-    //        //move the main view, so that the keyboard does not hide it.
-    //        if  (self.view.frame.origin.y >= 0)
-    //        {
-    //            [self setViewMovedUp:YES];
-    //        }
-    //    }
-}
-
-
-
-
-
-//method to move the view up/down whenever the keyboard is shown/dismissed
--(void)setViewMovedUp:(BOOL)movedUp
-{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3]; // if you want to slide up the view
-    
-    CGRect rect = self.view.frame;
-    if (movedUp)
-    {
-        // 1. move the view's origin up so that the text field that will be hidden come above the keyboard
-        // 2. increase the size of the view so that the area behind the keyboard is covered up.
-        rect.origin.y -= kOFFSET_FOR_KEYBOARD;
-        rect.size.height += kOFFSET_FOR_KEYBOARD;
-    }
-    else
-    {
-        // revert back to the normal state.
-        rect.origin.y += kOFFSET_FOR_KEYBOARD;
-        rect.size.height -= kOFFSET_FOR_KEYBOARD;
-    }
-    self.view.frame = rect;
-    
-    [UIView commitAnimations];
-}
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    // register for keyboard notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillShow)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillHide)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    // unregister for keyboard notifications while not visible.
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillShowNotification
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
 }
 
 #pragma mark TargetMethods
@@ -247,7 +152,12 @@
     }
 }
 #pragma mark - Menu
-
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.pickMyFriendView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20);
+}
 - (void)menuList:(UIButton *) sender
 {
     [self.pickMyFriendView bringSubviewToFront:self.pickMyFriendView.menuListTableView];
@@ -262,5 +172,19 @@
     }
     
 }
-
+#pragma mark - PickMyFriendViewDelegate
+- (void)pickMyFriendSelectPhoto
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    self.pickMyFriendView.imgViewFriend.image = image;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 @end
