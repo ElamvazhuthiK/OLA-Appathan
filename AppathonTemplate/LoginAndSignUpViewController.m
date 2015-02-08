@@ -190,9 +190,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)signupNextAction
 {
-    SelectedTripDetailsViewController *vc = [[SelectedTripDetailsViewController alloc] init];
+    SummaryViewController *vc = [[SummaryViewController alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
+    
+//    SelectedTripDetailsViewController *vc = [[SelectedTripDetailsViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)backgroundButtonAction:(UIButton *)sender
