@@ -25,7 +25,6 @@
 
 @implementation SearchPlaceViewController
 
-<<<<<<< HEAD
 - (instancetype)init
 {
     self = [super init];
@@ -39,11 +38,6 @@
 }
 
 - (void)createViews
-=======
-#pragma mark - View life cycle methods
-
-- (void)loadView
->>>>>>> e875199e3a653cb50c54fff6f917efc50f3d8e0d
 {
     
     self.searchPlaceView = [[SearchPlaceView alloc] init];
@@ -51,7 +45,6 @@
     
     [self.searchPlaceView.resetBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-<<<<<<< HEAD
     [self.searchPlaceView.doneBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -76,33 +69,6 @@
     
     self.searchPlaceView.frame = self.view.bounds;
 }
-=======
-    NSLog(@"%@", self.searchPlaceView.menuBtn);
-    [self.searchPlaceView.menuBtn addTarget:self action:@selector(menuList:) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.searchPlaceView.menuListTableView.dataSource = self;
-    self.searchPlaceView.menuListTableView.delegate = self;
-    self.menuListTableView.hidden = YES;
-}
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-#pragma mark - TableView
->>>>>>> e875199e3a653cb50c54fff6f917efc50f3d8e0d
 
 #pragma mark - Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

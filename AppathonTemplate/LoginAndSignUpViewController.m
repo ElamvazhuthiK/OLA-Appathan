@@ -10,11 +10,8 @@
 
 #import "LoginAndSignUpViewController.h"
 #import "SummaryViewController.h"
-<<<<<<< HEAD
 #import "SearchPlaceViewController.h"
-=======
 #import "SelectedTripDetailsViewController.h"
->>>>>>> e875199e3a653cb50c54fff6f917efc50f3d8e0d
 #define SCROLLVIEW_CONTENT_HEIGHT 460
 #define SCROLLVIEW_CONTENT_WIDTH 320
 
@@ -181,18 +178,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)loginDoneAction
 {
-<<<<<<< HEAD
     SearchPlaceViewController *vc = [[SearchPlaceViewController alloc] init];
-
-    //SummaryViewController *vc = [[SummaryViewController alloc] init];
-=======
-//    SummaryViewController *vc = [[SummaryViewController alloc] init];
-//    
-//    [self.navigationController pushViewController:vc animated:YES];
-
-    PickMyFriendViewController *vc = [[PickMyFriendViewController alloc] init];
->>>>>>> e875199e3a653cb50c54fff6f917efc50f3d8e0d
-    
     [self.navigationController pushViewController:vc animated:YES];
 
     
