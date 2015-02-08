@@ -8,9 +8,10 @@
 
 #import "SummaryViewController.h"
 #import "SummaryView.h"
+#import "AppDelegate.h"
 
 
-@interface SummaryViewController ()
+@interface SummaryViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) SummaryView *summaryView;
 
@@ -36,6 +37,10 @@
     
     self.summaryView = [[SummaryView alloc] init];
     [self.view addSubview:self.summaryView];
+    [self.summaryView.menuBtn addTarget:self action:@selector(menuList:) forControlEvents:UIControlEventTouchUpInside];
+    self.summaryView.menuListTableView.dataSource = self;
+    self.summaryView.menuListTableView.delegate = self;
+    self.summaryView.menuListTableView.hidden = YES;
 }
 
 - (void)viewDidLayoutSubviews
@@ -43,6 +48,50 @@
     [super viewDidLayoutSubviews];
     
     self.summaryView.frame = self.view.bounds;
+}
+
+#pragma mark - TableView
+
+#pragma mark - Datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.summaryView.mContentListArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [self.summaryView.mContentListArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
+#pragma mark - Delagate Methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row)
+    {
+    }
+}
+#pragma mark - Menu
+- (void)menuList:(UIButton *) sender
+{
+    if (self.summaryView.menuListTableView.hidden)
+    {
+        self.summaryView.menuListTableView.hidden = NO;
+        [self.summaryView.menuListTableView reloadData];
+    }
+    else
+    {
+       self.summaryView.menuListTableView.hidden = YES;
+    }
+    
 }
 
 @end

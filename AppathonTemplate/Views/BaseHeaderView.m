@@ -47,6 +47,12 @@
     self.mainContentView = [[UIView alloc] init];
     [self.fullContentView addSubview:self.mainContentView];
 
+    
+    self.menuListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 150, 150)];
+    [self addSubview:self.menuListTableView];
+    
+    self.mContentListArray = [[NSMutableArray alloc] initWithObjects:@"Cab for the day", @"Pick my friend", @"Profile", nil];
+    
 }
 
 - (void)layoutSubviews
