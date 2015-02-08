@@ -24,6 +24,7 @@
 - (void)createViews
 {
     [super createViews];
+    
     self.bgView = [[UIImageView alloc] init];
     self.bgView.userInteractionEnabled = YES;
     self.bgView.backgroundColor = [UIColor yellowColor];
@@ -39,6 +40,7 @@
     
     
     self.txtFieldNumber = [[UITextField alloc] initWithPlaceholder:@"Phone Number" andBackgroundColor:[UIColor clearColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentCenter andBorderStyle:UITextBorderStyleLine];
+    self.txtFieldNumber.keyboardType = UIKeyboardTypePhonePad;
     [self.bgView addSubview:self.txtFieldNumber];
     
     self.lblLocation = [[UILabel alloc] init];

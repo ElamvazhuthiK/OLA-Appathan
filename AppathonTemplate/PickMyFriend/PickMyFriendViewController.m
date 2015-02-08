@@ -8,9 +8,10 @@
 
 #import "PickMyFriendViewController.h"
 #import "PickMyFriendView.h"
+#import "SummaryViewController.h"
+#import "AppDelegate.h"
 
-
-@interface PickMyFriendViewController ()<BaseViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface PickMyFriendViewController ()<BaseViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic, strong)PickMyFriendView *pickMyFriendView;
 @property(nonatomic, strong)NSArray *aryLocations;
 @property(nonatomic, strong)NSDateFormatter *dateFormatter;
@@ -23,10 +24,18 @@
     self.pickMyFriendView = [[PickMyFriendView alloc] init];
     self.pickMyFriendView.delegate = self;
     self.view = self.pickMyFriendView;
+    
+    [self.pickMyFriendView.menuBtn addTarget:self action:@selector(menuList:) forControlEvents:UIControlEventTouchUpInside];
+    self.pickMyFriendView.menuListTableView.dataSource = self;
+    self.pickMyFriendView.menuListTableView.delegate = self;
+    self.pickMyFriendView.menuListTableView.hidden = YES;
+    
+    self.pickMyFriendView.titleLabel.text = @"Pick my friend";
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view.
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateFormat:@"dd/MM/yyyy"];
@@ -194,4 +203,64 @@
 {
     return [self.aryLocations objectAtIndex:row];
 }
+
+#pragma mark - TableView
+
+#pragma mark - Datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.pickMyFriendView.mContentListArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [self.pickMyFriendView.mContentListArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
+#pragma mark - Delagate Methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    if (indexPath.row == 0)
+    {
+        SummaryViewController *summaryVC = [[SummaryViewController alloc] init];
+        
+        // Summary view controller.
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:summaryVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
+    }
+    else if (indexPath.row == 1)
+    {
+        self.pickMyFriendView.menuListTableView.hidden = YES;
+    }
+}
+#pragma mark - Menu
+
+- (void)menuList:(UIButton *) sender
+{
+    [self.pickMyFriendView bringSubviewToFront:self.pickMyFriendView.menuListTableView];
+    if (self.pickMyFriendView.menuListTableView.hidden)
+    {
+        self.pickMyFriendView.menuListTableView.hidden = NO;
+        [self.pickMyFriendView.menuListTableView reloadData];
+    }
+    else
+    {
+        self.pickMyFriendView.menuListTableView.hidden = YES;
+    }
+    
+}
+
 @end

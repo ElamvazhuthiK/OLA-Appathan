@@ -13,6 +13,7 @@
 @property (nonatomic,strong) UIView *topBar;
 @property (nonatomic,strong) UIView *mainContentView;
 
+@property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UIButton *menuBtn;
 @property (nonatomic, strong) UITableView *menuListTableView;
 

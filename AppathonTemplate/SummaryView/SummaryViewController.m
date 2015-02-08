@@ -9,7 +9,7 @@
 #import "SummaryViewController.h"
 #import "SummaryView.h"
 #import "AppDelegate.h"
-
+#import "PickMyFriendViewController.h"
 
 @interface SummaryViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -41,6 +41,8 @@
     self.summaryView.menuListTableView.dataSource = self;
     self.summaryView.menuListTableView.delegate = self;
     self.summaryView.menuListTableView.hidden = YES;
+    
+    self.summaryView.titleLabel.text = @"Cab for the day";
 }
 
 - (void)viewDidLayoutSubviews
@@ -75,11 +77,26 @@
 #pragma mark - Delagate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row)
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    if (indexPath.row == 0)
     {
+        self.summaryView.menuListTableView.hidden = YES;
+    }
+    else if (indexPath.row == 1)
+    {
+        PickMyFriendViewController *pickMyFriendVC = [[PickMyFriendViewController alloc] init];
+        
+        // Pick my firend view controller.
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:pickMyFriendVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        
+        appDelegate.window.rootViewController = navigationVC;
     }
 }
 #pragma mark - Menu
+
 - (void)menuList:(UIButton *) sender
 {
     if (self.summaryView.menuListTableView.hidden)
