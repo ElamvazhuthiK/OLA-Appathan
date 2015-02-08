@@ -8,6 +8,8 @@
 
 #import "SearchPlaceViewController.h"
 #import "SearchPlaceView.h"
+#import "SummaryViewController.h"
+
 
 
 @interface SearchPlaceViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -23,38 +25,50 @@
 
 @implementation SearchPlaceViewController
 
-#pragma mark - View life cycle methods
-
-- (void)loadView
+- (instancetype)init
 {
+    self = [super init];
+    if (self)
+    {
+        //[self createViews];
+    }
+    
+    return self;
+    
+}
+
+- (void)createViews
+{
+    
     self.searchPlaceView = [[SearchPlaceView alloc] init];
-    self.view = self.searchPlaceView;
+    [self.view addSubview:self.searchPlaceView];
     
-    NSLog(@"%@", self.searchPlaceView.menuBtn);
-    [self.searchPlaceView.menuBtn addTarget:self action:@selector(menuList:) forControlEvents:UIControlEventTouchUpInside];
+    [self.searchPlaceView.resetBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.searchPlaceView.menuListTableView.dataSource = self;
-    self.searchPlaceView.menuListTableView.delegate = self;
-    self.menuListTableView.hidden = YES;
-}
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    [self.searchPlaceView.doneBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)btnClick:(UIButton *)sender
 {
-    [super viewWillAppear:animated];
+    if (sender == self.searchPlaceView.resetBtn)
+    {
+        self.searchPlaceView.widget2.bodyLabel.text = @"Domlur";
+        [self.searchPlaceView.tableView reloadData];
+    }
+    else
+    {
+        SummaryViewController *vc = [[SummaryViewController alloc] init];
+        [self navigateToViewController:vc];
+    }
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
 
-#pragma mark - TableView
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.searchPlaceView.frame = self.view.bounds;
+}
 
 #pragma mark - Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

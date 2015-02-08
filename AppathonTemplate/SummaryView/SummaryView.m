@@ -34,21 +34,28 @@
 {
     [super createViews];
     
+    self.fullContentView.backgroundColor = [UIColor clearColor];
+    
     self.dataArray = [NSArray arrayWithObjects:@"Test",@"Test",@"Test",@"Test",@"Test",@"Test",@"Test", nil];
     
-    self.bgImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image"] bgColor:[UIColor clearColor]];
+    self.bgImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"] bgColor:[UIColor clearColor]];
     [self.mainContentView addSubview:self.bgImage];
     
     self.widget1 = [[WidgetView alloc] init];
-    self.widget1.backgroundColor = UIColorFromRGB(0x3D3936);
+    self.widget1.titleLabel.text = @"Start Place";
+    self.widget1.bodyLabel.text = @"Domlur";
     [self.mainContentView addSubview:self.widget1];
     
     self.widget2 = [[WidgetView alloc] init];
-    self.widget2.backgroundColor = UIColorFromRGB(0x3D3936);
+    self.widget2.titleLabel.text = @"Places I have to Visit";
+    self.widget2.leftSepLine.hidden = NO;
+    self.widget2.rightSepLine.hidden = NO;
+    self.widget2.bodyLabel.text = @"Domlur + 3";
     [self.mainContentView addSubview:self.widget2];
     
     self.widget3 = [[WidgetView alloc] init];
-    self.widget3.backgroundColor = UIColorFromRGB(0x3D3936);
+    self.widget3.titleLabel.text = @"Time I have";
+    self.widget3.bodyLabel.text = @"10 Hrs";
     [self.mainContentView addSubview:self.widget3];
     
     self.tableView = [[UITableView alloc] init];
@@ -88,7 +95,8 @@
     if (!cell)
     {
         cell = [[SummaryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidentifier];
-        cell.backgroundColor = UIColorFromRGB(0xC7C2BF);
+        cell.backgroundColor = [UIColor clearColor];//UIColorFromRGB(0xC7C2BF);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.alpha = 0.8;
     }
     
@@ -106,9 +114,9 @@
     ;
     self.bgImage.frame = CGRectMake(startXPos, startYPos, fullWidth, fullHeight);
     
-    self.widget1.frame = CGRectMake(startXPos, startYPos, fullWidth/3, 75);
+    self.widget1.frame = CGRectMake(startXPos - 5, startYPos, fullWidth/3 + 5, 75);
     self.widget2.frame = CGRectMake(fullWidth/3, startYPos, fullWidth/3, 75);
-    self.widget3.frame = CGRectMake(fullWidth*2/3, startYPos, fullWidth/3, 75);
+    self.widget3.frame = CGRectMake(fullWidth*2/3, startYPos, fullWidth/3 + 5, 75);
     
     self.tableView.frame = CGRectMake(startXPos + 5, self.widget1.frame.origin.y + self.widget1.frame.size.height, fullWidth - 10, fullHeight - (self.widget1.frame.origin.y + self.widget1.frame.size.height));
     

@@ -10,4 +10,9 @@
 
 @interface WidgetView : UIView
 
+@property (nonatomic,strong) UILabel *titleLabel,*bodyLabel;
+
+@property (nonatomic,strong) UILabel *leftSepLine,*rightSepLine;
+@property (nonatomic,strong) UILabel *bottomHighLightLabel;
+
 @end
