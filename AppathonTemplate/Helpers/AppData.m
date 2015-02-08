@@ -17,7 +17,6 @@ static AppData *appData = nil;
     if (appData == nil)
     {
         appData = [AppData new];
-
     }
     return appData;
 }
@@ -45,13 +44,13 @@ static AppData *appData = nil;
 #pragma mark NSCoding delegates
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-//    [aCoder encodeObject:[NSNumber numberWithBool:self.mainDisclaimerAgreed] forKey:@"mainDisclaimerAgreed"];
-//    [aCoder encodeObject:self.initializeRequest forKey:@"initializeRequest"];
+    [aCoder encodeObject:[NSNumber numberWithBool:self.username] forKey:@"username"];
+    [aCoder encodeObject:self.password forKey:@"password"];
 }
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-//    self.mainDisclaimerAgreed = [[aDecoder decodeObjectForKey:@"mainDisclaimerAgreed"] boolValue];
-//    self.initializeRequest = [aDecoder decodeObjectForKey:@"initializeRequest"];
+    self.username = [aDecoder decodeObjectForKey:@"username"];
+    self.password = [aDecoder decodeObjectForKey:@"password"];
     return self;
 }
 @end

@@ -19,7 +19,7 @@
     self = [super init];
     if (self)
     {
-
+        self.backgroundColor = [UIColor greenColor];
     }
     return self;
 }
@@ -39,17 +39,26 @@
     self.submitButton = [[UIButton alloc] initWithTitle:@"Submit" andBackgroundImage:@"" andTextColor:[UIColor blueColor]];
     [self addSubview:self.submitButton];
     
-    self.signUpButton = [[UIButton alloc] initWithTitle:@"SignUp" andBackgroundImage:@"" andTextColor:[UIColor blueColor]];
-    [self addSubview:self.signUpButton];
+//    self.signUpButton = [[UIButton alloc] initWithTitle:@"SignUp" andBackgroundImage:@"" andTextColor:[UIColor blueColor]];
+//    [self addSubview:self.signUpButton];
 
 }
 
 - (void)layoutSubviews
 {
-    [self.userEmailTextField setFrame:CGRectMake(60, 74, 200, 30)];
-    [self.passwordTextField setFrame:CGRectMake(60, 114, 200, 30)];
-    [self.submitButton setFrame:CGRectMake(60, 154, 200, 30)];
-    [self.signUpButton setFrame:CGRectMake(60, 194, 200, 30)];
+    [super layoutSubviews];
+    [self.userEmailTextField setFrame:CGRectMake(60, 374, 200, 30)];
+    [self.passwordTextField setFrame:CGRectMake(60, 414, 200, 30)];
+    [self.submitButton setFrame:CGRectMake(60, 454, 200, 30)];
+//    [self.signUpButton setFrame:CGRectMake(60, 194, 200, 30)];
+}
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSUInteger touchCount = [touches count];
+    if (touchCount == 1) {
+        if ([self.delegate respondsToSelector:@selector(removeView)]) {
+            [self.delegate removeView];
+        }
+    }
 }
 
 @end

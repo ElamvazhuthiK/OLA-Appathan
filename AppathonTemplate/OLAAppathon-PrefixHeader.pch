@@ -29,6 +29,7 @@
 #import "UIColor+BasicColors.h"
 #import "UIButton+Button.h"
 #import "UIImageView+ImageView.h"
+#import "Macros.h"
 #import "UILabel+Label.h"
 #import "UILabel+AppathonLabel.h"
 #import "Header.h"

@@ -18,7 +18,11 @@
     self = [super init];
     if (self)
     {
-        self.backgroundColor = [UIColor greenColor];
+//<<<<<<< HEAD
+//        self.backgroundColor = [UIColor yellowColor];
+//        [self createViews];
+//=======
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -54,14 +58,14 @@
 
 - (void)layoutSubviews
 {
-    [self.userEmailTextField setFrame:CGRectMake(60, 74, 200, 30)];
-    [self.passwordTextField setFrame:CGRectMake(60, 114, 200, 30)];
-    [self.mobileNumberOfUserTextField setFrame:CGRectMake(60, 154, 200, 30)];
-    [self.userNameTextField setFrame:CGRectMake(60, 194, 200, 30)];
+    [super layoutSubviews];
+    [self.userEmailTextField setFrame:CGRectMake(60, 314, 200, 30)];
+    [self.passwordTextField setFrame:CGRectMake(60, 364, 200, 30)];
+    [self.mobileNumberOfUserTextField setFrame:CGRectMake(60, 414, 200, 30)];
+    [self.userNameTextField setFrame:CGRectMake(60, 464, 200, 30)];
     
-    [self.signUpButton setFrame:CGRectMake(60, 234, 200, 30)];
+    [self.signUpButton setFrame:CGRectMake(60, 514, 200, 30)];
 }
-
 - (void)dealloc
 {
 }

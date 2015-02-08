@@ -11,6 +11,9 @@
 @end
 @interface AppData : NSObject <NSCoding>
 @property (nonatomic, weak) id <AppDataDelegate> delegate;
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *password;
+
 + (id)getObject;
 + (void)loadData;
 + (void)saveData;

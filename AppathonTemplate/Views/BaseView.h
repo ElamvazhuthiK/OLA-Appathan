@@ -11,7 +11,7 @@
 
 
 @protocol BaseViewDelegate<NSObject>
-
+- (void)removeView;
 @end
 
 @interface BaseView : UIView<CLLocationManagerDelegate>

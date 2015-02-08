@@ -36,6 +36,7 @@
     [self addSubview:self.cabsInfoScrollView];
     
     [self.picksContainerScrollView setContentSize:CGSizeMake(560, 120)];
+    [self.cabsInfoScrollView setContentSize:CGSizeMake(1060, 72)];
 }
 
 - (void)layoutSubviews
@@ -43,7 +44,7 @@
     //[self.commentTextView setFrame:CGRectMake(10, 74, 300, 200)];
     [self.placeInfoLabel setFrame:CGRectMake(10, 74, 300, 100)];
     [self.picksContainerScrollView setFrame:CGRectMake(0, 184, 320, 120)];
-    [self.cabsInfoScrollView setFrame:CGRectMake(0, 424, 300, 120)];
+    [self.cabsInfoScrollView setFrame:CGRectMake(0, 496, 320, 72)];
     
 }
 
