@@ -47,6 +47,7 @@
 		7D52CACA1A861E6000CD56AE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CAC91A861E6000CD56AE /* libc++.dylib */; };
 		7D52CACC1A861E6F00CD56AE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACB1A861E6F00CD56AE /* libicucore.dylib */; };
 		7D52CACE1A861E7800CD56AE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D52CACD1A861E7800CD56AE /* libz.dylib */; };
+		7D5A1DCB1A87210A00DE0030 /* SignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A1DCA1A87210A00DE0030 /* SignUpModel.m */; };
 		CB38BD4F1A86B3C4001AB6F5 /* csmera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BD431A86B3C4001AB6F5 /* csmera@2x.png */; };
 		CB38BD511A86B3C4001AB6F5 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BD451A86B3C4001AB6F5 /* login@2x.png */; };
 		CB38BD521A86B3C4001AB6F5 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BD461A86B3C4001AB6F5 /* menu@2x.png */; };
@@ -172,6 +173,8 @@
 		7D52CAC91A861E6000CD56AE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		7D52CACB1A861E6F00CD56AE /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		7D52CACD1A861E7800CD56AE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7D5A1DC91A87210A00DE0030 /* SignUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpModel.h; sourceTree = "<group>"; };
+		7D5A1DCA1A87210A00DE0030 /* SignUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpModel.m; sourceTree = "<group>"; };
 		CB38BD411A86B3C4001AB6F5 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "Images/call@2x.png"; sourceTree = "<group>"; };
 		CB38BD421A86B3C4001AB6F5 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "close@2x.png"; path = "Images/close@2x.png"; sourceTree = "<group>"; };
 		CB38BD431A86B3C4001AB6F5 /* csmera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "csmera@2x.png"; path = "Images/csmera@2x.png"; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 				7D3295421A863AF000114B7D /* SignUpViewController.m */,
 				7D3295441A863B1600114B7D /* SignView.h */,
 				7D3295451A863B1600114B7D /* SignView.m */,
+				7D5A1DC91A87210A00DE0030 /* SignUpModel.h */,
+				7D5A1DCA1A87210A00DE0030 /* SignUpModel.m */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 				CB665B561A8649DC0032DA11 /* SocialSharingViewController.m in Sources */,
 				FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */,
 				7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */,
+				7D5A1DCB1A87210A00DE0030 /* SignUpModel.m in Sources */,
 				7D3295301A86335900114B7D /* AppConfig.m in Sources */,
 				CB38BE361A8710B2001AB6F5 /* SummaryViewController.m in Sources */,
 				7D52CAA41A8618DC00CD56AE /* AsynchronousImageDownloader.m in Sources */,

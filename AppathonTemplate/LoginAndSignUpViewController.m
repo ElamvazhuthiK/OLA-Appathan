@@ -179,8 +179,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     SearchPlaceViewController *vc = [[SearchPlaceViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-
-    
 }
 
 - (IBAction)signupNextAction
