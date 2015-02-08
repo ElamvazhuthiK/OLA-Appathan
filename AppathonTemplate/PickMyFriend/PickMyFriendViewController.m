@@ -172,11 +172,11 @@
     if (self.pickMyFriendView.datePicker.hidden == NO) {
         self.pickMyFriendView.datePicker.hidden = YES;
         [self.dateFormatter setDateFormat:@"dd/MM/yyyy"];
-        self.pickMyFriendView.lblDate.text = [self.dateFormatter stringFromDate:self.pickMyFriendView.timePicker.date];
+        self.pickMyFriendView.lblDate.text = [self.dateFormatter stringFromDate:self.pickMyFriendView.datePicker.date];
     }else if (self.pickMyFriendView.timePicker.hidden == NO) {
         self.pickMyFriendView.timePicker.hidden = YES;
         [self.dateFormatter setDateFormat:@"hh:mm"];
-        self.pickMyFriendView.lblTime.text = [self.dateFormatter stringFromDate:self.pickMyFriendView.datePicker.date];
+        self.pickMyFriendView.lblTime.text = [self.dateFormatter stringFromDate:self.pickMyFriendView.timePicker.date];
     }else if (self.pickMyFriendView.locationPicker.hidden == NO) {
         self.pickMyFriendView.locationPicker.hidden = YES;
         self.pickMyFriendView.lblLocation.text = [self.aryLocations objectAtIndex:[self.pickMyFriendView.locationPicker selectedRowInComponent:0]];

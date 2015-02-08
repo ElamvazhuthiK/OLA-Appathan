@@ -9,7 +9,7 @@
 #import "PickMyFriendView.h"
 
 @interface PickMyFriendView()<UITextFieldDelegate>
-@property(nonatomic, strong)UIImageView *bgView;
+@property(nonatomic, strong)UIView *bgView;
 @end
 @implementation PickMyFriendView
 - (instancetype)init
@@ -17,7 +17,7 @@
     self = [super init];
     if (self)
     {
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -25,11 +25,13 @@
 {
     [super createViews];
     
-    self.bgView = [[UIImageView alloc] init];
+    self.titleLabel.text = @"Pick My Friend";
+    self.bgView = [[UIView alloc] init];
     self.bgView.userInteractionEnabled = YES;
-    self.bgView.backgroundColor = [UIColor yellowColor];
+    self.bgView.backgroundColor = [UIColor whiteColor];
+    self.bgView.opaque = 0.1;
     
-    [self addSubview:self.bgView];
+    [self.mainContentView addSubview:self.bgView];
     
     self.imgViewFriend = [[UIImageView alloc] init];
     self.imgViewFriend.backgroundColor = [UIColor grayColor];
@@ -79,7 +81,7 @@
     self.btnDone = [[UIButton alloc] initWithTitle:@"Done" andBackgroundImage:nil andTextColor:UIColorFromRGB(0xD7DE52)];
     [self addSubview:self.btnDone];
     
-    
+    self.locationPicker.hidden = YES;
     self.datePicker.hidden = YES;
     self.timePicker.hidden = YES;
     
@@ -91,7 +93,7 @@
     [super layoutSubviews];
     float y = 10;
     float height = 40;
-    self.bgView.frame = CGRectInset(self.frame, 10,50);
+    self.bgView.frame = self.mainContentView.bounds;
     CGRect frame = self.bgView.frame;
     self.imgViewFriend.frame = CGRectMake((frame.size.width - 100)/2, y, 100, 100);
     y+=110;
@@ -123,5 +125,13 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     [textField resignFirstResponder];
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSUInteger touchCount = [touches count];
+    if (touchCount == 1) {
+        [self.txtFieldName resignFirstResponder];
+        [self.txtFieldNumber resignFirstResponder];
+    }
 }
 @end

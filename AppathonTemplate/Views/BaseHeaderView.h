@@ -16,5 +16,4 @@
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UIButton *menuBtn;
 @property (nonatomic, strong) UITableView *menuListTableView;
-
 @end
