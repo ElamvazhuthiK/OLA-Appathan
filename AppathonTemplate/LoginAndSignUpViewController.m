@@ -40,7 +40,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 #pragma mark - View life cycle methods
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
