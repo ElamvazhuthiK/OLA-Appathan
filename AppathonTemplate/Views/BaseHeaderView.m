@@ -46,7 +46,7 @@
     [self.fullContentView addSubview:self.mainContentView];
 
     
-    self.menuListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 150, 150)];
+    self.menuListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 70, 150, 150)];
     [self addSubview:self.menuListTableView];
     
     self.mContentListArray = [[NSMutableArray alloc] initWithObjects:@"Cab for the day", @"Pick my friend", @"Profile", nil];
@@ -57,7 +57,7 @@
 {
     [super layoutSubviews];
     
-    self.topBar.frame = CGRectMake(0,0, self.fullContentView.frame.size.width, 50);
+    self.topBar.frame = CGRectMake(0, 0, self.fullContentView.frame.size.width, 50);
     self.menuBtn.frame = CGRectMake(0, 0, 50, self.topBar.frame.size.height);
     
     self.titleLabel.frame = CGRectMake(self.menuBtn.frame.size.width + self.menuBtn.frame.origin.x ,0, self.topBar.frame.size.width - (self.menuBtn.frame.size.width + self.menuBtn.frame.origin.x ), self.topBar.frame.size.height);

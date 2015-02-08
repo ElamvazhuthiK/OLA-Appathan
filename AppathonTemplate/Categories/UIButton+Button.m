@@ -23,7 +23,7 @@
     return self;
 }
 
--(id) initWithButtonOnMachineInformationFrame:(CGRect)frame andTitle:(NSString*) title andTarget:(id)target selector:(SEL)action
+-(id) initWithButtonFrame:(CGRect)frame andTitle:(NSString*) title andTarget:(id)target selector:(SEL)action
 {
     self = [super initWithFrame:frame];
     if (self)

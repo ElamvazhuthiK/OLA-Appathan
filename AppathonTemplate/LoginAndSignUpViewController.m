@@ -21,7 +21,7 @@ static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
-@interface LoginAndSignUpViewController ()
+@interface LoginAndSignUpViewController ()<UITextFieldDelegate>
 {
     CGPoint point;
     CGPoint startingPoint;
@@ -46,7 +46,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    backgroundButton = [[UIButton alloc] initWithButtonOnMachineInformationFrame:self.view.frame andTitle:nil andTarget:self selector:@selector(backgroundButtonAction:)];
+    backgroundButton = [[UIButton alloc] initWithButtonFrame:self.view.frame andTitle:nil andTarget:self selector:@selector(backgroundButtonAction:)];
     
     self.navigationController.navigationBar.hidden = YES;
     [self.view addSubview:backgroundButton];
@@ -220,15 +220,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     loginView = [[UIView alloc] initWithFrame:CGRectMake(0, 568, 320, 214)];
     loginView.backgroundColor = [UIColor signUpBackgroundColor];
     
-    doneButton = [[UIButton alloc] initWithButtonOnMachineInformationFrame:CGRectMake(0, 142, 320, 72) andTitle:@"DONE" andTarget:self selector:@selector(loginDoneAction)];
+    doneButton = [[UIButton alloc] initWithButtonFrame:CGRectMake(0, 142, 320, 72) andTitle:@"DONE" andTarget:self selector:@selector(loginDoneAction)];
     doneButton.backgroundColor = [UIColor blackColor];
     [loginView addSubview:doneButton];
     
-    loginUsernameField = [[UITextField alloc] initWithPlaceholder:@"Email ID" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    loginUsernameField = [[UITextField alloc] initWithPlaceholder:@"Email ID" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     [loginUsernameField setFrame:CGRectMake(20, 11, 280, 33)];
     [loginView addSubview:loginUsernameField];
     
-    loginPasswordField = [[UITextField alloc] initWithPlaceholder:@"Password" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    loginPasswordField = [[UITextField alloc] initWithPlaceholder:@"Password" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     loginPasswordField.secureTextEntry = YES;
     [loginPasswordField setFrame:CGRectMake(20, 55, 280, 33)];
     [loginView addSubview:loginPasswordField];
@@ -238,6 +238,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [loginView addSubview:forgotPasswordBtn];
     
     [self.view addSubview:loginView];
+    
+    loginUsernameField.text = @"abhilash@gmail.com";
+    loginPasswordField.text = @"12345678";
+    
+    loginUsernameField.delegate = self;
+    loginPasswordField.delegate = self;
 }
 
 - (void)signupViewConfiguration
@@ -253,42 +259,53 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     signupView = [[UIView alloc] initWithFrame:CGRectMake(0, 568, 320, 294)];
     signupView.backgroundColor = [UIColor signUpBackgroundColor];
-    signupEmailField = [[UITextField alloc] initWithPlaceholder:@"Email ID" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    signupEmailField = [[UITextField alloc] initWithPlaceholder:@"Email ID" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     [signupEmailField setFrame:CGRectMake(20, 11, 280, 33)];
     [signupView addSubview:signupEmailField];
     
-    signupPasswordField = [[UITextField alloc] initWithPlaceholder:@"Password" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    signupPasswordField = [[UITextField alloc] initWithPlaceholder:@"Password" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     signupPasswordField.secureTextEntry = YES;
     [signupPasswordField setFrame:CGRectMake(20, 55, 280, 33)];
     [signupView addSubview:signupPasswordField];
     
-    signUpConfirmPassword = [[UITextField alloc] initWithPlaceholder:@"Confirm Password" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    signUpConfirmPassword = [[UITextField alloc] initWithPlaceholder:@"Confirm Password" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     [signUpConfirmPassword setFrame:CGRectMake(20, 99, 280, 33)];
+    signUpConfirmPassword.secureTextEntry = YES;
     [signupView addSubview:signUpConfirmPassword];
     
-    signupUsernameField = [[UITextField alloc] initWithPlaceholder:@"Name" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    signupUsernameField = [[UITextField alloc] initWithPlaceholder:@"Name" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     [signupUsernameField setFrame:CGRectMake(20, 142, 280, 33)];
     [signupView addSubview:signupUsernameField];
     
-    signupMobileField = [[UITextField alloc] initWithPlaceholder:@"Phone Number" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
+    signupMobileField = [[UITextField alloc] initWithPlaceholder:@"Phone Number" andBackgroundColor:[UIColor whiteColor] andTextColor:[UIColor blackColor] andTextAlignment:NSTextAlignmentLeft andBorderStyle:UITextBorderStyleRoundedRect];
     [signupMobileField setFrame:CGRectMake(20, 185, 280, 33)];
     [signupView addSubview:signupMobileField];
     
-    nextButton = [[UIButton alloc] initWithButtonOnMachineInformationFrame:CGRectMake(0, 225, 320, 72) andTitle:@"SignUp" andTarget:self selector:@selector(signupNextAction)];
+    nextButton = [[UIButton alloc] initWithButtonFrame:CGRectMake(0, 225, 320, 72) andTitle:@"SignUp" andTarget:self selector:@selector(signupNextAction)];
     nextButton.backgroundColor = [UIColor blackColor];
     [signupView addSubview:nextButton];
     
     [self.view addSubview:signupView];
+    
+    signupEmailField.text = @"abhilash@gmail.com";
+    signupPasswordField.text = @"12345678";
+    signUpConfirmPassword.text = @"12345678";
+    signupUsernameField.text = @"Abhilash";
+    signupMobileField.text = @"9966496003";
+    signupUsernameField.delegate = self;
+    signupPasswordField.delegate = self;
+    signUpConfirmPassword.delegate = self;
+    signupUsernameField.delegate = self;
+    signupMobileField.delegate = self;
 }
 
 #pragma mark TextField Delegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [textField resignFirstResponder];
     return YES;
 }
-
-
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
