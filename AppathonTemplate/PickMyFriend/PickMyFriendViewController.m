@@ -10,6 +10,7 @@
 #import "PickMyFriendView.h"
 #import "SummaryViewController.h"
 #import "AppDelegate.h"
+#import "ProfileViewController.h"
 
 @interface PickMyFriendViewController ()<BaseViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic, strong)PickMyFriendView *pickMyFriendView;
@@ -244,6 +245,15 @@
     else if (indexPath.row == 1)
     {
         self.pickMyFriendView.menuListTableView.hidden = YES;
+    }
+    else if (indexPath.row == 2)
+    {
+        ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+        
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:profileVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
     }
 }
 #pragma mark - Menu

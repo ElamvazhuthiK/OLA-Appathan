@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppathonTemplate/PickMyFriend/PickMyFriendViewController.m"
-            timestampString = "445050981.067451"
+            timestampString = "445052872.105695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "-menuList:"
             landmarkType = "5">
          </BreakpointContent>

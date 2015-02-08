@@ -10,6 +10,7 @@
 #import "SummaryView.h"
 #import "AppDelegate.h"
 #import "PickMyFriendViewController.h"
+#import "ProfileViewController.h"
 
 @interface SummaryViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -43,6 +44,7 @@
     self.summaryView.menuListTableView.hidden = YES;
     
     self.summaryView.titleLabel.text = @"Cab for the day";
+    [self.summaryView.topBar setFrame:CGRectMake(0, 0, self.summaryView.fullContentView.frame.size.width, 50)];
 }
 
 - (void)viewDidLayoutSubviews
@@ -92,6 +94,15 @@
         
         navigationVC.navigationBar.hidden = YES;
         
+        appDelegate.window.rootViewController = navigationVC;
+    }
+    else if (indexPath.row == 2)
+    {
+        ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+        
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:profileVC];
+        
+        navigationVC.navigationBar.hidden = YES;
         appDelegate.window.rootViewController = navigationVC;
     }
 }

@@ -13,6 +13,7 @@
 		34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFDA1A86D63400C193F6 /* cab1.png */; };
 		34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFDC1A86D8A600C193F6 /* rupee.png */; };
 		34C6DFE11A86F1D500C193F6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DFE01A86F1D500C193F6 /* ProfileViewController.m */; };
+		34C6DFE41A86F49900C193F6 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DFE31A86F49900C193F6 /* ProfileView.m */; };
 		7D3295271A8631D200114B7D /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295261A8631D200114B7D /* ModelBase.m */; };
 		7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295291A8632AE00114B7D /* LoginModel.m */; };
 		7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32952C1A8632FF00114B7D /* BaseModel.m */; };
@@ -103,6 +104,8 @@
 		34C6DFDC1A86D8A600C193F6 /* rupee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rupee.png; sourceTree = "<group>"; };
 		34C6DFDF1A86F1D500C193F6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		34C6DFE01A86F1D500C193F6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		34C6DFE21A86F49900C193F6 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
+		34C6DFE31A86F49900C193F6 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
 		7D3295241A8631D200114B7D /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
 		7D3295251A8631D200114B7D /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
 		7D3295261A8631D200114B7D /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 			children = (
 				34C6DFDF1A86F1D500C193F6 /* ProfileViewController.h */,
 				34C6DFE01A86F1D500C193F6 /* ProfileViewController.m */,
+				34C6DFE21A86F49900C193F6 /* ProfileView.h */,
+				34C6DFE31A86F49900C193F6 /* ProfileView.m */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -792,6 +797,7 @@
 				CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */,
 				7D59FDD01A86E106007C921D /* UIColor+BasicColors.m in Sources */,
 				7D59FDBD1A86A239007C921D /* PickMyFriendViewController.m in Sources */,
+				34C6DFE41A86F49900C193F6 /* ProfileView.m in Sources */,
 				7D59FDD31A86E106007C921D /* UILabel+Label.m in Sources */,
 				7D52CAB71A861A6200CD56AE /* LoginView.m in Sources */,
 				7D52CAA81A8618DC00CD56AE /* ServerHandler.m in Sources */,
