@@ -12,6 +12,7 @@
 		34C6DFD31A86CF8400C193F6 /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFD21A86CF8400C193F6 /* gallery.png */; };
 		34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFDA1A86D63400C193F6 /* cab1.png */; };
 		34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C6DFDC1A86D8A600C193F6 /* rupee.png */; };
+		34C6DFE11A86F1D500C193F6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C6DFE01A86F1D500C193F6 /* ProfileViewController.m */; };
 		7D3295271A8631D200114B7D /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295261A8631D200114B7D /* ModelBase.m */; };
 		7D32952A1A8632AE00114B7D /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3295291A8632AE00114B7D /* LoginModel.m */; };
 		7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D32952C1A8632FF00114B7D /* BaseModel.m */; };
@@ -108,6 +109,8 @@
 		34C6DFD21A86CF8400C193F6 /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
 		34C6DFDA1A86D63400C193F6 /* cab1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cab1.png; sourceTree = "<group>"; };
 		34C6DFDC1A86D8A600C193F6 /* rupee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rupee.png; sourceTree = "<group>"; };
+		34C6DFDF1A86F1D500C193F6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		34C6DFE01A86F1D500C193F6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		7D3295241A8631D200114B7D /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
 		7D3295251A8631D200114B7D /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
 		7D3295261A8631D200114B7D /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
@@ -275,6 +278,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34C6DFDE1A86F1B300C193F6 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				34C6DFDF1A86F1D500C193F6 /* ProfileViewController.h */,
+				34C6DFE01A86F1D500C193F6 /* ProfileViewController.m */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		7D52CA771A8618DC00CD56AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +599,7 @@
 		FC3AEB201A837C6300EA6B03 /* AppathonTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				34C6DFDE1A86F1B300C193F6 /* ProfileView */,
 				7D59FDF51A86E6F9007C921D /* Images */,
 				7D59FDF21A86E6C7007C921D /* LoginAndSignUpViewController.h */,
 				7D59FDF31A86E6C7007C921D /* LoginAndSignUpViewController.m */,
@@ -729,6 +742,10 @@
 				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
 				34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */,
 				7D59FE151A870171007C921D /* gallery@2x.png in Resources */,
+				34C6DFD11A86CF0100C193F6 /* csmera.png in Resources */,
+				34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */,
+				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
+				34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */,
 				FC3AEB2F1A837C6400EA6B03 /* Images.xcassets in Resources */,
 				7D59FE121A870171007C921D /* call@2x.png in Resources */,
 				7D59FE191A870171007C921D /* transpernt list@2x.png in Resources */,
@@ -761,6 +778,7 @@
 				7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */,
 				7D59FDD71A86E1DA007C921D /* BaseHeaderViewController.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
+				34C6DFE11A86F1D500C193F6 /* ProfileViewController.m in Sources */,
 				CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
 				7D90EF201A865DFB00AF79F9 /* Encryptor.m in Sources */,
