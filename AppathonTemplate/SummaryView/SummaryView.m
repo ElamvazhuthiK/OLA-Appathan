@@ -34,9 +34,11 @@
 {
     [super createViews];
     
+    self.fullContentView.backgroundColor = [UIColor clearColor];
+    
     self.dataArray = [NSArray arrayWithObjects:@"Test",@"Test",@"Test",@"Test",@"Test",@"Test",@"Test", nil];
     
-    self.bgImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image"] bgColor:[UIColor clearColor]];
+    self.bgImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"] bgColor:[UIColor clearColor]];
     [self.mainContentView addSubview:self.bgImage];
     
     self.widget1 = [[WidgetView alloc] init];
@@ -93,7 +95,8 @@
     if (!cell)
     {
         cell = [[SummaryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidentifier];
-        cell.backgroundColor = UIColorFromRGB(0xC7C2BF);
+        cell.backgroundColor = [UIColor clearColor];//UIColorFromRGB(0xC7C2BF);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.alpha = 0.8;
     }
     

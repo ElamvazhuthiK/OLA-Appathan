@@ -166,7 +166,7 @@
     {
         cell = [[ImageDetails alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidentifier];
         cell.backgroundColor = UIColorFromRGB(0xC7C2BF);
-        cell.alpha = 0.8;
+        cell.alpha = 0;
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }

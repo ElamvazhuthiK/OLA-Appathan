@@ -76,6 +76,9 @@
 		CB38BE4E1A87112C001AB6F5 /* SelectedTripDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB38BE4B1A87112C001AB6F5 /* SelectedTripDetailsView.m */; };
 		CB38BE4F1A87112C001AB6F5 /* SelectedTripDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB38BE4D1A87112C001AB6F5 /* SelectedTripDetailsViewController.m */; };
 		CB38BE521A8711B8001AB6F5 /* LoginAndSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB38BE511A8711B8001AB6F5 /* LoginAndSignUpViewController.m */; };
+		CB38BE551A87173E001AB6F5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BE531A87173E001AB6F5 /* Default@2x.png */; };
+		CB38BE561A87173E001AB6F5 /* nophoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BE541A87173E001AB6F5 /* nophoto@2x.png */; };
+		CB38BE581A871927001AB6F5 /* unnamed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BE571A871927001AB6F5 /* unnamed@2x.png */; };
 		CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B521A8649DC0032DA11 /* SocialShare.m */; };
 		CB665B561A8649DC0032DA11 /* SocialSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B541A8649DC0032DA11 /* SocialSharingViewController.m */; };
 		CB665B5F1A864A500032DA11 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B591A864A500032DA11 /* HomeView.m */; };
@@ -225,6 +228,9 @@
 		CB38BE4D1A87112C001AB6F5 /* SelectedTripDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedTripDetailsViewController.m; sourceTree = "<group>"; };
 		CB38BE501A8711B8001AB6F5 /* LoginAndSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginAndSignUpViewController.h; sourceTree = "<group>"; };
 		CB38BE511A8711B8001AB6F5 /* LoginAndSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAndSignUpViewController.m; sourceTree = "<group>"; };
+		CB38BE531A87173E001AB6F5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/Default@2x.png"; sourceTree = "<group>"; };
+		CB38BE541A87173E001AB6F5 /* nophoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nophoto@2x.png"; path = "Images/nophoto@2x.png"; sourceTree = "<group>"; };
+		CB38BE571A871927001AB6F5 /* unnamed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unnamed@2x.png"; path = "Images/unnamed@2x.png"; sourceTree = "<group>"; };
 		CB665B511A8649DC0032DA11 /* SocialShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShare.h; sourceTree = "<group>"; };
 		CB665B521A8649DC0032DA11 /* SocialShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialShare.m; sourceTree = "<group>"; };
 		CB665B531A8649DC0032DA11 /* SocialSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialSharingViewController.h; sourceTree = "<group>"; };
@@ -463,6 +469,9 @@
 		7D59FDBA1A86A204007C921D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CB38BE571A871927001AB6F5 /* unnamed@2x.png */,
+				CB38BE531A87173E001AB6F5 /* Default@2x.png */,
+				CB38BE541A87173E001AB6F5 /* nophoto@2x.png */,
 				CB38BDFD1A86EFC5001AB6F5 /* Picture47@2x.jpg */,
 				CB38BDFE1A86EFC5001AB6F5 /* Screen Shot 2015-02-07 at 10.23.40 PM@2x.png */,
 				CB38BD411A86B3C4001AB6F5 /* call@2x.png */,
@@ -762,8 +771,10 @@
 				CB38BD511A86B3C4001AB6F5 /* login@2x.png in Resources */,
 				CB38BD581A86B3C4001AB6F5 /* transpernt list@2x.png in Resources */,
 				CB38BD4F1A86B3C4001AB6F5 /* csmera@2x.png in Resources */,
+				CB38BE561A87173E001AB6F5 /* nophoto@2x.png in Resources */,
 				CB38BD551A86B3C4001AB6F5 /* signup@2x.png in Resources */,
 				34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */,
+				CB38BE551A87173E001AB6F5 /* Default@2x.png in Resources */,
 				34C6DFD11A86CF0100C193F6 /* csmera.png in Resources */,
 				34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */,
 				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
@@ -771,6 +782,7 @@
 				FC3AEB2F1A837C6400EA6B03 /* Images.xcassets in Resources */,
 				34C6DFD31A86CF8400C193F6 /* gallery.png in Resources */,
 				7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */,
+				CB38BE581A871927001AB6F5 /* unnamed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

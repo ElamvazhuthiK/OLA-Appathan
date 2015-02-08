@@ -36,7 +36,7 @@
 {
     self.containerView = [[UIView alloc] init];
     self.containerView.backgroundColor = UIColorFromRGB(0xC7C2BF);
-    self.containerView.alpha = 0.8;
+    self.containerView.alpha = 0.9;
     [self.contentView addSubview:self.containerView];
     
     self.headerLabel = [[UILabel alloc]initWithText:@"Majestic- ISKAN temple" textAlignment:NSTextAlignmentLeft textColor:[UIColor blackColor] font:[UIFont fontWithName:@COMMONBOLDFONT size:14.0]];
@@ -51,8 +51,7 @@
     self.carTypelabel = [[UILabel alloc]initWithText:@"2 Sadans and 1 Mini cabs are by You" textAlignment:NSTextAlignmentLeft textColor:[UIColor grayColor] font:[UIFont fontWithName:@COMMONGFONT size:14.0]];
     [self.containerView addSubview:self.carTypelabel];
     
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Picture47.png"] bgColor:[UIColor clearColor]];
-    self.imageView.backgroundColor = [UIColor redColor];
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"unnamed.png"] bgColor:[UIColor clearColor]];
     [self.containerView addSubview:self.imageView];
 }
 
@@ -60,7 +59,7 @@
 {
     [super layoutSubviews];
     
-    self.containerView.frame = CGRectMake(0, 5, self.contentView.frame.size.width, self.contentView.frame.size.height - 10);
+    self.containerView.frame = CGRectMake(0, 2, self.contentView.frame.size.width, self.contentView.frame.size.height - 4);
     
     float startXPos = 5;
     float startYPos = 0;

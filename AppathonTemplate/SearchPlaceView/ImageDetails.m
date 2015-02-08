@@ -34,8 +34,7 @@
 
 - (void)createViews
 {
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Picture47.png"] bgColor:[UIColor clearColor]];
-    self.imageView.backgroundColor = [UIColor redColor];
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"unnamed.png"] bgColor:[UIColor clearColor]];
     [self.contentView addSubview:self.imageView];
     
     self.headerLabel = [[UILabel alloc]initWithText:@"Majestic- ISKAN templehvdabdvnasbdvnbasvdnbvasdnbvasnbdvnbasvdnbavsdnbvasnbdvnabsfv" textAlignment:NSTextAlignmentLeft textColor:[UIColor blackColor] font:[UIFont fontWithName:@COMMONGFONT size:11.0]];
