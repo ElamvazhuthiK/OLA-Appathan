@@ -8,6 +8,7 @@
 
 #import "LoginAndSignUpViewController.h"
 #import "SummaryViewController.h"
+#import "SelectedTripDetailsViewController.h"
 #define SCROLLVIEW_CONTENT_HEIGHT 460
 #define SCROLLVIEW_CONTENT_WIDTH 320
 
@@ -181,7 +182,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)signupNextAction
 {
-    SummaryViewController *vc = [[SummaryViewController alloc] init];
+    SelectedTripDetailsViewController *vc = [[SelectedTripDetailsViewController alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

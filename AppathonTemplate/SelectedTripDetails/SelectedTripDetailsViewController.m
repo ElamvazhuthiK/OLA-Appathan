@@ -8,8 +8,11 @@
 
 #import "SelectedTripDetailsViewController.h"
 #import "SelectedTripDetailsView.h"
+#define CAR_MODEL @"car_model"
+#define DURATION @"duration"
+#define CAR_COST @"car_cost"
 
-#define CABS_INFO_JSON @"[{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Maruti Swift Dzire\", \"color\": \"Blue\", \"driver_name\": \"Mohan.K\", \"driver_mobile\": \"9412567863\", \"duration\": \"3 mins\"},{\"id\": 4385764, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Hundai Verna\", \"color\": \"Yellow\", \"driver_name\": \"Kalyan.K\", \"driver_mobile\": \"9412567864\", \"duration\": \"7 mins\"},{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Mahendra Logan\", \"color\": \"Gray\", \"driver_name\": \"Krishna.P\", \"driver_mobile\": \"9412567865\", \"duration\": \"10 mins\"},{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"TATA Indigo\", \"color\": \"Blue\", \"driver_name\": \" Raj kumar.S\", \"driver_mobile\": \"9412567866\", \"duration\": \"15 mins\"}, {\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Maruti Swift\", \"color\": \"White\", \"driver_name\": \" Subhash.A\", \"driver_mobile\": \"9412567867\", \"duration\": \"15 mins\"}]"
+#define CABS_INFO_JSON @"[{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Swift\", \"color\": \"Blue\", \"driver_name\": \"Mohan.K\", \"driver_mobile\": \"9412567863\", \"duration\": \"3 mins near by\", \"car_cost\": \"305\"},{\"id\": 4385764, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Verna\", \"color\": \"Yellow\", \"driver_name\": \"Kalyan.K\", \"driver_mobile\": \"9412567864\", \"duration\": \"7 mins near by\", \"car_cost\": \"325\"},{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Logan\", \"color\": \"Gray\", \"driver_name\": \"Krishna.P\", \"driver_mobile\": \"9412567865\", \"duration\": \"10 mins near by\", \"car_cost\": \"350\"},{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Innova\", \"color\": \"Blue\", \"driver_name\": \" Raj kumar.S\", \"driver_mobile\": \"9412567866\", \"duration\": \"15 mins near by\", \"car_cost\": \"370\"}, {\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Scorpio\", \"color\": \"White\", \"driver_name\": \" Subhash.A\", \"driver_mobile\": \"9412567867\", \"duration\": \"15 mins near by\", \"car_cost\": \"340\"}]"
 @interface SelectedTripDetailsViewController ()<UIGestureRecognizerDelegate>
 {
     NSMutableArray *cabsInformationArray;
@@ -34,6 +37,7 @@
 {
     self.selTripDetailsView = [[SelectedTripDetailsView alloc] init];
     self.view = self.selTripDetailsView;
+    self.navigationController.navigationBar.hidden = NO;
     
 }
 - (void)viewDidLoad
@@ -50,12 +54,21 @@
     
     NSLog(@"Cabs information : %@", cabsInformationArray);
     
+    [self.selTripDetailsView.placeInfoLabel setBackgroundColor:[UIColor signUpBackgroundColor]];
+    [self.selTripDetailsView.placeInfoLabel setTextColor:[UIColor blackColor]];
+    
     // User pick images.
     [self picksViewCreation];
     
     // Cabs available view.
     [self availableCabsCreation];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -75,7 +88,16 @@
         //NSLog(@"%d", xPosition);
         UIImageView *picksImageView = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 10, 100, 100)];
         
-        [picksImageView setImage:[UIImage imageNamed:@"Google"]];
+        [picksImageView setImage:[UIImage imageNamed:@"gallery"]];
+        if (picPosition == 0)
+        {
+            [picksImageView setImage:[UIImage imageNamed:@"csmera"]];
+        }
+        else
+        {
+            
+        }
+        
         // Pick image tag setting.
         [picksImageView setTag:(picPosition+1)];
         picksImageView.userInteractionEnabled = YES;
@@ -92,20 +114,56 @@
 {
     for (NSInteger picPosition = 0; picPosition < cabsInformationArray.count; picPosition++)
     {
-        NSInteger xPosition = 10 + (picPosition * 110);
-        //NSLog(@"%d", xPosition);
-        UIImageView *availableCabsImageView = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 10, 100, 100)];
+        NSDictionary *cInformationDictionary = [cabsInformationArray objectAtIndex:picPosition];
         
-        [availableCabsImageView setImage:[UIImage imageNamed:@"Google"]];
+        NSInteger xPosition = 10 + (picPosition * 210);
+        
+        //NSLog(@"%ld", xPosition);
+        UIView *cabView = [[UIView alloc] initWithFrame:CGRectMake(xPosition, 10, 200, 61)];
+        [cabView setBackgroundColor:[UIColor blackColor]];
+        
+        // Cab image view adding
+        UIImageView *availableCabsImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 16, 40, 41)];
+        
+        [availableCabsImageView setImage:[UIImage imageNamed:@"cab1"]];
+        [cabView addSubview:availableCabsImageView];
+        
+        // Car name Label
+        UILabel *cNameLabel = [[UILabel alloc] initWithText:[cInformationDictionary valueForKey:CAR_MODEL] textAlignment:NSTextAlignmentLeft textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:14]];
+        [cNameLabel setFrame:CGRectMake(50, 16, 60, 25)];
+        
+        [cabView addSubview:cNameLabel];
+        
+        // Reach time  Label
+        UILabel *rTimeLabel = [[UILabel alloc] initWithText:[cInformationDictionary valueForKey:DURATION] textAlignment:NSTextAlignmentLeft textColor:[UIColor lightGrayColor] font:[UIFont systemFontOfSize:8]];
+        
+        [rTimeLabel setFrame:CGRectMake(50, 40, 60, 21)];
+        
+        //rTimeLabel.text = @"8 min near by";
+        [cabView addSubview:rTimeLabel];
+        
+        
+        // Cab image view adding
+        UIImageView *rupeeImage = [[UIImageView alloc] initWithFrame:CGRectMake(120, 16, 21, 30)];
+        
+        [rupeeImage setImage:[UIImage imageNamed:@"rupee"]];
+        [cabView addSubview:rupeeImage];
+        
+        // Car name Label
+        UILabel *amountLabel = [[UILabel alloc] initWithText:[cInformationDictionary valueForKey:CAR_COST] textAlignment:NSTextAlignmentLeft textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:14]];
+        [amountLabel setFrame:CGRectMake(150, 16, 40, 30)];
+        
+        [cabView addSubview:amountLabel];
+        
         // Pick image tag setting.
-        [availableCabsImageView setTag:(picPosition+1)];
-        availableCabsImageView.userInteractionEnabled = YES;
+        [cabView setTag:(picPosition+1)];
+        cabView.userInteractionEnabled = YES;
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cabTapGestureRecognise:)];
         
         [tapGesture setDelegate:self];
-        [availableCabsImageView addGestureRecognizer:tapGesture];
+        [cabView addGestureRecognizer:tapGesture];
         //[picksView setBackgroundColor:[UIColor magentaColor]];
-        [self.selTripDetailsView.cabsInfoScrollView addSubview:availableCabsImageView];
+        [self.selTripDetailsView.cabsInfoScrollView addSubview:cabView];
     }
 }
 
@@ -115,6 +173,7 @@
 {
     UIImageView *selectedUserImage = (UIImageView*)tapGesture.view;
     
+//    NSInteger 
     //NSLog(@"%@", [priorityUserDetailsArray objectAtIndex:selectedUserImage.tag]);
     
 //    NSMutableDictionary *selectedUserDetailsDictionary = [priorityUserDetailsArray objectAtIndex:selectedUserImage.tag];
