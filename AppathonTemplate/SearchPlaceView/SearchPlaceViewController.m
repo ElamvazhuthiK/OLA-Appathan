@@ -9,14 +9,12 @@
 #import "SearchPlaceViewController.h"
 #import "SearchPlaceView.h"
 #import "SummaryViewController.h"
-
+#import "AppDelegate.h"
+#import "PickMyFriendViewController.h"
+#import "ProfileViewController.h"
 
 
 @interface SearchPlaceViewController ()<UITableViewDataSource,UITableViewDelegate>
-{
-    NSArray *mContentListArray;
-}
-@property (nonatomic, strong) UITableView *menuListTableView;
 
 @property (nonatomic,strong) SearchPlaceView *searchPlaceView;
 
@@ -46,6 +44,10 @@
     [self.searchPlaceView.resetBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.searchPlaceView.doneBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.searchPlaceView.menuBtn addTarget:self action:@selector(menuList:) forControlEvents:UIControlEventTouchUpInside];
+    self.searchPlaceView.menuListTableView.hidden = YES;
+    self.searchPlaceView.menuListTableView.dataSource = self;
+    self.searchPlaceView.menuListTableView.delegate = self;
 }
 
 - (void)btnClick:(UIButton *)sender
@@ -73,7 +75,7 @@
 #pragma mark - Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return mContentListArray.count;
+    return self.searchPlaceView.mContentListArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,18 +88,51 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [mContentListArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.searchPlaceView.mContentListArray objectAtIndex:indexPath.row];
     return cell;
 }
 
 #pragma mark - Delagate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
+    if (indexPath.row == 0)
+    {
+        SummaryViewController *summaryVC = [[SummaryViewController alloc] init];
+        
+        // Summary view controller.
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:summaryVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
+    }
+    else if (indexPath.row == 1)
+    {
+        PickMyFriendViewController *pickMyFriendVC = [[PickMyFriendViewController alloc] init];
+        
+        // Pick my firend view controller.
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:pickMyFriendVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        
+        appDelegate.window.rootViewController = navigationVC;
+    }
+    else if (indexPath.row == 2)
+    {
+        ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+        
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:profileVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
+    }
 }
 #pragma mark - Menu
 - (void)menuList:(UIButton *) sender
 {
+    [self.searchPlaceView bringSubviewToFront:self.searchPlaceView.menuListTableView];
+    
     if (self.searchPlaceView.menuListTableView.hidden)
     {
         self.searchPlaceView.menuListTableView.hidden = NO;
