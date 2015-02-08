@@ -7,8 +7,11 @@
 //
 
 #import "BaseHeaderView.h"
-
+@protocol PickMyFriendViewDelegate <BaseViewDelegate>
+- (void)pickMyFriendSelectPhoto;
+@end
 @interface PickMyFriendView : BaseHeaderView
+@property(nonatomic, strong)id<PickMyFriendViewDelegate>pickDelegate;
 @property(nonatomic, strong)UIImageView *imgViewFriend;
 @property(nonatomic, strong)UITextField *txtFieldName;
 @property(nonatomic, strong)UITextField *txtFieldNumber;

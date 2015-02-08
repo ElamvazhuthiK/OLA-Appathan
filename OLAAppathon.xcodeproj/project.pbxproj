@@ -66,7 +66,16 @@
 		7D59FDF11A86E688007C921D /* WidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D59FDED1A86E688007C921D /* WidgetView.m */; };
 		7D59FDF41A86E6C7007C921D /* LoginAndSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D59FDF31A86E6C7007C921D /* LoginAndSignUpViewController.m */; };
 		7D59FE061A86E6F9007C921D /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDFA1A86E6F9007C921D /* login@2x.png */; };
-		7D59FE0C1A86E6F9007C921D /* splash-01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FE001A86E6F9007C921D /* splash-01@2x.png */; };
+		7D59FE101A8700F1007C921D /* nophoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDFD1A86E6F9007C921D /* nophoto@2x.png */; };
+		7D59FE111A8700FB007C921D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDFF1A86E6F9007C921D /* Default@2x.png */; };
+		7D59FE121A870171007C921D /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDF61A86E6F9007C921D /* call@2x.png */; };
+		7D59FE131A870171007C921D /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDF71A86E6F9007C921D /* close@2x.png */; };
+		7D59FE141A870171007C921D /* csmera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDF81A86E6F9007C921D /* csmera@2x.png */; };
+		7D59FE151A870171007C921D /* gallery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDF91A86E6F9007C921D /* gallery@2x.png */; };
+		7D59FE161A870171007C921D /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDFB1A86E6F9007C921D /* menu@2x.png */; };
+		7D59FE171A870171007C921D /* noyification side box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDFC1A86E6F9007C921D /* noyification side box@2x.png */; };
+		7D59FE181A870171007C921D /* signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FDFE1A86E6F9007C921D /* signup@2x.png */; };
+		7D59FE191A870171007C921D /* transpernt list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D59FE011A86E6F9007C921D /* transpernt list@2x.png */; };
 		7D90EF201A865DFB00AF79F9 /* Encryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */; };
 		7D90EF231A86816C00AF79F9 /* SignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D90EF221A86816C00AF79F9 /* SignUpModel.m */; };
 		CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B521A8649DC0032DA11 /* SocialShare.m */; };
@@ -81,7 +90,6 @@
 		FC3AEB271A837C6400EA6B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB261A837C6400EA6B03 /* AppDelegate.m */; };
 		FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */; };
 		FC3AEB2F1A837C6400EA6B03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB2E1A837C6400EA6B03 /* Images.xcassets */; };
-		FC3AEB321A837C6400EA6B03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3AEB301A837C6400EA6B03 /* LaunchScreen.xib */; };
 		FC3AEB3E1A837C6600EA6B03 /* AppathonTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3AEB3D1A837C6600EA6B03 /* AppathonTemplateTests.m */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +129,7 @@
 		7D3295351A8634CB00114B7D /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		7D3295371A86351500114B7D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		7D3295381A86351500114B7D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
-		7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppathonTemplate-PrefixHeader.pch"; sourceTree = "<group>"; };
+		7D3295401A8638F000114B7D /* OLAAppathon-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OLAAppathon-PrefixHeader.pch"; sourceTree = "<group>"; };
 		7D3295411A863AF000114B7D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		7D3295421A863AF000114B7D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		7D3295441A863B1600114B7D /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
@@ -207,10 +215,9 @@
 		7D59FDFA1A86E6F9007C921D /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
 		7D59FDFB1A86E6F9007C921D /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		7D59FDFC1A86E6F9007C921D /* noyification side box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noyification side box@2x.png"; sourceTree = "<group>"; };
-		7D59FDFD1A86E6F9007C921D /* pick my friend pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pick my friend pic@2x.png"; sourceTree = "<group>"; };
+		7D59FDFD1A86E6F9007C921D /* nophoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nophoto@2x.png"; sourceTree = "<group>"; };
 		7D59FDFE1A86E6F9007C921D /* signup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup@2x.png"; sourceTree = "<group>"; };
-		7D59FDFF1A86E6F9007C921D /* splash-01-01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-01-01@2x.png"; sourceTree = "<group>"; };
-		7D59FE001A86E6F9007C921D /* splash-01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-01@2x.png"; sourceTree = "<group>"; };
+		7D59FDFF1A86E6F9007C921D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7D59FE011A86E6F9007C921D /* transpernt list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transpernt list@2x.png"; sourceTree = "<group>"; };
 		7D90EF1E1A865DFB00AF79F9 /* Encryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryptor.h; sourceTree = "<group>"; };
 		7D90EF1F1A865DFB00AF79F9 /* Encryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryptor.m; sourceTree = "<group>"; };
@@ -231,15 +238,14 @@
 		CB665B671A865B300032DA11 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = InitialView/InitialViewController.m; sourceTree = "<group>"; };
 		CB665B691A865BCF0032DA11 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialView.h; path = InitialView/InitialView.h; sourceTree = "<group>"; };
 		CB665B6A1A865BCF0032DA11 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = InitialView/InitialView.m; sourceTree = "<group>"; };
-		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3AEB1E1A837C6300EA6B03 /* OLAAppathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLAAppathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC3AEB251A837C6400EA6B03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC3AEB261A837C6400EA6B03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FC3AEB2C1A837C6400EA6B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3AEB2E1A837C6400EA6B03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC3AEB311A837C6400EA6B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FC3AEB371A837C6600EA6B03 /* AppathonTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppathonTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3AEB371A837C6600EA6B03 /* OLAAppathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLAAppathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB3C1A837C6600EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB3D1A837C6600EA6B03 /* AppathonTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppathonTemplateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -521,10 +527,9 @@
 				7D59FDFA1A86E6F9007C921D /* login@2x.png */,
 				7D59FDFB1A86E6F9007C921D /* menu@2x.png */,
 				7D59FDFC1A86E6F9007C921D /* noyification side box@2x.png */,
-				7D59FDFD1A86E6F9007C921D /* pick my friend pic@2x.png */,
+				7D59FDFD1A86E6F9007C921D /* nophoto@2x.png */,
 				7D59FDFE1A86E6F9007C921D /* signup@2x.png */,
-				7D59FDFF1A86E6F9007C921D /* splash-01-01@2x.png */,
-				7D59FE001A86E6F9007C921D /* splash-01@2x.png */,
+				7D59FDFF1A86E6F9007C921D /* Default@2x.png */,
 				7D59FE011A86E6F9007C921D /* transpernt list@2x.png */,
 			);
 			path = Images;
@@ -590,8 +595,8 @@
 		FC3AEB1F1A837C6300EA6B03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */,
-				FC3AEB371A837C6600EA6B03 /* AppathonTemplateTests.xctest */,
+				FC3AEB1E1A837C6300EA6B03 /* OLAAppathon.app */,
+				FC3AEB371A837C6600EA6B03 /* OLAAppathonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -622,7 +627,6 @@
 				FC3AEB261A837C6400EA6B03 /* AppDelegate.m */,
 				FC3AEB2B1A837C6400EA6B03 /* Main.storyboard */,
 				FC3AEB2E1A837C6400EA6B03 /* Images.xcassets */,
-				FC3AEB301A837C6400EA6B03 /* LaunchScreen.xib */,
 				FC3AEB211A837C6300EA6B03 /* Supporting Files */,
 			);
 			path = AppathonTemplate;
@@ -631,7 +635,7 @@
 		FC3AEB211A837C6300EA6B03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */,
+				7D3295401A8638F000114B7D /* OLAAppathon-PrefixHeader.pch */,
 				FC3AEB221A837C6400EA6B03 /* Info.plist */,
 				FC3AEB231A837C6400EA6B03 /* main.m */,
 			);
@@ -658,9 +662,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC3AEB1D1A837C6300EA6B03 /* AppathonTemplate */ = {
+		FC3AEB1D1A837C6300EA6B03 /* OLAAppathon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplate" */;
+			buildConfigurationList = FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathon" */;
 			buildPhases = (
 				FC3AEB1A1A837C6300EA6B03 /* Sources */,
 				FC3AEB1B1A837C6300EA6B03 /* Frameworks */,
@@ -670,14 +674,14 @@
 			);
 			dependencies = (
 			);
-			name = AppathonTemplate;
+			name = OLAAppathon;
 			productName = AppathonTemplate;
-			productReference = FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */;
+			productReference = FC3AEB1E1A837C6300EA6B03 /* OLAAppathon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC3AEB361A837C6600EA6B03 /* AppathonTemplateTests */ = {
+		FC3AEB361A837C6600EA6B03 /* OLAAppathonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplateTests" */;
+			buildConfigurationList = FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathonTests" */;
 			buildPhases = (
 				FC3AEB331A837C6500EA6B03 /* Sources */,
 				FC3AEB341A837C6500EA6B03 /* Frameworks */,
@@ -688,9 +692,9 @@
 			dependencies = (
 				FC3AEB391A837C6600EA6B03 /* PBXTargetDependency */,
 			);
-			name = AppathonTemplateTests;
+			name = OLAAppathonTests;
 			productName = AppathonTemplateTests;
-			productReference = FC3AEB371A837C6600EA6B03 /* AppathonTemplateTests.xctest */;
+			productReference = FC3AEB371A837C6600EA6B03 /* OLAAppathonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -711,7 +715,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "AppathonTemplate" */;
+			buildConfigurationList = FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "OLAAppathon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -724,8 +728,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC3AEB1D1A837C6300EA6B03 /* AppathonTemplate */,
-				FC3AEB361A837C6600EA6B03 /* AppathonTemplateTests */,
+				FC3AEB1D1A837C6300EA6B03 /* OLAAppathon */,
+				FC3AEB361A837C6600EA6B03 /* OLAAppathonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -735,17 +739,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D59FE111A8700FB007C921D /* Default@2x.png in Resources */,
 				34C6DFD11A86CF0100C193F6 /* csmera.png in Resources */,
+				7D59FE101A8700F1007C921D /* nophoto@2x.png in Resources */,
 				FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */,
 				34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */,
-				FC3AEB321A837C6400EA6B03 /* LaunchScreen.xib in Resources */,
+				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
+				34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */,
+				7D59FE151A870171007C921D /* gallery@2x.png in Resources */,
+				34C6DFD11A86CF0100C193F6 /* csmera.png in Resources */,
+				34C6DFDB1A86D63400C193F6 /* cab1.png in Resources */,
 				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
 				34C6DFDD1A86D8A600C193F6 /* rupee.png in Resources */,
 				FC3AEB2F1A837C6400EA6B03 /* Images.xcassets in Resources */,
+				7D59FE121A870171007C921D /* call@2x.png in Resources */,
+				7D59FE191A870171007C921D /* transpernt list@2x.png in Resources */,
+				7D59FE141A870171007C921D /* csmera@2x.png in Resources */,
+				7D59FE131A870171007C921D /* close@2x.png in Resources */,
 				34C6DFD31A86CF8400C193F6 /* gallery.png in Resources */,
+				7D59FE161A870171007C921D /* menu@2x.png in Resources */,
+				7D59FE181A870171007C921D /* signup@2x.png in Resources */,
 				7D52CAA01A8618DC00CD56AE /* GoogleMaps.bundle in Resources */,
-				7D59FE0C1A86E6F9007C921D /* splash-01@2x.png in Resources */,
 				7D59FE061A86E6F9007C921D /* login@2x.png in Resources */,
+				7D59FE171A870171007C921D /* noyification side box@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,7 +846,7 @@
 /* Begin PBXTargetDependency section */
 		FC3AEB391A837C6600EA6B03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC3AEB1D1A837C6300EA6B03 /* AppathonTemplate */;
+			target = FC3AEB1D1A837C6300EA6B03 /* OLAAppathon */;
 			targetProxy = FC3AEB381A837C6600EA6B03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -842,14 +858,6 @@
 				FC3AEB2C1A837C6400EA6B03 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FC3AEB301A837C6400EA6B03 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC3AEB311A837C6400EA6B03 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -946,12 +954,12 @@
 					"$(PROJECT_DIR)/AppathonTemplate/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppathonTemplate/AppathonTemplate-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "AppathonTemplate/OLAAppathon-PrefixHeader.pch";
 				INFOPLIST_FILE = AppathonTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathon;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -966,12 +974,12 @@
 					"$(PROJECT_DIR)/AppathonTemplate/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppathonTemplate/AppathonTemplate-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "AppathonTemplate/OLAAppathon-PrefixHeader.pch";
 				INFOPLIST_FILE = AppathonTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathon;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
@@ -990,7 +998,7 @@
 				);
 				INFOPLIST_FILE = AppathonTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathonTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppathonTemplate.app/AppathonTemplate";
 			};
 			name = Debug;
@@ -1005,7 +1013,7 @@
 				);
 				INFOPLIST_FILE = AppathonTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathonTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppathonTemplate.app/AppathonTemplate";
 			};
 			name = Release;
@@ -1013,7 +1021,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "AppathonTemplate" */ = {
+		FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "OLAAppathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3AEB3F1A837C6600EA6B03 /* Debug */,
@@ -1022,7 +1030,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplate" */ = {
+		FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3AEB421A837C6600EA6B03 /* Debug */,
@@ -1031,7 +1039,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplateTests" */ = {
+		FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3AEB451A837C6600EA6B03 /* Debug */,

@@ -22,7 +22,7 @@
 //        self.backgroundColor = [UIColor yellowColor];
 //        [self createViews];
 //=======
-        self.backgroundColor = [UIColor greenColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }

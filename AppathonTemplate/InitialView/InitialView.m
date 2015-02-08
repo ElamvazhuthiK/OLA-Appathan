@@ -20,7 +20,7 @@
 - (void)createViews
 {
     [super createViews];
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-01-01.png"] bgColor:[UIColor clearColor]];
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"] bgColor:[UIColor clearColor]];
     //[self.fullContentView addSubview:self.imageView];
     
     self.signUpBtn = [[UIButton alloc] initWithTitle:@"signUp" andBackgroundImage:@"image" andTextColor:[UIColor blackColor]];

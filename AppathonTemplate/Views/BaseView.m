@@ -33,7 +33,7 @@
 {
     self.frame = [[UIScreen mainScreen] bounds];
     
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-01-01.png"] bgColor:[UIColor clearColor]];
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"] bgColor:[UIColor clearColor]];
     [self addSubview:self.imageView];
     
     self.fullContentView = [[UIView alloc] initWithFrame:self.bounds];
