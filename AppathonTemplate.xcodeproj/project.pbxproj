@@ -65,6 +65,9 @@
 		CB38BD581A86B3C4001AB6F5 /* transpernt list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BD4C1A86B3C4001AB6F5 /* transpernt list@2x.png */; };
 		CB38BDF91A86BCB4001AB6F5 /* BaseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB38BDF81A86BCB4001AB6F5 /* BaseHeaderView.m */; };
 		CB38BDFC1A86BEB8001AB6F5 /* BaseHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB38BDFB1A86BEB8001AB6F5 /* BaseHeaderViewController.m */; };
+		CB38BDFF1A86EFC5001AB6F5 /* Picture47@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB38BDFD1A86EFC5001AB6F5 /* Picture47@2x.jpg */; };
+		CB38BE001A86EFC5001AB6F5 /* Screen Shot 2015-02-07 at 10.23.40 PM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB38BDFE1A86EFC5001AB6F5 /* Screen Shot 2015-02-07 at 10.23.40 PM@2x.png */; };
+		CB38BE031A86F41B001AB6F5 /* ImageDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = CB38BE021A86F41B001AB6F5 /* ImageDetails.m */; };
 		CB665B551A8649DC0032DA11 /* SocialShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B521A8649DC0032DA11 /* SocialShare.m */; };
 		CB665B561A8649DC0032DA11 /* SocialSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B541A8649DC0032DA11 /* SocialSharingViewController.m */; };
 		CB665B5F1A864A500032DA11 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665B591A864A500032DA11 /* HomeView.m */; };
@@ -191,6 +194,10 @@
 		CB38BDF81A86BCB4001AB6F5 /* BaseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHeaderView.m; sourceTree = "<group>"; };
 		CB38BDFA1A86BEB8001AB6F5 /* BaseHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHeaderViewController.h; sourceTree = "<group>"; };
 		CB38BDFB1A86BEB8001AB6F5 /* BaseHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHeaderViewController.m; sourceTree = "<group>"; };
+		CB38BDFD1A86EFC5001AB6F5 /* Picture47@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Picture47@2x.jpg"; path = "Images/Picture47@2x.jpg"; sourceTree = "<group>"; };
+		CB38BDFE1A86EFC5001AB6F5 /* Screen Shot 2015-02-07 at 10.23.40 PM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2015-02-07 at 10.23.40 PM@2x.png"; path = "Images/Screen Shot 2015-02-07 at 10.23.40 PM@2x.png"; sourceTree = "<group>"; };
+		CB38BE011A86F41B001AB6F5 /* ImageDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageDetails.h; path = SearchPlaceView/ImageDetails.h; sourceTree = "<group>"; };
+		CB38BE021A86F41B001AB6F5 /* ImageDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageDetails.m; path = SearchPlaceView/ImageDetails.m; sourceTree = "<group>"; };
 		CB665B511A8649DC0032DA11 /* SocialShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShare.h; sourceTree = "<group>"; };
 		CB665B521A8649DC0032DA11 /* SocialShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialShare.m; sourceTree = "<group>"; };
 		CB665B531A8649DC0032DA11 /* SocialSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialSharingViewController.h; sourceTree = "<group>"; };
@@ -469,6 +476,8 @@
 		CB38BD401A86B372001AB6F5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CB38BDFD1A86EFC5001AB6F5 /* Picture47@2x.jpg */,
+				CB38BDFE1A86EFC5001AB6F5 /* Screen Shot 2015-02-07 at 10.23.40 PM@2x.png */,
 				CB38BD411A86B3C4001AB6F5 /* call@2x.png */,
 				CB38BD421A86B3C4001AB6F5 /* close@2x.png */,
 				CB38BD431A86B3C4001AB6F5 /* csmera@2x.png */,
@@ -547,6 +556,8 @@
 				CB665B851A86A2CC0032DA11 /* SearchPlaceView.m */,
 				CB665B871A86A2ED0032DA11 /* SearchPlaceViewController.h */,
 				CB665B881A86A2ED0032DA11 /* SearchPlaceViewController.m */,
+				CB38BE011A86F41B001AB6F5 /* ImageDetails.h */,
+				CB38BE021A86F41B001AB6F5 /* ImageDetails.m */,
 			);
 			name = SearchPlaceView;
 			sourceTree = "<group>";
@@ -710,6 +721,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB38BD561A86B3C4001AB6F5 /* splash-01-01@2x.png in Resources */,
+				CB38BE001A86EFC5001AB6F5 /* Screen Shot 2015-02-07 at 10.23.40 PM@2x.png in Resources */,
 				CB38BD521A86B3C4001AB6F5 /* menu@2x.png in Resources */,
 				FC3AEB2D1A837C6400EA6B03 /* Main.storyboard in Resources */,
 				CB38BD541A86B3C4001AB6F5 /* pick my friend pic@2x.png in Resources */,
@@ -719,6 +731,7 @@
 				CB38BD4D1A86B3C4001AB6F5 /* call@2x.png in Resources */,
 				CB38BD501A86B3C4001AB6F5 /* gallery@2x.png in Resources */,
 				34C6DFA51A8673CC00C193F6 /* Google.png in Resources */,
+				CB38BDFF1A86EFC5001AB6F5 /* Picture47@2x.jpg in Resources */,
 				CB38BD511A86B3C4001AB6F5 /* login@2x.png in Resources */,
 				CB38BD581A86B3C4001AB6F5 /* transpernt list@2x.png in Resources */,
 				CB38BD4F1A86B3C4001AB6F5 /* csmera@2x.png in Resources */,
@@ -749,6 +762,7 @@
 				34C6DF981A866DA700C193F6 /* SQLiteClass.m in Sources */,
 				7D32952D1A8632FF00114B7D /* BaseModel.m in Sources */,
 				7D52CAA51A8618DC00CD56AE /* ImageDownloader.m in Sources */,
+				CB38BE031A86F41B001AB6F5 /* ImageDetails.m in Sources */,
 				CB665B611A864A500032DA11 /* GoogleMapView.m in Sources */,
 				CB665B7B1A867BE30032DA11 /* WidgetView.m in Sources */,
 				7D52CAA91A8618DC00CD56AE /* BaseViewController.m in Sources */,
