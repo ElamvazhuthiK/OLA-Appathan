@@ -126,7 +126,7 @@
 		7D3295351A8634CB00114B7D /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		7D3295371A86351500114B7D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		7D3295381A86351500114B7D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
-		7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppathonTemplate-PrefixHeader.pch"; sourceTree = "<group>"; };
+		7D3295401A8638F000114B7D /* OLAAppathon-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OLAAppathon-PrefixHeader.pch"; sourceTree = "<group>"; };
 		7D3295411A863AF000114B7D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		7D3295421A863AF000114B7D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		7D3295441A863B1600114B7D /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
@@ -235,14 +235,14 @@
 		CB665B671A865B300032DA11 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = InitialView/InitialViewController.m; sourceTree = "<group>"; };
 		CB665B691A865BCF0032DA11 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialView.h; path = InitialView/InitialView.h; sourceTree = "<group>"; };
 		CB665B6A1A865BCF0032DA11 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = InitialView/InitialView.m; sourceTree = "<group>"; };
-		FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppathonTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3AEB1E1A837C6300EA6B03 /* OLAAppathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLAAppathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB221A837C6400EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB231A837C6400EA6B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC3AEB251A837C6400EA6B03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC3AEB261A837C6400EA6B03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FC3AEB2C1A837C6400EA6B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3AEB2E1A837C6400EA6B03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC3AEB371A837C6600EA6B03 /* AppathonTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppathonTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3AEB371A837C6600EA6B03 /* OLAAppathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLAAppathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3AEB3C1A837C6600EA6B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AEB3D1A837C6600EA6B03 /* AppathonTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppathonTemplateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -590,8 +590,8 @@
 		FC3AEB1F1A837C6300EA6B03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */,
-				FC3AEB371A837C6600EA6B03 /* AppathonTemplateTests.xctest */,
+				FC3AEB1E1A837C6300EA6B03 /* OLAAppathon.app */,
+				FC3AEB371A837C6600EA6B03 /* OLAAppathonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -630,7 +630,7 @@
 		FC3AEB211A837C6300EA6B03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7D3295401A8638F000114B7D /* AppathonTemplate-PrefixHeader.pch */,
+				7D3295401A8638F000114B7D /* OLAAppathon-PrefixHeader.pch */,
 				FC3AEB221A837C6400EA6B03 /* Info.plist */,
 				FC3AEB231A837C6400EA6B03 /* main.m */,
 			);
@@ -657,9 +657,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC3AEB1D1A837C6300EA6B03 /* AppathonTemplate */ = {
+		FC3AEB1D1A837C6300EA6B03 /* OLAAppathon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplate" */;
+			buildConfigurationList = FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathon" */;
 			buildPhases = (
 				FC3AEB1A1A837C6300EA6B03 /* Sources */,
 				FC3AEB1B1A837C6300EA6B03 /* Frameworks */,
@@ -669,14 +669,14 @@
 			);
 			dependencies = (
 			);
-			name = AppathonTemplate;
+			name = OLAAppathon;
 			productName = AppathonTemplate;
-			productReference = FC3AEB1E1A837C6300EA6B03 /* AppathonTemplate.app */;
+			productReference = FC3AEB1E1A837C6300EA6B03 /* OLAAppathon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC3AEB361A837C6600EA6B03 /* AppathonTemplateTests */ = {
+		FC3AEB361A837C6600EA6B03 /* OLAAppathonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplateTests" */;
+			buildConfigurationList = FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathonTests" */;
 			buildPhases = (
 				FC3AEB331A837C6500EA6B03 /* Sources */,
 				FC3AEB341A837C6500EA6B03 /* Frameworks */,
@@ -687,9 +687,9 @@
 			dependencies = (
 				FC3AEB391A837C6600EA6B03 /* PBXTargetDependency */,
 			);
-			name = AppathonTemplateTests;
+			name = OLAAppathonTests;
 			productName = AppathonTemplateTests;
-			productReference = FC3AEB371A837C6600EA6B03 /* AppathonTemplateTests.xctest */;
+			productReference = FC3AEB371A837C6600EA6B03 /* OLAAppathonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -710,7 +710,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "AppathonTemplate" */;
+			buildConfigurationList = FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "OLAAppathon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -723,8 +723,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC3AEB1D1A837C6300EA6B03 /* AppathonTemplate */,
-				FC3AEB361A837C6600EA6B03 /* AppathonTemplateTests */,
+				FC3AEB1D1A837C6300EA6B03 /* OLAAppathon */,
+				FC3AEB361A837C6600EA6B03 /* OLAAppathonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -840,7 +840,7 @@
 /* Begin PBXTargetDependency section */
 		FC3AEB391A837C6600EA6B03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC3AEB1D1A837C6300EA6B03 /* AppathonTemplate */;
+			target = FC3AEB1D1A837C6300EA6B03 /* OLAAppathon */;
 			targetProxy = FC3AEB381A837C6600EA6B03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -948,12 +948,12 @@
 					"$(PROJECT_DIR)/AppathonTemplate/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppathonTemplate/AppathonTemplate-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "AppathonTemplate/OLAAppathon-PrefixHeader.pch";
 				INFOPLIST_FILE = AppathonTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathon;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -968,12 +968,12 @@
 					"$(PROJECT_DIR)/AppathonTemplate/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppathonTemplate/AppathonTemplate-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "AppathonTemplate/OLAAppathon-PrefixHeader.pch";
 				INFOPLIST_FILE = AppathonTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathon;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
@@ -992,7 +992,7 @@
 				);
 				INFOPLIST_FILE = AppathonTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathonTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppathonTemplate.app/AppathonTemplate";
 			};
 			name = Debug;
@@ -1007,7 +1007,7 @@
 				);
 				INFOPLIST_FILE = AppathonTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OLAAppathonTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppathonTemplate.app/AppathonTemplate";
 			};
 			name = Release;
@@ -1015,7 +1015,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "AppathonTemplate" */ = {
+		FC3AEB191A837C6200EA6B03 /* Build configuration list for PBXProject "OLAAppathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3AEB3F1A837C6600EA6B03 /* Debug */,
@@ -1024,7 +1024,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplate" */ = {
+		FC3AEB411A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3AEB421A837C6600EA6B03 /* Debug */,
@@ -1033,7 +1033,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "AppathonTemplateTests" */ = {
+		FC3AEB441A837C6600EA6B03 /* Build configuration list for PBXNativeTarget "OLAAppathonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC3AEB451A837C6600EA6B03 /* Debug */,
