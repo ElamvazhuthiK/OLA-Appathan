@@ -8,11 +8,12 @@
 
 #import "BaseView.h"
 @protocol LoginViewDelegate <BaseViewDelegate>
+
 @end
 @interface LoginView : BaseView
+@property(nonatomic, weak)id<LoginViewDelegate> delegate;
 @property(nonatomic, strong)UITextField *userEmailTextField;
 @property(nonatomic, strong)UITextField *passwordTextField;
-@property(nonatomic, strong)UIButton *signUpButton;
 @property(nonatomic, strong)UIButton *submitButton;
 
 @end

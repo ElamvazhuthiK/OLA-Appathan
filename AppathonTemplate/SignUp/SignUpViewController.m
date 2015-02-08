@@ -11,8 +11,9 @@
 #import "SelectedTripDetailsViewController.h"
 #import "SignView.h"
 #import "SignUpModel.h"
+#import "Encryptor.h"
 
-@interface SignUpViewController ()
+@interface SignUpViewController ()<SignUpModelDelegate, BaseViewDelegate>
 
 @property (nonatomic, strong) SignView *signUpView;
 @property (nonatomic, strong) SignUpModel *signUpModel;
@@ -34,9 +35,15 @@
 {
     self.signUpView = [[SignView alloc] init];
     [self.view addSubview:self.signUpView];
-    //[self.view   addSubView :self.signUpView];
-    
     [self.signUpView.signUpButton addTarget:self action:@selector(signUpNewUser:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([[AppData getObject] username] != nil) {
+        self.signUpView.userNameTextField.text = [[AppData getObject] username];
+    }
+    
+    if ([[AppData getObject] password] != nil) {
+        self.signUpView.userNameTextField.text = [[Encryptor encryptor] decryptData:[[[AppData getObject] password] dataUsingEncoding:NSUTF8StringEncoding] withKey:ENCRYPTION_KEY];
+    }
 }
 
 - (void)viewDidLayoutSubviews
@@ -57,28 +64,5 @@
 {
     SelectedTripDetailsViewController *selTripvc = [[SelectedTripDetailsViewController alloc] init];
     [self.navigationController pushViewController:selTripvc animated:YES];
-    
-//    if (self.signUpView.userEmailTextField.text.length > 0 && self.signUpView.passwordTextField.text.length > 0 && self.signUpView.mobileNumberOfUserTextField.text.length > 0 && self.signUpView.userNameTextField.text.length > 0)
-//    {
-////        @property(nonatomic, strong) NSString *email;
-////        @property(nonatomic, strong) NSString *password;
-////        @property(nonatomic, strong) NSString *name;
-////        @property(nonatomic, strong) NSString *mobile;
-////        @property(nonatomic, strong) NSString *source;
-////        @property(nonatomic, strong) NSString *device_id;
-////        loginRequest.email = self.signUpView.userEmailTextField.text;
-////        loginRequest.password = self.signUpView.passwordTextField.text;
-////        loginRequest.email = self.signUpView.mobileNumberOfUserTextField.text;
-////        loginRequest.email = self.signUpView.userEmailTextField.text;
-//
-//        
-////        [self.signUpModel sendRequest:]
-//    }
-//    else
-//    {
-//        UIAlertView *missedRequieredFields = [[UIAlertView alloc] initWithTitle:@"Missing required fields" message:@"Please make sure all requiered fields are given" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-//        
-//        [missedRequieredFields show];
-//    }
 }
 @end

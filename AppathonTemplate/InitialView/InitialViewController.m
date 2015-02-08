@@ -12,10 +12,14 @@
 #import "LoginViewController.h"
 #import "SummaryViewController.h"
 
+
+#import "PickMyFriendViewController.h"
 @interface InitialViewController ()
 
 @property (nonatomic,strong) InitialView *iniView;
-
+@property (nonatomic,strong) LoginViewController *loginVC;
+@property (nonatomic,strong) SignUpViewController *signupVC;
+@property (nonatomic,strong) UIViewController *childViewCtrl;
 @end
 
 @implementation InitialViewController
@@ -23,6 +27,10 @@
 {
     [super loadView];
     self.iniView = [[InitialView alloc] init];
+//<<<<<<< HEAD
+//    self.iniView.backgroundColor = [UIColor redColor];
+//    self.view = self.iniView;
+//=======
     [self.view addSubview:self.iniView];
 }
 
@@ -47,17 +55,6 @@
 {
     SummaryViewController *vc = [[SummaryViewController alloc] init];
     [self navigateToViewController:vc];
-    
-//    if (sender == self.iniView.loginBtn)
-//    {
-//        LoginViewController *loginVC = [[LoginViewController alloc] init];
-//        [self navigateToViewController:loginVC];
-//    }
-//    else
-//    {
-//        SignUpViewController *signupVc = [[SignUpViewController alloc] init];
-//        [self navigateToViewController:signupVc];
-//    }
 }
 
 
@@ -65,5 +62,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end
