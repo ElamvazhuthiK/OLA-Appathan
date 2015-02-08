@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Market Simplified. All rights reserved.
 //
 
-#import "BaseView.h"
+#import "BaseHeaderView.h"
 
 @interface InitialView : BaseView
 

@@ -17,30 +17,17 @@
 
 @implementation InitialView
 
-- (instancetype) init
-{
-    self = [super init];
-    
-    if (self)
-    {
-        
-    }
-    
-    return self;
-}
-
 - (void)createViews
 {
-    //[super createViews];
+    [super createViews];
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-01-01.png"] bgColor:[UIColor clearColor]];
+    //[self.fullContentView addSubview:self.imageView];
     
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"initialImage"] bgColor:[UIColor clearColor]];
-    [self addSubview:self.imageView];
-    
-    self.signUpBtn = [[UIButton alloc] initWithTitle:@"SIGNUP" andBackgroundImage:@"image" andTextColor:[UIColor blackColor]];
-    [self addSubview:self.signUpBtn];
+    self.signUpBtn = [[UIButton alloc] initWithTitle:@"signUp" andBackgroundImage:@"image" andTextColor:[UIColor blackColor]];
+    [self.fullContentView addSubview:self.signUpBtn];
     
     self.loginBtn = [[UIButton alloc] initWithTitle:@"LOGIN" andBackgroundImage:@"image" andTextColor:[UIColor blackColor]];
-    [self addSubview:self.loginBtn];
+    [self.fullContentView addSubview:self.loginBtn];
 }
 
 - (void)layoutSubviews
@@ -49,8 +36,8 @@
     
     float startXPos = 0;
     float startYPos = 0;
-    float fullWidth = self.frame.size.width - (startXPos*2);
-    float fullHeight = self.frame.size.height- (startYPos*2);
+    float fullWidth = self.fullContentView.frame.size.width - (startXPos*2);
+    float fullHeight = self.fullContentView.frame.size.height- (startYPos*2);
     
     self.imageView.frame = CGRectMake(startXPos, startYPos, fullWidth, fullHeight - 50);
     self.signUpBtn.frame = CGRectMake(startXPos, self.imageView.frame.size.height + self.imageView.frame.origin.y, fullWidth/2, fullHeight - (self.imageView.frame.size.height + self.imageView.frame.origin.y));

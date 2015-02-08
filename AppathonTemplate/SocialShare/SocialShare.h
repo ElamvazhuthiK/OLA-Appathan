@@ -11,4 +11,10 @@
 
 @interface SocialShare : BaseView
 
+@property (nonatomic, strong) UITextView *commentTextView;
+@property (nonatomic, strong) UIImageView *selectedImageView;
+
+@property(nonatomic, strong)UIButton *facebookPostButton;
+@property(nonatomic, strong)UIButton *twitterPostButton;
+
 @end

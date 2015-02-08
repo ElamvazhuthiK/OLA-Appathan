@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 @protocol BaseViewDelegate<NSObject>
 - (void)removeView;
@@ -19,6 +18,9 @@
 
 @property(nonatomic,weak) id<BaseViewDelegate>delegate;
 @property (nonatomic,strong) CLLocationManager *locationManager;
+
+
+@property (nonatomic,strong) UIView *fullContentView;
 
 - (void)createViews;
 

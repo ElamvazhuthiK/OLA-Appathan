@@ -12,4 +12,6 @@
 
 - (id)initWithTitle:(NSString *) titleString andBackgroundImage:(NSString *) bgImageName andTextColor:(UIColor *) textColor;
 
+-(id) initWithButtonOnMachineInformationFrame:(CGRect)frame andTitle:(NSString*) title andTarget:(id)target selector:(SEL)action;
+
 @end

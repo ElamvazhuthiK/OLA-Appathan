@@ -12,19 +12,25 @@
 
 @end
 @implementation SignView
+
 - (instancetype)init
 {
     self = [super init];
     if (self)
     {
-        self.backgroundColor = [UIColor yellowColor];
-        [self createViews];
+//<<<<<<< HEAD
+//        self.backgroundColor = [UIColor yellowColor];
+//        [self createViews];
+//=======
+        self.backgroundColor = [UIColor greenColor];
     }
     return self;
 }
 
 - (void)createViews
 {
+    [super createViews];
+    
     self.userEmailTextField = [[UITextField alloc] initWithPlaceholder:@"email" andBackgroundColor:[UIColor clearColor] andTextColor:[UIColor blueColor] andTextAlignment:NSTextAlignmentCenter andBorderStyle:UITextBorderStyleLine];
     [self addSubview:self.userEmailTextField];
     
@@ -60,26 +66,8 @@
     
     [self.signUpButton setFrame:CGRectMake(60, 514, 200, 30)];
 }
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
-
-- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSUInteger touchCount = [touches count];
-    if (touchCount == 1) {
-        if ([self.delegate respondsToSelector:@selector(removeView)]) {
-            [self.delegate removeView];
-        }
-    }
-}
 - (void)dealloc
 {
 }
 
-//@implementation SignView
-//
 @end

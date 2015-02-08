@@ -7,16 +7,35 @@
 //
 
 #import "BaseViewController.h"
+#import "BaseView.h"
 
 @interface BaseViewController ()
+
+@property (nonatomic,strong) BaseView *baseView;
 
 @end
 
 @implementation BaseViewController
 
+- (void)loadView
+{
+    [super loadView];
+    self.baseView = [[BaseView alloc] init];
+    self.view = self.baseView;
+}
+
+
 - (void)navigateToViewController:(UIViewController *)viewController
 {
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.baseView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20);
 }
 
 - (void)viewDidLoad
