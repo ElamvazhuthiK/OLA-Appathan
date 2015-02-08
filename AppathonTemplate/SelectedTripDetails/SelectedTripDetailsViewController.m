@@ -8,12 +8,17 @@
 
 #import "SelectedTripDetailsViewController.h"
 #import "SelectedTripDetailsView.h"
+#import "AppDelegate.h"
+#import "SummaryViewController.h"
+#import "ProfileViewController.h"
+#import "PickMyFriendViewController.h"
+
 #define CAR_MODEL @"car_model"
 #define DURATION @"duration"
 #define CAR_COST @"car_cost"
 
 #define CABS_INFO_JSON @"[{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Swift\", \"color\": \"Blue\", \"driver_name\": \"Mohan.K\", \"driver_mobile\": \"9412567863\", \"duration\": \"3 mins near by\", \"car_cost\": \"305\"},{\"id\": 4385764, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Verna\", \"color\": \"Yellow\", \"driver_name\": \"Kalyan.K\", \"driver_mobile\": \"9412567864\", \"duration\": \"7 mins near by\", \"car_cost\": \"325\"},{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Logan\", \"color\": \"Gray\", \"driver_name\": \"Krishna.P\", \"driver_mobile\": \"9412567865\", \"duration\": \"10 mins near by\", \"car_cost\": \"350\"},{\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Innova\", \"color\": \"Blue\", \"driver_name\": \" Raj kumar.S\", \"driver_mobile\": \"9412567866\", \"duration\": \"15 mins near by\", \"car_cost\": \"370\"}, {\"id\": 4385763, \"lat\": 13.204492, \"lng\": 77.707687, \"license_number\": \"KA 06 HJ 6666\", \"car_model\": \"Scorpio\", \"color\": \"White\", \"driver_name\": \" Subhash.A\", \"driver_mobile\": \"9412567867\", \"duration\": \"15 mins near by\", \"car_cost\": \"340\"}]"
-@interface SelectedTripDetailsViewController ()<UIGestureRecognizerDelegate>
+@interface SelectedTripDetailsViewController ()<UIGestureRecognizerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *cabsInformationArray;
 }
@@ -33,11 +38,15 @@
 
 #pragma mark - View life cycle methods
 
-- (void)loadView
+- (void)createViews
 {
+    
     self.selTripDetailsView = [[SelectedTripDetailsView alloc] init];
     self.view = self.selTripDetailsView;
     self.navigationController.navigationBar.hidden = NO;
+    self.selTripDetailsView.menuListTableView.hidden = YES;
+    self.selTripDetailsView.menuListTableView.dataSource = self;
+    self.selTripDetailsView.menuListTableView.delegate = self;
     
 }
 - (void)viewDidLoad
@@ -173,29 +182,29 @@
 {
     UIImageView *selectedUserImage = (UIImageView*)tapGesture.view;
     
-//    NSInteger 
+    //    NSInteger
     //NSLog(@"%@", [priorityUserDetailsArray objectAtIndex:selectedUserImage.tag]);
     
-//    NSMutableDictionary *selectedUserDetailsDictionary = [priorityUserDetailsArray objectAtIndex:selectedUserImage.tag];
-//    
-//    // Opening Pdf file.
-//    NSString *pdfFilepathString = [[NSBundle mainBundle] pathForResource:[selectedUserDetailsDictionary valueForKey:PDF_FILE_NAME] ofType:@"pdf"];
-//    
-//    NSFileManager *filemanager = [NSFileManager defaultManager];
-//    
-//    if ([filemanager fileExistsAtPath:pdfFilepathString])
-//    {
-//        NSURL *pdfFileUrl = [NSURL fileURLWithPath:pdfFilepathString];
-//        
-//        //NSURL *URL = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"pdf"];
-//        
-//        [self performSegueWithIdentifier:@"PdfViewer" sender:pdfFileUrl];
-//    }
-//    else
-//    {
-//        UIAlertView *noPdfAlertView = [[UIAlertView alloc] initWithTitle:@"Marketing" message:@"No pdf file" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-//        [noPdfAlertView show];
-//    }
+    //    NSMutableDictionary *selectedUserDetailsDictionary = [priorityUserDetailsArray objectAtIndex:selectedUserImage.tag];
+    //
+    //    // Opening Pdf file.
+    //    NSString *pdfFilepathString = [[NSBundle mainBundle] pathForResource:[selectedUserDetailsDictionary valueForKey:PDF_FILE_NAME] ofType:@"pdf"];
+    //
+    //    NSFileManager *filemanager = [NSFileManager defaultManager];
+    //
+    //    if ([filemanager fileExistsAtPath:pdfFilepathString])
+    //    {
+    //        NSURL *pdfFileUrl = [NSURL fileURLWithPath:pdfFilepathString];
+    //
+    //        //NSURL *URL = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"pdf"];
+    //
+    //        [self performSegueWithIdentifier:@"PdfViewer" sender:pdfFileUrl];
+    //    }
+    //    else
+    //    {
+    //        UIAlertView *noPdfAlertView = [[UIAlertView alloc] initWithTitle:@"Marketing" message:@"No pdf file" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    //        [noPdfAlertView show];
+    //    }
 }
 
 - (void)cabTapGestureRecognise:(UITapGestureRecognizer*) tapGesture
@@ -215,5 +224,79 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark - TableView
+
+#pragma mark - Datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.selTripDetailsView.mContentListArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [self.selTripDetailsView.mContentListArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
+#pragma mark - Delagate Methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    if (indexPath.row == 0)
+    {
+        SummaryViewController *summaryVC = [[SummaryViewController alloc] init];
+        
+        // Summary view controller.
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:summaryVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
+    }
+    else if (indexPath.row == 1)
+    {
+        PickMyFriendViewController *pickMyFriendVC = [[PickMyFriendViewController alloc] init];
+        
+        // Summary view controller.
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:pickMyFriendVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
+    }
+    else if (indexPath.row == 2)
+    {
+        ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+        
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:profileVC];
+        
+        navigationVC.navigationBar.hidden = YES;
+        appDelegate.window.rootViewController = navigationVC;
+    }
+}
+
+#pragma mark - Menu
+
+- (void)menuList:(UIButton *) sender
+{
+    if (self.selTripDetailsView.menuListTableView.hidden)
+    {
+        self.selTripDetailsView.menuListTableView.hidden = NO;
+        [self.selTripDetailsView.menuListTableView reloadData];
+    }
+    else
+    {
+        self.selTripDetailsView.menuListTableView.hidden = YES;
+    }
+    
+}
 
 @end

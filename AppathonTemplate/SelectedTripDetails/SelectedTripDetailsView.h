@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Market Simplified. All rights reserved.
 //
 
-#import "BaseView.h"
+#import "BaseHeaderView.h"
 
-@interface SelectedTripDetailsView : BaseView
+@interface SelectedTripDetailsView : BaseHeaderView
 
 @property (nonatomic, strong) UILabel *placeInfoLabel;
 @property (nonatomic, strong) UIScrollView *picksContainerScrollView;

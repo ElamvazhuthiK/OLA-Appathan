@@ -25,9 +25,9 @@
 {
     [super createViews];
     
-//    CGRect frame = self.frame;
-//    frame.origin.y = 20;
-//    self.frame = frame;
+    //    CGRect frame = self.frame;
+    //    frame.origin.y = 20;
+    //    self.frame = frame;
     
     self.titleLabel.text = @"Pick My Friend";
     self.bgView = [[UIView alloc] init];
@@ -38,7 +38,7 @@
     
     [self addSubview:self.bgView];
     
-    self.imgViewFriend = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nophoto.png"]];
+    self.imgViewFriend = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myFriend"]];
     self.imgViewFriend.backgroundColor = [UIColor grayColor];
     [self.bgView addSubview:self.imgViewFriend];
     
@@ -78,7 +78,7 @@
     self.datePicker = [[UIDatePicker alloc] init];
     self.datePicker.datePickerMode = UIDatePickerModeDate;
     [self.bgView addSubview:self.datePicker];
-
+    
     self.timePicker = [[UIDatePicker alloc] init];
     self.timePicker.datePickerMode = UIDatePickerModeTime;
     [self.bgView addSubview:self.timePicker];
@@ -100,8 +100,8 @@
     float y = 10;
     float height = 40;
     CGRect frame;// = self.frame;
-//    frame.origin.y = 40;
-//    self.frame = frame;
+    //    frame.origin.y = 40;
+    //    self.frame = frame;
     self.bgView.frame = CGRectInset(self.bounds, 10, 60);
     frame = self.bgView.frame;
     frame.size.height -= 10;
@@ -123,9 +123,9 @@
     self.btnTime.frame = CGRectMake(10+(frame.size.width - 60), y, 40, height);
     y+=(height+5);
     
-    self.locationPicker.frame = CGRectMake(0, frame.size.height - 110, frame.size.width, 110);
-    self.datePicker.frame = CGRectMake(0, frame.size.height - 110, frame.size.width, 110);
-    self.timePicker.frame = CGRectMake(0, frame.size.height - 110, frame.size.width, 110);
+    self.locationPicker.frame = CGRectMake(0, frame.size.height - 120, frame.size.width, 120);
+    self.datePicker.frame = CGRectMake(0, frame.size.height - 120, frame.size.width, 120);
+    self.timePicker.frame = CGRectMake(0, frame.size.height - 120, frame.size.width, 120);
     
     self.btnDone.frame = CGRectMake((self.frame.size.width - 100)/2, frame.origin.y + frame.size.height + 5, 100, 30);
 }
